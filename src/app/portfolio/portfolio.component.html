@@ -1,0 +1,26 @@
+<div id="portfolio" class="portfolio-section">
+    <div class="portfolio">
+        <div class="short-line"></div>
+        <h1> Portfolio</h1>
+        <div class="long-line"></div>
+    </div>
+
+    <span class="description">Explore a selection of my work here - Interact with projects to see my skills in
+        action.</span>
+
+
+        <div class="development-section" *ngFor="let development of developments; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
+            <div class="product-img"><img src="{{development.img}}" alt="will be added soon"></div>
+            <div class="info-container">
+                <h3>{{development.title}}</h3>
+                <span class="skills">{{development.skills}}</span>
+                <span class="development-description">{{development.description}}</span>
+                <div class="btn-section">
+                    <button (click)="sendToUrl(development.url)" class="live-test">Live Test</button>
+                    <button (click)="sendToUrl(development.github)" class="github">Github</button>
+                </div>
+            </div>
+        </div>
+        <img class="decorate-img" src="assets/vector.png" alt="">
+        <img class="decorate-image" src="assets/green-shadow.png" alt="">
+</div>

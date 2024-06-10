@@ -1,0 +1,27 @@
+<nav>
+
+  <span class="name">
+    Ar<span class="colored-letter">t</span>ur
+  </span>
+  <div class="link-section">
+    <a href="#about-me">About me</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+  </div>
+  <div class="menu display-none">
+    <a href="#" (click)="menuContent($event)">
+        <img class="btn-img" src="assets/menu.png" alt="">
+        <img class="btn-img-hover" src="assets/menu-hover.png" alt="">
+    </a>
+</div>
+<div id="mobile-content" class="menu-mobile display-none">
+  <div class="menu-content ">
+  <img (click)="closeContent()" class="close-img" src="assets/close.png" alt="">
+    <a (click)="closeContent()" href="#about-me">About me</a>
+    <a (click)="closeContent()" href="#skills">My skills</a>
+    <a (click)="closeContent()" href="#portfolio">Portfolio</a>
+    <a (click)="closeContent()" href="#contact">Contact</a>
+  </div>
+</div>
+</nav>
+

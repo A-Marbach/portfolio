@@ -1,0 +1,166 @@
+.portfolio-section {
+    padding-top: 80px;
+    background-color: #141D2F;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.decorate-img{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    top: 450px;
+    right: -250px;
+    rotate: (35deg);
+}
+
+.decorate-image{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    bottom: 0;
+    rotate: (35deg);
+    left: -200px;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 32px;
+}
+
+h1 {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0;
+    font-size: 88px;
+    color: white;
+}
+
+.short-line {
+    margin-top: 58px;
+    background-color: #4441E5;
+    height: 4px;
+    width: 100px;
+}
+
+.long-line {
+    background-color: #4441E5;
+    height: 4px;
+    width: 570px;
+    margin-top: 58px;
+}
+
+.description {
+    color: white;
+    padding-left: 400px;
+    font-size: 22px;
+    padding-bottom: 80px;
+}
+
+.development-description{
+    max-width: 500px;
+    font-size: 22px;
+}
+
+.development-section {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.development-section.reverse {
+    flex-direction: row-reverse;
+    /* Flex-Richtung umdrehen für jedes zweite Element */
+}
+
+
+
+
+.development-section.reverse>.info-container {
+    order: 1;
+    /* Ändert die Reihenfolge des zweiten Elements in umgekehrten Iterationen */
+    padding-right: 0;
+    padding-left: 80px;
+    display: flex;
+    align-items: end;
+    text-align: end;
+}
+
+
+
+.development-section.reverse>.info-container>.btn-section  {
+    display: flex;
+    justify-content: end;
+    gap: 86px;
+    
+}
+
+.product-img {
+    padding-left: 200px;
+    width: 50%;
+
+    >img {
+        height: 500px;
+        width: 500px;
+    }
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 150px;
+    color: white;
+    width: 50%;
+    margin-top: 70px;
+    z-index: 10;
+}
+
+h3 {
+    color: #4441E5 !important;
+    font-size: 36px;
+    margin-bottom: 4px;
+}
+
+.skills {
+    font-size: 24px;
+    color: #1CDAE6 !important;
+    padding-bottom: 8px;
+}
+
+.btn-section {
+    display: flex;
+    gap: 86px;
+    padding-top: 50px;
+}
+
+.live-test {
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    background-color: #4441E5;
+    color: white;
+
+    &:hover {
+        background-color: #1CDAE6;
+
+    }
+}
+
+.github {
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    background-color: #141D2F;
+    border-color: #1CDAE6;
+    color: white;
+
+    &:hover {
+        background-color: #1CDAE6;
+
+    }
+}

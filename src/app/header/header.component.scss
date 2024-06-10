@@ -1,0 +1,137 @@
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 15vh;
+    background-color: #141D2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    opacity: 1;
+}
+
+.close-img{
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    cursor: pointer;
+}
+
+.menu-mobile{
+    border-top: 2px solid #1CDAE6;
+    position: fixed;
+    top: 0;
+    left: 0;
+   width: 100%;
+    height: 100vh;
+    background-color: rgb(42, 40, 40);
+    text-decoration: none;
+
+}
+
+.menu-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+
+    >a{
+        color: lightgray;
+        text-decoration: none;
+        padding-top: 24px;
+        font-size: 24px;
+    }
+    
+}
+
+.display-none{
+    display:none;
+}
+
+.menu {
+    
+    justify-content: end;
+    position: relative;
+
+    padding-top: 32px;
+    padding-right: 100px;
+}
+
+.btn-img-hover {
+    opacity: 0; /* Anfangs unsichtbar */
+    transition: opacity 0.3s ease; /* Übergangseffekt */
+    
+    right: 0; /* Links ausrichten */
+    z-index: 1; /* Z-Index über dem ersten Bild */
+    cursor: pointer;
+    padding-top: 32px;
+    padding-right: 100px;
+}
+
+.menu:hover .btn-img-hover {
+    opacity: 1; /* Bild einblenden beim Hover */
+}
+.menu .btn-img-hover {
+    opacity: 0;
+    display: none; /* Anfangs unsichtbar */
+    position: absolute; /* Positionierung des Bildes */
+    top: 0; /* Oben ausrichten */
+    right: 0; /* Rechts ausrichten */
+    cursor: pointer;
+}
+
+.menu:hover .btn-img-hover {
+    display: block; /* Bild einblenden beim Hover */
+}
+
+.menu:hover .btn-img {
+    opacity: 0; /* Erstes Bild ausblenden beim Hover */
+}
+
+
+
+.colored-letter{
+    padding-left: 0;
+    padding-right: 0;
+    color: #1CDAE6;
+}
+
+.name {
+    color: white;
+    padding-left: 100px;
+    padding-top: 32px;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+
+.link-section {
+    padding-right: 100px;
+    padding-top: 32px;
+    font-size: 32px;
+   
+    a {
+        padding-right: 24px;
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #1CDAE6;
+    }
+}
+
+@media screen and (max-width:850px){
+    .link-section{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+}

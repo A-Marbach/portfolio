@@ -1,0 +1,91 @@
+<div class="contact-section">
+    <div class="flex">
+        <div class="decorate-line"></div>
+        <h1>Contact</h1>
+    </div>
+
+    <div class="content">
+        <div class="contact-info">
+            <h2>Got a problem to solve?</h2>
+            <div class="contact-span">
+                <span>Contact me throug this form, I am interested in hearing from you, knowing your ideas and
+                    contributing
+                    to your projects with my work.</span>
+            </div>
+
+            <div class="contact-me">
+                <span>Need a Frontend developer? <b>Contact me!</b></span>
+            </div>
+        </div>
+        <div id="contact" class="form-content">
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                <div class="relative">
+                    <input minlength="3" [(ngModel)]="contactData.name" #name="ngModel" type="text" id="name"
+                        name="name" placeholder="Your name" required (click)="setInputClicked()"
+                        (input)="onInputChange()" [class.error-border]="isClicked && name?.value?.length < 3"
+                        [class.success-border]="isClicked && name?.value?.length >= 3">
+                    <img class="error-img" src="assets/red.png" alt="Error Image"
+                        [hidden]="!isClicked || name?.value?.length >= 3">
+                    <img class="success-img" src="assets/green.png" alt="Success Image"
+                        [hidden]="!isClicked || name?.value?.length < 3">
+                    @if(!name?.valid && name.touched) {
+                    <span class="error-text">Please enter a name</span>
+                    }
+                </div>
+
+                <div class="relative">
+                    <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                        placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required
+                        (click)="setInputClickeds()" (input)="onInputChanges()"
+                        [class.error-border]="isClickedSecondInput && !email?.valid"
+                        [class.success-border]="isClickedSecondInput && email?.valid">
+                    <img class="error-img"  src="assets/red.png" alt="Error Image"
+                        [hidden]="!isClickedSecondInput || email?.valid">
+                    <img class="success-img"  src="assets/green.png" alt="Success Image"
+                        [hidden]="!isClickedSecondInput || !email?.valid">
+                    @if(!email?.valid && email.touched) {
+                    <span class="error-text">Please enter a valid email</span>
+                    }
+                </div>
+
+                <div class="relative">
+                    <textarea minlength="20" #message="ngModel" [(ngModel)]="contactData.message" name="message"
+                        id="message" placeholder="Your message" required (click)="setInputClickedss()"
+                        (input)="onTextareaInputChange()"
+                        [class.error-border]="isClickedTextarea && message?.value?.length < 20"
+                        [class.success-border]="isClickedTextarea && message?.value?.length >= 20"></textarea>
+                    <img class="error-img"  src="assets/red.png" alt="Error Image"
+                        [hidden]="!isClickedTextarea || message?.value?.length >= 20">
+                    <img class="success-img"  src="assets/green.png" alt="Success Image"
+                        [hidden]="!isClickedTextarea || message?.value?.length < 20">
+                    @if(!message?.valid && message.touched) {
+                    <span class="error-text">Please enter a message</span>
+                    }
+                </div>
+
+
+                <div class="information-data">
+                    <input type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox" name="checkbox" required>
+                    <label for="myCheckbox"></label>
+                    <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as
+                        outlined.</span>
+                    <div class="send-message-btn">
+                        <button id="button" [disabled]="!contactForm.valid"
+                            [ngClass]="{'enabled': contactForm.valid, 'disabled': !contactForm.valid}">Send message
+                            :)</button>
+                    </div>
+                </div>
+                
+            </form>
+            <div class="go-up-btn">
+                <a href="#first-section">
+                <img class="btn-img" src="assets/zeiger-weiss.png" alt="">
+                <img class="btn-img-hover" src="assets/zeiger-türkis.png" alt="">
+            </a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="bottom-line"></div>
+</div>

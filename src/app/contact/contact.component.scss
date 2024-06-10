@@ -1,0 +1,319 @@
+.contact-section {
+    background-color: #141D2F;
+    color: white !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.decorate-line {
+    height: 4px;
+    width: 50px;
+    background-color: #4441E5;
+    margin-top: 110px;
+}
+
+h1 {
+    padding-left: 50px;
+    font-size: 88px;
+}
+
+.content {
+    display: flex;
+    padding-bottom: 100px;
+}
+
+.contact-info {
+    width: 50%;
+    padding-left: 100px;
+}
+
+.go-up-btn {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+.btn-img-hover {
+    opacity: 0; /* Anfangs unsichtbar */
+    transition: opacity 0.3s ease; /* Übergangseffekt */
+    position: absolute; /* Positionierung des Bildes */
+    top: 0; /* Oben ausrichten */
+    right: 0; /* Links ausrichten */
+    z-index: 1; /* Z-Index über dem ersten Bild */
+    cursor: pointer;
+}
+
+.go-up-btn:hover .btn-img-hover {
+    opacity: 1; /* Bild einblenden beim Hover */
+}
+
+
+
+.form-content {
+    width: 50%;
+    padding-right: 100px;
+    padding-left: 50px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.contact-span {
+    font-size: 22px;
+}
+
+.contact-me {
+    font-size: 22px;
+    padding-top: 12px;
+}
+
+.information-data {
+    padding: 16px;
+
+    >span {
+        padding-top: 0 !important;
+        padding-left: 8px;
+        font-size: 16px;
+    }
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    /* Breite der Checkbox */
+    height: 20px;
+    /* Höhe der Checkbox */
+    cursor: pointer;
+    /* Zeigt einen Zeiger bei Hover */
+    border: 2px solid #1CDAE6;
+    /* Rahmenfarbe der Checkbox */
+    background-color: transparent;
+    /* Hintergrundfarbe der Checkbox */
+    appearance: none;
+    /* Entfernt das Standard-Checkbox-Design */
+    -webkit-appearance: none;
+    /* Für Webkit-Browser */
+    -moz-appearance: none;
+    /* Für Mozilla-Browser */
+    border-radius: 0;
+}
+
+
+
+input[type="checkbox"]:checked:before {
+    content: '✓';
+    /* Häkchen bei Aktivierung */
+    color: #1CDAE6;
+    /* Farbe des Häkchens */
+    display: block;
+    text-align: center;
+    line-height: 18px;
+    
+    /* Vertikale Zentrierung des Häkchens */
+}
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: #4441E5;
+
+    >a:hover {
+        text-decoration: underline !important;
+        cursor: pointer;
+    }
+}
+
+.send-message-btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.send-message-btn>button {
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+button.enabled {
+    background-color: #1CDAE6 !important;
+    /* Farbe für aktivierten Button */
+    cursor: pointer !important;
+}
+
+button.disabled {
+    background-color: lightgray;
+    /* Farbe für deaktivierten Button */
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+/* Verstecke die Standard-Checkbox */
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Stil für das benutzerdefinierte Checkbox-Element */
+.custom-checkbox {
+    display: inline-block;
+    width: 20px;
+    /* Breite und Höhe anpassen */
+    height: 20px;
+    border: 2px solid #1CDAE6;
+    /* Randfarbe */
+    border-radius: 4px;
+    /* Runden die Ecken */
+    position: relative;
+
+
+}
+
+.custom-checkbox:hover {
+    cursor: pointer;
+    background-color: #6fedf3;
+    opacity: 0.8;
+}
+
+.custom-checkbox::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border: 2px solid #1CDAE6;
+    border-left: none;
+    border-top: none;
+    opacity: 0;
+    background-color: transparent; /* Transparenter Hintergrund hinzugefügt */
+}
+
+
+/* Stil für die Checkbox, wenn sie aktiviert ist */
+.custom-checkbox input[type="checkbox"]:checked+label::after {
+    opacity: 1;
+    /* Häkchen anzeigen, wenn aktiviert */
+}
+
+input:focus {
+    outline: none;
+    /* Entfernt den Standard-Fokusrahmen des Browsers */
+    background-color: inherit;
+    /* Beibehaltung des ursprünglichen Hintergrunds */
+}
+
+textarea:focus {
+    outline: none;
+    /* Entfernt den Standard-Fokusrahmen des Browsers */
+    background-color: inherit;
+    /* Beibehaltung des ursprünglichen Hintergrunds */
+}
+
+// .input{
+//     background-color: #1CDAE6;
+// }
+
+.bottom-line {
+    width: 100%;
+    height: 4px;
+    background-color: #1CDAE6;
+}
+
+input {
+    width: 100%;
+    margin: 16px;
+    background-color: #141D2F;
+    border-color: #4441E5;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+
+    &:hover {
+        border-color: #1CDAE6;
+        cursor: pointer;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+textarea {
+    border-color: #4441E5;
+    background-color: #141D2F;
+    color: white;
+    height: 200px;
+    margin: 16px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 100%;
+
+    &:hover {
+        border-color: #1CDAE6;
+        cursor: pointer;
+    }
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+
+
+    .error-text {
+        color: red;
+        padding-left: 24px;
+    }
+
+
+}
+
+.error-img,
+.success-img {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+
+}
+
+.error-border {
+    border: 2px solid red !important;
+    /* Ändere die Border-Farbe auf Rot, wenn die Länge des Werts kleiner als 3 ist */
+}
+
+.success-border {
+    border: 2px solid green !important;
+    /* Ändere die Border-Farbe auf Grün, wenn die Länge des Werts größer oder gleich 3 ist und das Inputfeld angeklickt wurde */
+}
+
+
+
+input::placeholder {
+    color: white;
+    padding-left: 8px;
+    font-size: 18px;
+}
+
+textarea::placeholder {
+    color: white;
+    padding-left: 8px;
+    font-size: 18px;
+
+
+}
