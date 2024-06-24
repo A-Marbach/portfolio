@@ -4,6 +4,8 @@
     margin: 0;
     position: relative;
     overflow: hidden;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .decorate-img{
@@ -42,21 +44,22 @@ h1 {
     margin-top: 58px;
     background-color: #4441E5;
     height: 4px;
-    width: 100px;
+    width: 5%;
 }
 
 .long-line {
     background-color: #4441E5;
     height: 4px;
-    width: 570px;
+    width: 30%;
     margin-top: 58px;
 }
 
 .description {
     color: white;
-    padding-left: 400px;
     font-size: 22px;
     padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 .development-description{
@@ -69,6 +72,7 @@ h1 {
     flex-direction: row;
     padding-top: 20px;
     padding-bottom: 80px;
+    padding-left: 100px;
 }
 
 .development-section.reverse {
@@ -99,9 +103,10 @@ h1 {
 }
 
 .product-img {
-    padding-left: 200px;
-    width: 50%;
-
+    padding-left: 100px;
+    padding-right: 100px;
+  
+    padding-top: 30px;
     >img {
         height: 500px;
         width: 500px;
@@ -111,9 +116,9 @@ h1 {
 .info-container {
     display: flex;
     flex-direction: column;
-    padding-right: 150px;
+   
     color: white;
-    width: 50%;
+    
     margin-top: 70px;
     z-index: 10;
 }
@@ -162,5 +167,13 @@ h3 {
     &:hover {
         background-color: #1CDAE6;
 
+    }
+}
+
+
+
+@media screen and (max-width:1600px){
+    .development-section{
+        padding-left: 0;
     }
 }

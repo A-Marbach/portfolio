@@ -394,7 +394,7 @@ a{
 
    .my-profile{
     
-    padding-left: 5%;
+    padding-left: 10%;
    }
 
     .front-end-developer{
@@ -411,5 +411,31 @@ a{
 
     .vertikal{
         font-size: 25px;
+        margin-top: 25px!important;
+        margin-right: -17px!important;
+    }
+
+    .btn{
+        margin-top: 20px;
+    }
+
+    .right-section{
+        padding-left: 10%;
+    }
+}
+
+@media screen and (max-width:580px){
+    .right-section{
+        padding-left: 5%;
+    }
+}
+
+@media screen and (max-width: 565px){
+    .vertikal{
+        padding-left: 5%;
+    }
+
+    .name{
+        font-size: 30px!important;
     }
 }

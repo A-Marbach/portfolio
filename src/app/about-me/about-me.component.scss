@@ -78,3 +78,58 @@ h1{
     top: 0px;
     right: -300px;
 }
+
+@media screen and (max-width: 1600px){
+    .background-shadow{
+        right: -400px;
+    }
+
+    .profile-circle-container{
+        padding-top: 85px;
+    }
+
+   
+}
+
+@media screen and (max-width:1200px){
+    .profile-circle-container{
+       display: none;
+    }
+    .right-section{
+        display: none;
+    }
+
+  .left-section{
+    width: 100%;
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width: 850px){
+    .about-me-section{
+        padding-left: 25px;
+    }
+
+    .left-section{
+        padding-right: 25px;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width: 700px){
+    h1{
+        font-size: 60px;
+    }
+
+    .info{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 570px){
+    h1{
+        font-size: 50px;
+    }
+
+   
+}

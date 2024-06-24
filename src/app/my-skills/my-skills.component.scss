@@ -2,12 +2,13 @@
 .my-skills-section{
     background-color: #141D2F;
     color: white;
-    padding-left: 100px;
+    padding-left: 80px;
     position: relative;
     display: flex;
     padding-bottom: 100px;
     padding-top: 150px;
     overflow: hidden;
+    
 }
 
 .decorate-img{
@@ -27,28 +28,21 @@ h1{
     width: 60%;
     display: flex;
     flex-wrap: wrap;
+   
     z-index: 10;
+   gap: 50px;
 }
 
 .right-content{
     width: 40%;
 }
 
-.skills-container{
-    text-align: center;
-    font-size: 22px;
-    padding-right: 100px !important;
-}
 
 .line{
    margin-bottom: 35px;
     background-color: #4441E5;
     height: 4px;
     width: 10%;
-    
-   
-  
-    
 }
 
 .btn{
@@ -78,10 +72,13 @@ h1{
 }
 
 .skills-container{
+    text-align: center;
+    font-size: 22px;
     display: flex;
     flex-direction: column;
     padding-bottom: 48px;
-    padding-right: 84px;
+    padding: 20px;
+   padding-right: 100px;
     >img{
         cursor: pointer;
         height: 80px;
@@ -112,4 +109,63 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width: 1250px) {
+    h1{
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .my-skills-section{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .right-content{
+        width: 100%;
+    }
+
+    .left-content{
+        width: 100%;
+        padding-top: 50px;
+        gap: 40px;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .flex{
+        justify-content: end;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    .my-skills-section{
+        padding-left: 5px;
+    }
+
+    .skills-container{
+        padding-right: 25px;
+    }
+
+    
+
+    
+}
+
+@media screen and (max-width: 550px){
+    .skills-container{
+font-size: 18px;
+        >img{
+            width: 50px;
+            height: 50px;
+        }
+    }
 }
