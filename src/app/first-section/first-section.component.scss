@@ -179,7 +179,7 @@ a{
     bottom: 40px;
     margin-right: 15px;
     display: flex;
-    z-index: 5;
+    z-index: 99;
 
     #img {
 
@@ -258,14 +258,27 @@ a{
 
 @media screen and (max-width: 1200px){
     .right-section{
-        padding-top: 500px;
+        padding-top: 700px;
         padding-left: 20%;
-        z-index: 10;
+        z-index: 99;
         padding-bottom: 200px;
+        padding-right: 0;
+    }
+   
+
+    .name{
+        padding-left: 0!important;
+    }
+    .column{
+        width: 400px;
+    }
+
+    .btn{
+        margin-top: 5px;
     }
 
     .contact{
-        bottom: 7px;
+        bottom: -110px;
     }
    
     .background{
@@ -295,16 +308,15 @@ a{
     }
 
     .my-profile{
-        width: 900px;
-        padding-left: 10%;
-        height: 800px;
-        padding-bottom: 100px;
+        width: 70%;
+        padding-left: 15%;
+        object-fit: cover;
+        padding-bottom: 50px;
     }
 
     .behind_the_picture{
-        height: 550px;
-        width: 550px;
-        padding-left: 330px;
+       width: 80%;
+        padding-left: 10%;
         padding-top: -250px;
     }
 
@@ -313,129 +325,200 @@ a{
     }
 
     .first-section{
-        padding-bottom: 150px;
+        padding-bottom: 200px;
     }
 
     .vertikal{
-        padding-left: 95px;
+        padding-left: 55px;
         font-size: 41px;
-        padding-top: 50px;
+        padding-top: 80px;
         transform: rotate(270deg);
         writing-mode: initial;
     }
+
+   .front-end-developer{
+    padding-left: 0;
+   }
+
+   .name{
+    padding-left: 0;
+   }
 }
 
 @media screen and (max-width: 1030px) {
-    .my-profile{
-        width: 790px;
-    }
+   
 
     .right-section{
         padding-left: 15%;
     }
 
-    .behind_the_picture{
-        padding-left: 10%;
-        width: 750px;
-    }
+    
 }
 
 @media screen and (max-width: 900px){
+    
     .my-profile{
-        width: 700px;
-        padding-left: 5%;
+        padding-left: 10%;
     }
 
     .right-section{
         padding-left: 5%;
     }
 
-    .behind_the_picture{
-        width: 625px;
-    }
+   
 }
 
 @media screen and (max-width: 760px){
-    .my-profile{
-        width: 500px;
-        padding-left: 15%;
-    }
+    
 
     .line{
         width: 100px;
     }
 
-    .name{
-        font-size: 40px!important;
-        padding-left: 0!important;
-    }
+   .right-section{
+    padding-left: 2%;
+   }
 
-    .front-end-developer{
-        font-size: 30px;
-        padding-left: 0!important;
+   
+   
+}
 
-    }
-
-    .btn{
-        margin-left: 50px;
-    }
-    .right-section{
-        padding-left: 0;
-    }
-
-    .behind_the_picture{
-        padding-left: 0;
+@media screen and (max-width:700px){
+    .my-profile{
+        width: 85%;
+        padding-left: 5%;
     }
 }
 @media screen and (max-width: 660px){
-    .name{
-        font-size: 36px!important;
-    }
-
-   .my-profile{
-    
-    padding-left: 10%;
-   }
-
-    .front-end-developer{
-        font-size: 26px;
-    }
-
-    .behind_the_picture{
-      width: 500px;
-    }
-
     .btn{
         margin-left: 50px;
     }
 
     .vertikal{
         font-size: 25px;
-        margin-top: 25px!important;
-        margin-right: -17px!important;
+        margin-top: -17px!important;
+        margin-right: 0;
+        width: 56px;
+    }
+
+    .name{
+        font-size: 40px!important;
+    }
+
+    .front-end-developer{
+        font-size: 30px;
     }
 
     .btn{
         margin-top: 20px;
     }
 
-    .right-section{
-        padding-left: 10%;
-    }
+   
 }
 
 @media screen and (max-width:580px){
-    .right-section{
-        padding-left: 5%;
+   
+
+    .vertikal{
+       padding-left: 60px;
+       margin-top: -15px !important;
+       margin-right: -40px !important;
+       padding-top: 0;
+    }
+
+    
+}
+
+@media screen and (max-width: 566px){
+  
+
+    .my-profile{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .column{
+        max-width: 350px;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width:500px){
+    .my-profile{
+        height: 100%;
+        top: 120px;
+        padding-left: 0;
+    }
+
+    a{
+        >img{
+            width: 35px;
+            height: 35px;
+            padding-left: 24px;
+            
+        }
     }
 }
 
-@media screen and (max-width: 565px){
-    .vertikal{
-        padding-left: 5%;
+@media screen and (max-width:460px){
+    .right-section{
+        padding-left: 0;
+    }
+
+    .column{
+        max-width: 300px;
     }
 
     .name{
+        font-size: 32px!important;
+    }
+
+    .front-end-developer{
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:440px){
+    .vertikal{
+        margin-left: -15%;
+    }
+
+    .name{
+        font-size: 38px!important;
+    }
+
+    .front-end-developer{
         font-size: 30px!important;
     }
+}
+
+@media screen and (max-width:400px){
+
+    .my-profile{
+        height: 92%;
+    }
+    .name{
+        font-size: 32px!important;
+    }
+
+    .front-end-developer{
+        font-size: 24px!important;
+    }
+
+    .column{
+        max-width: 250px;
+    }
+
+    .btn{
+        margin-left: 40px;
+    }
+}
+
+
+@media screen and (max-width:380px){
+  
+
 }

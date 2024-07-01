@@ -13,6 +13,8 @@ export class HeaderComponent implements OnInit {
   menuContent(event: Event) {
     event.preventDefault(); // Verhindert das Standardverhalten des Links
     document.getElementById('mobile-content')?.classList.remove('display-none');
+   
+
 }
 
 closeContent(){

@@ -11,7 +11,7 @@
     height: 4px;
     width: 50px;
     background-color: #4441E5;
-    margin-top: 110px;
+    margin-top: 65px;
 }
 
 h1 {
@@ -35,18 +35,29 @@ h1 {
     position: relative;
 }
 
+.privacy-policy:hover{
+    border-bottom: 2px solid #4441E5;
+}
+
 .btn-img-hover {
-    opacity: 0; /* Anfangs unsichtbar */
-    transition: opacity 0.3s ease; /* Übergangseffekt */
-    position: absolute; /* Positionierung des Bildes */
-    top: 0; /* Oben ausrichten */
-    right: 0; /* Links ausrichten */
-    z-index: 1; /* Z-Index über dem ersten Bild */
+    opacity: 0;
+    /* Anfangs unsichtbar */
+    transition: opacity 0.3s ease;
+    /* Übergangseffekt */
+    position: absolute;
+    /* Positionierung des Bildes */
+    top: 0;
+    /* Oben ausrichten */
+    right: 0;
+    /* Links ausrichten */
+    z-index: 1;
+    /* Z-Index über dem ersten Bild */
     cursor: pointer;
 }
 
 .go-up-btn:hover .btn-img-hover {
-    opacity: 1; /* Bild einblenden beim Hover */
+    opacity: 1;
+    /* Bild einblenden beim Hover */
 }
 
 
@@ -58,64 +69,63 @@ h1 {
 }
 
 h2 {
+    padding-top: 32px;
+    padding-bottom: 25px;
     font-size: 36px;
 }
 
 .contact-span {
     font-size: 22px;
+    padding-bottom: 25px;
+
 }
 
 .contact-me {
     font-size: 22px;
     padding-top: 12px;
+    padding-bottom: 25px;
+
 }
 
 .information-data {
-    padding: 16px;
+   
 
     >span {
-        padding-top: 0 !important;
-        padding-left: 8px;
+       
+        
         font-size: 16px;
     }
 }
 
+/* Entfernt margin und padding für alle Elemente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stil für die Checkbox */
 input[type="checkbox"] {
     width: 20px;
-    /* Breite der Checkbox */
     height: 20px;
-    /* Höhe der Checkbox */
     cursor: pointer;
-    /* Zeigt einen Zeiger bei Hover */
     border: 2px solid #1CDAE6;
-    /* Rahmenfarbe der Checkbox */
     background-color: transparent;
-    /* Hintergrundfarbe der Checkbox */
-    appearance: none;
-    /* Entfernt das Standard-Checkbox-Design */
     -webkit-appearance: none;
-    /* Für Webkit-Browser */
     -moz-appearance: none;
-    /* Für Mozilla-Browser */
     border-radius: 0;
 }
 
 
 
+/* Stil für das Häkchen */
 input[type="checkbox"]:checked:before {
     content: '✓';
-    /* Häkchen bei Aktivierung */
     color: #1CDAE6;
-    /* Farbe des Häkchens */
     display: block;
     text-align: center;
     line-height: 18px;
-    
-    /* Vertikale Zentrierung des Häkchens */
 }
-
-
-
 
 
 a {
@@ -198,7 +208,8 @@ button.disabled {
     border-left: none;
     border-top: none;
     opacity: 0;
-    background-color: transparent; /* Transparenter Hintergrund hinzugefügt */
+    background-color: transparent;
+    /* Transparenter Hintergrund hinzugefügt */
 }
 
 
@@ -314,6 +325,103 @@ textarea::placeholder {
     color: white;
     padding-left: 8px;
     font-size: 18px;
+}
+
+@media screen and (max-width:1100px){
+    .contact-info{
+        width: 55%;
+    }
+
+    .form-content{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        width: 90%;
+    }
+
+    .form-content {
+        width: 100%;
+        padding-left: 100px;
+    }
+
+    form {
+        padding: 0;
+
+    }
+
+    input {
+        margin: 0;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    textarea {
+        margin: 0;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    h1{
+        padding-left: 0;
+    }
+
+    .decorate-line{
+        width: 25px;
+    }
+
+    .form-content{
+        padding-right: 25px;
+        padding-left: 25px;
+       
+    }
+
+    .contact-info{
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width:630px) {
+    h2{
+        font-size: 32px;
+    }
+
+    .contact-span{
+        font-size: 20px;
+    }
+
+    .contact-me{
+        font-size: 20px;
+    }
+}
 
 
+@media screen and (max-width:500px) {
+
+    h1{
+        font-size: 64px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    .decorate-line{
+        margin-top: 47px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    h2{
+        font-size: 24px;
+    }
 }

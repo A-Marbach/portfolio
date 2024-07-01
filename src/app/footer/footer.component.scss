@@ -1,4 +1,4 @@
-footer{
+footer {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #141D2F;
@@ -7,66 +7,105 @@ footer{
     padding-right: 100px;
 }
 
-.content{
+.content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: center;
 
-    >img{
+    >img {
         width: 20px;
         height: 20px;
         filter: invert(1)
     }
 }
 
-h2{
+h2 {
     font-size: 88px;
     margin-top: 0;
     margin-bottom: 0;
     cursor: pointer;
 }
 
-.name{
+.name {
     font-size: 22px;
     padding-left: 8px;
 }
 
-.colored-letter{
+.colored-letter {
     padding-left: 0;
     padding-right: 0;
     color: #1CDAE6;
 }
 
 
-a{
+a {
     text-decoration: none;
     color: white;
     cursor: pointer;
     margin-top: 0;
-   
-    
-    >img{
+
+
+    >img {
         width: 40px;
         height: 40px;
         padding-left: 24px;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             scale: 1.2;
         }
     }
-   
+
 }
 
-.inprint{
+.inprint {
 
-    &:hover{
-        border-bottom: 2px solid  #1CDAE6;
+    &:hover {
+        border-bottom: 2px solid #1CDAE6;
 
     }
+}
+
+.mobile-section {
+    display: none;
+    padding-top: 24px;
+
+    &:hover {
+        border-bottom: 2px solid #1CDAE6;
+
+    }
+}
+
+
+@media screen and (max-width:1000px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .mobile-section {
+        display: block;
+    }
+
+    .link-section {
+        padding-top: 16px;
+    }
+
+    footer{
+        padding-left: 50px!important;
+        padding-right: 50px!important;
+    }
+
+    .inprint {
+        display: none;
+    }
+}
+@media screen and (max-width:500px) {
+.name{
+    font-size: 18px!important;
+}
 }

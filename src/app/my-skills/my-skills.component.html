@@ -1,15 +1,20 @@
 <div id="skills" class="my-skills-section">
-    
+    <div class="mobile-btn">
+        <button class="btn-mobile hide-mobile">Get in touch</button>
+
+    </div>
     <div class="left-content">
         <div class="skills-container" *ngFor="let image of images; let i = index">
             <img class="skill-image" src="{{ image }}">
             <span class="title-skills">{{ title[i]}}</span>
-            
+           
         </div>
+        
     </div>
+   
     <div class="right-content">
         <div class="flex">
-            
+           
             <H1>My Skills</H1>
             <div class="line"></div>
         </div>
@@ -17,8 +22,9 @@
         <span class="skills-container">I have grown my frontend developments skills that have allowed me toc reate
             different real
             projects.</span>
-        <button class="btn">Get in touch</button>
+        <button class="btn hide-desktop">Get in touch</button>
     </div>
+   
     <img class="decorate-img" src="assets/green_shadow.png" alt="">
     
 </div>

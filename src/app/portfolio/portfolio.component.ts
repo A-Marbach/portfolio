@@ -28,14 +28,14 @@ export class PortfolioComponent {
       'url': 'https://el-pollo-loco.artur-marbach.de',
       'github': 'https://github.com/A-Marbach/el-pollo-loco'
     },
-    {
-      'title': 'Simple CRM',
-      'skills': 'Angular | Firebase',
-      'description': 'A very Simple Customer Relationship Management system working with CRUD functionality',
-      'img': 'assets/crm.png',
-      'url': '',
-      'github': ''
-    }
+    // {
+    //   'title': 'Simple CRM',
+    //   'skills': 'Angular | Firebase',
+    //   'description': 'A very Simple Customer Relationship Management system working with CRUD functionality',
+    //   'img': 'assets/crm.png',
+    //   'url': '',
+    //   'github': ''
+    // }
     
   ]
   sendToUrl(url:string){

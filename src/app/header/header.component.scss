@@ -20,7 +20,6 @@ nav {
 }
 
 .menu-mobile{
-    border-top: 2px solid #1CDAE6;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,6 +39,12 @@ nav {
     height: 100vh;
     
 
+    >img{
+        padding-top: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
     >a{
         color: lightgray;
         text-decoration: none;
@@ -47,6 +52,10 @@ nav {
         font-size: 24px;
     }
     
+
+    >a:hover{
+        border-bottom: 2px solid  #1CDAE6;
+    }
 }
 
 .display-none{
@@ -70,7 +79,7 @@ nav {
     z-index: 1; /* Z-Index über dem ersten Bild */
     cursor: pointer;
     padding-top: 32px;
-    padding-right: 100px;
+   padding-right: 25px;
 }
 
 .menu:hover .btn-img-hover {
