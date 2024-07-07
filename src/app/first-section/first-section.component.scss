@@ -1,3 +1,5 @@
+
+
 .first-section {
     background-color: #141D2F;
     height: 85vh;
@@ -11,6 +13,12 @@
     height: 300px;
     bottom: -150px;
     z-index: 1;
+}
+
+
+a{
+    color: white;
+    text-decoration: none;
 }
 
 
@@ -60,7 +68,7 @@
 }
 
 .right-section {
-    padding-left: 800px;
+    padding-left: 670px;
     padding-right: 100px;
     padding-bottom: 150px;
     
@@ -74,14 +82,14 @@
         color: white;
         padding-left: 20px;
        
-        font-size: 70px;
+        font-size: 53px;
     }
 }
 
 .front-end-developer {
     color: #4441E5;
 
-    font-size: 55px;
+    font-size: 40px;
     padding-left: 22px;
 }
 
@@ -146,6 +154,10 @@
     /* Drehen des Textes um 180 Grad */
 }
 
+.vertikal.deutsch {
+    font-size: 40px; /* Größe für das Element, wenn die Sprache auf Deutsch ist */
+  }
+
 .line {
     height: 4px;
     margin-top: 20px;
@@ -199,37 +211,10 @@ a{
 }
 
 
-@media screen and (max-width: 1600px) {
-    .right-section{
-        padding-left: 650px;
-    }
-
-   
-}
-
-@media screen and (max-width: 1480px){
-   
-
-    .name{
-        font-size: 60px!important;
-    }
-
-    .front-end-developer{
-        font-size: 46px;
-    }
-    .btn{
-        margin-left: 135px;
-    }
-
-    .vertikal{
-        font-size: 50px;
-        padding-top: 95px;
-    }
-}
 
 @media screen and (max-width: 1380px){
     .right-section{
-        padding-left: 600px;
+        padding-left: 550px;
     }
 
     

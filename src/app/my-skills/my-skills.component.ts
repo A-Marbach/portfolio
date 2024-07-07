@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
@@ -39,4 +40,17 @@ export class MySkillsComponent {
     'Material-Design',
     'Wordpress',
   ]
+  isGerman: boolean = false;
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+    this.translate.onLangChange.subscribe((event) => {
+      this.isGerman = event.lang === 'de';
+    });
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

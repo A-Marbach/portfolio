@@ -1,11 +1,20 @@
 body{
     margin: 0;
     font-family: 'poppins';
+    background-color: #141D2F;
 }
 html {
   scroll-behavior: smooth;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  
+  box-sizing: border-box; /* Optional, um Padding im Gesamtbreitenberechnung zu berücksichtigen */
+  
+
+}
 
 
 /* poppins-200 - latin */

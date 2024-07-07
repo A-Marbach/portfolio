@@ -56,7 +56,7 @@ h1 {
 
 .description {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     padding-bottom: 80px;
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ h1 {
     order: 1;
     /* Ändert die Reihenfolge des zweiten Elements in umgekehrten Iterationen */
     padding-right: 0;
-    padding-left: 150px;
+    
     display: flex;
     align-items: end;
     text-align: end;
@@ -154,6 +154,7 @@ h3 {
     cursor: pointer;
     background-color: #4441E5;
     color: white;
+    border: none;
 
     &:hover {
         background-color: #1CDAE6;
@@ -178,26 +179,7 @@ h3 {
 
 
 
-@media screen and (max-width:1600px) {
-    .development-section:nth-of-type(2) {
-        padding-left: 0;
-    }
 
-    .development-section:nth-of-type(2) {
-        .product-img {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
-
-    .info-container {
-        padding-left: 150px;
-        z-index: 9;
-    }
-
-
-}
 
 @media screen and (max-width:1290px) {
     .development-section.reverse {

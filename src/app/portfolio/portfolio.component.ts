@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule, TranslateModule ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -15,7 +16,7 @@ export class PortfolioComponent {
     {
       'title': 'Join',
       'skills': 'JavaScript | HTML | CSS',
-      'description': 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
+      'description': 'development1.description',
       'img': 'assets/join.png',
       'url': 'https://join.artur-marbach.de',
       'github': 'https://github.com/A-Marbach/join'
@@ -23,7 +24,7 @@ export class PortfolioComponent {
     {
       'title': 'El-pollo-loco',
       'skills': 'JavaScript | HTML | CSS',
-      'description': 'A simple Jump-and-Run game based on a object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken',
+      'description': 'development2.description',
       'img': 'assets/pollo-loco.png',
       'url': 'https://el-pollo-loco.artur-marbach.de',
       'github': 'https://github.com/A-Marbach/el-pollo-loco'
@@ -41,7 +42,17 @@ export class PortfolioComponent {
   sendToUrl(url:string){
     window.open(url);
   }
-  constructor() {
-   
+  isGerman: boolean = false;
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+    this.translate.onLangChange.subscribe((event) => {
+      this.isGerman = event.lang === 'de';
+    });
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
   }
 }

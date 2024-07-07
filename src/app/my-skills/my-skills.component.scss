@@ -95,12 +95,16 @@ h1 {
 .title-skills {
     text-align: center;
     padding-top: 14px;
-    max-width: 80px;
+    max-width: 60px;
+}
+
+a{
+    text-decoration: none;
 }
 
 .skills-container {
     text-align: center;
-    font-size: 22px;
+    font-size: 16px;
     display: flex;
     flex-direction: column;
     padding-bottom: 48px;
@@ -109,8 +113,8 @@ h1 {
 
     >img {
         cursor: pointer;
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
     }
 
     .skill-image {

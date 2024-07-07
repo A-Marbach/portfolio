@@ -1,0 +1,13 @@
+{
+    "BUTTON": {
+        "LETS_TALK": "Lets talk"
+    },
+    "homepage.intro": "Hello, I'm Artur Marbach, a frontend developer from Hamburg, Germany. Welcome to my homepage! Passionate about creative solutions, I'm committed to continuous development in web development. With a keen interest in technology and a drive to deepen my skills, I aim to craft innovative and user-friendly websites.",
+    "Enthusiasm": "With a broad knowledge base and passion for web development, I offer a fresh perspective and strong willingness to learn. Determined to further develop my skills, I'm eager tocollaborate on tailored solutions supporting your company goals",
+    "Commitment": "As an aspiring web developer, I bring a unique perspective and unwavering commitment to quality. With a drive to learn new technologies and develop myself, I'm confident in making a valuable contribution to your digital projects.",
+    "Skill Development": "I have grown my frontend developments skills that have allowed me toc reate different real projects.",
+    "Portfolio": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "development1.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
+    "development2.description": "A simple Jump-and-Run game based on a object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken",
+    "Communication": "Contact me throug this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work."
+}

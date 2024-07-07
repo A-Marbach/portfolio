@@ -4,33 +4,36 @@
     <div class="contact">
         <div class="line"></div>
         <div class="logo">
-            <a href="">
+            <a routerLink="">
                 <img (click)="goToUrl('g')"  src="assets/github.png" alt="">
             </a>
             <a href="#contact">
                 <img  src="assets/mail.png" alt="">
             </a>
-            <a href="">
+            <a routerLink="">
                 <img (click)="goToUrl('l')"  src="assets/linkIn.png" alt="">
             </a>
         </div>
-        <span class="e-mail" [innerHTML]="'Marbach.A' + '@' + 'gmx.net'"></span>
+        <span class="e-mail">
+            <a [href]="'mailto:' + 'Marbach.A' + '&#64;' + 'gmx.net'">Marbach.A&#64;gmx.net</a>
+          </span>
     </div>
     <img class="my-profile" src="assets/my-photo.png">
 
     <div class="scroll-down-vertikal box">
-        <span>Scroll down</span>
+        <span>{{"Scroll down" | translate}}</span>
         <img class="up" src="assets/up.png" alt="">
 
     </div>
 
     <div class="right-section">
        
-            <span class="vertikal">I am</span>
+            <span  class="vertikal" [ngClass]="{'deutsch': isGerman}">{{ 'I am' | translate }}</span>
             <div class="column">
                 <span class="name"> <b>Artur Marbach</b> <br></span>
-                <span class="front-end-developer">Frontend Developer</span>
-                <button class="btn">Let´s talk!</button>
+                <span class="front-end-developer">Frontend {{ 'Developer' | translate }}</span>
+                <a href="#contact"><button  class="btn">{{ 'BUTTON.LETS_TALK' | translate }}</button></a>
+                
         
        
         </div>

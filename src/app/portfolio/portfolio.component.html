@@ -5,8 +5,7 @@
         <div class="long-line"></div>
     </div>
 
-    <span class="description">Explore a selection of my work here - Interact with projects to see my skills in
-        action.</span>
+    <span class="description">{{ "Portfolio" | translate}}</span>
 
 
         <div class="development-section" *ngFor="let development of developments; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
@@ -14,9 +13,9 @@
             <div class="info-container">
                 <h3>{{development.title}}</h3>
                 <span class="skills">{{development.skills}}</span>
-                <span class="development-description">{{development.description}}</span>
+                <span class="development-description">{{development.description | translate }}</span>
                 <div class="btn-section">
-                    <button (click)="sendToUrl(development.url)" class="live-test">Live Test</button>
+                    <button (click)="sendToUrl(development.url)" class="live-test">{{ "Live Test" | translate}}</button>
                     <button (click)="sendToUrl(development.github)" class="github">Github</button>
                 </div>
             </div>

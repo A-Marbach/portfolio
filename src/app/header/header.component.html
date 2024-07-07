@@ -1,14 +1,16 @@
 <nav>
-
-  <span class="name">
-    Ar<span class="colored-letter">t</span>ur
-  </span>
+<a class="name" href="/"> Ar<span class="colored-letter">t</span>ur</a>
+ 
   <div class="link-section">
-    <a href="#about-me">About me</a>
-    <a href="#skills">Skills</a>
+    <a href="#about-me">{{ 'About me' | translate }}</a>
+    <a href="#skills">{{ 'Skills' | translate }}</a>
     <a href="#portfolio">Portfolio</a>
+    <button (click)="switchLanguage('en')">En</button>
+  <button (click)="switchLanguage('de')">De</button>
   </div>
   <div class="menu display-none">
+    <button (click)="switchLanguage('en')">En</button>
+    <button (click)="switchLanguage('de')">De</button>
     <a href="#" (click)="menuContent($event)">
         <img class="btn-img" src="assets/menu.png" alt="">
         <img id="btn-hover" class="btn-img-hover" src="assets/menu-hover.png" alt="">
@@ -17,10 +19,10 @@
 <div id="mobile-content" class="menu-mobile display-none">
   <div class="menu-content ">
   <img (click)="closeContent()" class="close-img" src="assets/close.png" alt="">
-    <a (click)="closeContent()" href="#about-me">About me</a>
-    <a (click)="closeContent()" href="#skills">My skills</a>
+    <a (click)="closeContent()" href="#about-me">{{ 'About me' | translate }}</a>
+    <a (click)="closeContent()" href="#skills">{{ 'Skills' | translate }}</a>
     <a (click)="closeContent()" href="#portfolio">Portfolio</a>
-    <a (click)="closeContent()" href="#contact">Contact</a>
+    <a (click)="closeContent()" href="#contact">{{ 'Contact' | translate }}</a>
   </div>
 </div>
 </nav>

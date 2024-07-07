@@ -1,22 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent  {
+export class ContactComponent {
 
   http = inject(HttpClient);
-
- 
-
-  
 
   contactData = {
     name: "" ,
@@ -25,20 +22,15 @@ export class ContactComponent  {
     checkbox: false
   }
 
-  
   mailTest = false;
 
-  inputValue: string = ''; // inputValue deklarieren
-  input2Value: string = '';
-  textareaValue: string = '';
-
   isClicked: boolean = false; // Deklaration der isClicked-Variable
+  isBlurred: boolean = false; // Deklaration der isBlurred-Variable
   isClickedSecondInput: boolean = false;
+  isBlurredSecondInput: boolean = false;
   isClickedTextarea: boolean = false;
+  isBlurredTextarea: boolean = false;
 
-
-
-  
   post = {
     endPoint: 'https://portfolio.artur-marbach.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -55,21 +47,19 @@ export class ContactComponent  {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
-       // Reset form values and flags
-       this.contactData = {
-        name: '',
-        email: '',
-        message: '',
-        checkbox: false
-      };
-
-      // Reset clicked states
-      this.isClicked = false;
-      this.isClickedSecondInput = false;
-      this.isClickedTextarea = false;
-
+            this.contactData = {
+              name: '',
+              email: '',
+              message: '',
+              checkbox: false
+            };
+            this.isClicked = false;
+            this.isBlurred = false;
+            this.isClickedSecondInput = false;
+            this.isBlurredSecondInput = false;
+            this.isClickedTextarea = false;
+            this.isBlurredTextarea = false;
           },
           error: (error) => {
             console.error(error);
@@ -81,117 +71,43 @@ export class ContactComponent  {
       ngForm.resetForm();
     }
   }
- 
- 
-    // Methode, um die inputValue zu aktualisieren und isClicked zu setzen
-    onInputChange() {
-      this.inputValue = this.contactData.name.trim();
-    }
-  
-    setInputClicked() {
-      this.isClicked = true;
-    }
-  
-    onInputChanges() {
-      this.input2Value = this.contactData.email.trim();
-    }
-  
-    setInputClickeds() {
-      this.isClickedSecondInput = true;
-    }
-  
-    setInputClickedss() {
-      this.isClickedTextarea = true;
-    }
-  
-    onTextareaInputChange() {
-      this.textareaValue = this.contactData.message;
-    }
-  
+
+  onInputChange() {
+    this.isClicked = true;
   }
 
+  setInputBlurred() {
+    this.isBlurred = true;
+  }
 
+  onInputChanges() {
+    this.isClickedSecondInput = true;
+  }
 
+  setInputBlurredSecondInput() {
+    this.isBlurredSecondInput = true;
+  }
 
+  onTextareaInputChange() {
+    this.isClickedTextarea = true;
+  }
 
+  setInputBlurredTextarea() {
+    this.isBlurredTextarea = true;
+  }
 
+  isGerman: boolean = false;
 
-// ngOnInit(): void {
- 
-//     this.addInputEventListener();
-// }
-// addInputEventListener() {
-//   const inputField = document.getElementById('name') as HTMLInputElement;
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+    this.translate.onLangChange.subscribe((event) => {
+      this.isGerman = event.lang === 'de';
+    });
+  }
 
-//   if (inputField) {
-//     inputField.addEventListener('input', () => {
-//       this.checkInputLength();
-//     });
-//   }
-// }
-
-
-//   checkInputLength() {
-//     const inputField = document.getElementById('name') as HTMLInputElement;
-//     const errorImg = document.getElementById('error');
-//     const successImg = document.getElementById('success');
-
-//     if (inputField && errorImg && successImg) {
-//       const inputValue = inputField.value.trim();
-
-//       if (inputValue.length < 2) {
-//         errorImg.classList.add('error');
-//         inputField.classList.remove('success');
-//         inputField.style.borderColor = 'red';
-//       } else {
-//         errorImg.classList.remove('error');
-//         successImg.classList.add('error');
-//         inputField.classList.remove('error');
-//         inputField.style.borderColor = 'green';
-//       }
-
-//       // Manuelle Ausführung des Change Detection
-//       this.cdr.detectChanges();
-//     }
-//   }
-// }
-  
-//  checkInputLength() {
-//   let inputField = document.getElementById('name') as HTMLInputElement;
-//   let errorImg = document.getElementById('error')as HTMLInputElement;
-//   let successImg = document.getElementById('success')as HTMLInputElement;
-
-
-//   // Überprüfe, ob das Inputfeld existiert
-//   if (inputField) {
-//     let inputValue = inputField.value.trim(); // Den Wert des Inputfelds ohne Leerzeichen am Anfang und Ende erhalten
-
-//     // Überprüfe die Länge des Eingabewerts
-//     if (inputValue.length < 2) {
-//       errorImg.classList.add('error');
-//       inputField.classList.remove('success'); // Entferne die Klasse 'success'
-      
-//       inputField.style.borderColor = 'red'; // Ändere den Border auf Rot
-//     } else {
-//       errorImg.classList.remove('error');
-//       successImg.classList.add('error');
-
-//       inputField.classList.remove('error'); // Entferne die Klasse 'error'
-    
-//       inputField.style.borderColor = 'green'; // Ändere den Border auf Grün
-      
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-
- 
-
-
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
+}
 
