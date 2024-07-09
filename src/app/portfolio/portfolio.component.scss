@@ -4,8 +4,7 @@
     margin: 0;
     position: relative;
     overflow: hidden;
-    padding-left: 100px;
-    padding-right: 100px;
+  ;
 }
 
 .decorate-img {
@@ -29,6 +28,7 @@
 .portfolio {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     padding-bottom: 32px;
 }
 
@@ -41,7 +41,7 @@ h1 {
 }
 
 .short-line {
-    margin-top: 58px;
+   
     background-color: #4441E5;
     height: 4px;
     width: 5%;
@@ -51,7 +51,6 @@ h1 {
     background-color: #4441E5;
     height: 4px;
     width: 30%;
-    margin-top: 58px;
 }
 
 .description {
@@ -72,7 +71,7 @@ h1 {
     flex-direction: row;
     padding-top: 20px;
     padding-bottom: 80px;
-    padding-left: 100px;
+    
 }
 
 .development-section.reverse {
@@ -110,8 +109,8 @@ h1 {
 }
 
 .product-img {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
 
     padding-top: 30px;
 
@@ -125,7 +124,7 @@ h1 {
     display: flex;
     flex-direction: column;
     color: white;
-    margin-top: 70px;
+    margin-top: 80px;
     z-index: 10;
 }
 
@@ -181,12 +180,16 @@ h3 {
 
 
 
-@media screen and (max-width:1290px) {
+@media screen and (max-width:1300px) {
     .development-section.reverse {
         .product-img {
             padding-right: 0;
-            padding-left: 100px;
         }
+    }
+
+    .product-img{
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .development-section:nth-of-type(2) {
@@ -195,10 +198,20 @@ h3 {
         }
     }
 
+    .btn-section{
+        gap: 60px;
+    }
+
     .development-section.reverse {
         .info-container {
             padding-left: 20px;
         }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    h1{
+        font-size: 80px;
     }
 }
 
@@ -231,14 +244,8 @@ h3 {
         padding-top: 0;
     }
 
-    .long-line {
-        margin-top: 68px;
-    }
-
-    .short-line {
-        margin-top: 68px;
-    }
-
+   
+   
     .description {
         padding-bottom: 0;
         padding-right: 100px;
@@ -301,21 +308,12 @@ h3 {
         font-size: 74px;
     }
 
-    .long-line {
-        width: 25%;
-        margin-top: 58px;
-    }
-
-    .short-line {
-        margin-top: 58px;
-
-    }
+    
 }
 
 @media screen and (max-width:700px) {
     .long-line {
         width: 20%;
-        margin-top: 50px;
     }
 
     .decorate-img {
@@ -333,10 +331,7 @@ h3 {
         padding-right: 50px;
     }
 
-    .short-line {
-        margin-top: 50px;
-
-    }
+   
 
     h1 {
         padding-right: 16px;
@@ -355,16 +350,10 @@ h3 {
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
-    .long-line {
-        margin-top: 32px;
-    }
-
-    .short-line {
-        margin-top: 32px;
-    }
+   
 }
 
 
@@ -373,8 +362,13 @@ h3 {
         font-size: 18px;
     }
 
+  
     .btn-section {
         gap: 35px;
+    }
+
+    .long-line{
+        width: 13%;
     }
 
     .development-section.reverse {

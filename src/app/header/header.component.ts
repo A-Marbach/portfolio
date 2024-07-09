@@ -11,6 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
   ngOnInit(): void {
 
   }
@@ -18,17 +19,22 @@ export class HeaderComponent implements OnInit {
   menuContent(event: Event) {
     event.preventDefault(); // Verhindert das Standardverhalten des Links
     document.getElementById('mobile-content')?.classList.remove('display-none');
-
+    document.getElementById('btn-hover')?.classList.add('display-none');
 
   }
 
   closeContent() {
     document.getElementById('mobile-content')?.classList.add('display-none');
+    document.getElementById('btn-hover')?.classList.remove('display-none');
+
   }
 
-  constructor(private translate: TranslateService) { }
+  constructor(private translate: TranslateService) { 
+    this.translate.setDefaultLang(this.currentLanguage);
+  }
 
   switchLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 }

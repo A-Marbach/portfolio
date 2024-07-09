@@ -1,4 +1,3 @@
-
 nav {
     position: -webkit-sticky;
     position: sticky;
@@ -12,63 +11,112 @@ nav {
     opacity: 1;
 
 
-    >a{
+    >a {
         text-decoration: none;
     }
 }
 
-.close-img{
+.link-section button {
+    background-color: #141D2F;
+    /* Standard Hintergrundfarbe */
+    border: 1px solid #1CDAE6;
+    /* Standard Rahmenfarbe */
+    height: 32px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: background-color 0.3s;
+}
+
+.link-section.button:hover {
+    background-color: #252f43;
+}
+
+.link-section button.selected {
+    background-color: #141D2F;
+    /* Standard Hintergrundfarbe */
+    opacity: 1;
+    /* Transparenter Hintergrund für den ausgewählten Button */
+}
+
+.mobile-btn {
+    padding-top: 24px;
+}
+
+
+.mobile-btn button {
+    background-color: #141D2F;
+    /* Standard Hintergrundfarbe */
+    border: 1px solid #1CDAE6;
+    /* Standard Rahmenfarbe */
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: background-color 0.3s;
+}
+
+.mobile-btn button.selected {
+    background-color: #141D2F;
+    /* Standard Hintergrundfarbe */
+    opacity: 1;
+    /* Transparenter Hintergrund für den ausgewählten Button */
+}
+
+.close-img {
     position: absolute;
-    right: 32px;
+    right: 25px;
     top: 32px;
+
     cursor: pointer;
 }
 
-.menu-mobile{
+.menu-mobile {
+    opacity: 0.9;
     position: fixed;
     top: 0;
     left: 0;
-   width: 100%;
+    width: 100%;
     height: 100vh;
     background-color: rgb(42, 40, 40);
     text-decoration: none;
 
 }
 
-.menu-content{
+.menu-content {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    
 
-    >img{
+
+    >img {
         padding-top: 15px;
-        width: 40px;
-        height: 40px;
+        width: 32px;
+        height: 32px;
     }
 
-    >a{
+    >a {
         color: lightgray;
         text-decoration: none;
         padding-top: 24px;
         font-size: 24px;
     }
-    
 
-    >a:hover{
-        border-bottom: 2px solid  #1CDAE6;
+
+    >a:hover {
+        border-bottom: 2px solid #1CDAE6;
     }
 }
 
-.display-none{
-    display:none;
+.display-none {
+    display: none;
 }
 
 .menu {
-    
+
     justify-content: end;
     position: relative;
 
@@ -77,39 +125,51 @@ nav {
 }
 
 .btn-img-hover {
-    opacity: 0; /* Anfangs unsichtbar */
-    transition: opacity 0.3s ease; /* Übergangseffekt */
-    
-    right: 0; /* Links ausrichten */
-    z-index: 1; /* Z-Index über dem ersten Bild */
+    opacity: 0;
+    /* Anfangs unsichtbar */
+    transition: opacity 0.3s ease;
+    /* Übergangseffekt */
+
+    right: 0;
+    /* Links ausrichten */
+    z-index: 1;
+    /* Z-Index über dem ersten Bild */
     cursor: pointer;
     padding-top: 32px;
-   padding-right: 25px;
+    padding-right: 25px;
 }
 
 .menu:hover .btn-img-hover {
-    opacity: 1; /* Bild einblenden beim Hover */
+    opacity: 1;
+    /* Bild einblenden beim Hover */
 }
+
 .menu .btn-img-hover {
     opacity: 0;
-    display: none; /* Anfangs unsichtbar */
-    position: absolute; /* Positionierung des Bildes */
-    top: 0; /* Oben ausrichten */
-    right: 0; /* Rechts ausrichten */
+    display: none;
+    /* Anfangs unsichtbar */
+    position: absolute;
+    /* Positionierung des Bildes */
+    top: 0;
+    /* Oben ausrichten */
+    right: 0;
+    /* Rechts ausrichten */
     cursor: pointer;
 }
 
 .menu:hover .btn-img-hover {
-    display: block; /* Bild einblenden beim Hover */
+    display: block;
+    /* Bild einblenden beim Hover */
 }
 
 .menu:hover .btn-img {
-    opacity: 0; /* Erstes Bild ausblenden beim Hover */
+    opacity: 0;
+    /* Erstes Bild ausblenden beim Hover */
 }
 
 
 
-.colored-letter{
+.colored-letter {
     padding-left: 0;
     padding-right: 0;
     color: #1CDAE6;
@@ -125,10 +185,12 @@ nav {
 
 
 .link-section {
+    display: flex;
+    align-items: center;
     padding-right: 100px;
     padding-top: 32px;
     font-size: 32px;
-   
+
     a {
         padding-right: 24px;
         color: white;
@@ -140,17 +202,21 @@ nav {
     }
 }
 
-@media screen and (max-width:850px){
-    .link-section{
+.link-section.deutsch {
+    font-size: 26px;
+}
+
+@media screen and (max-width:950px) {
+    .link-section {
         display: none;
     }
 
-    .menu{
+    .menu {
         display: block;
         padding-right: 25px;
     }
 
-    .name{
+    .name {
         padding-left: 25px;
     }
 }

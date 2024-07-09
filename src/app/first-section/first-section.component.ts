@@ -16,6 +16,7 @@ export class FirstSectionComponent {
   linkIn = 'https://linkedin.com/in/a-marbach-21b964307';
   gitHub = 'https://github.com/A-Marbach';
   isGerman: boolean = false;
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en');
@@ -26,6 +27,7 @@ export class FirstSectionComponent {
   }
 
   switchLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 

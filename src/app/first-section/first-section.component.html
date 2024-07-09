@@ -26,16 +26,13 @@
 
     </div>
 
-    <div class="right-section">
+    <div [class.deutsch]="currentLanguage === 'de'" class="right-section">
        
             <span  class="vertikal" [ngClass]="{'deutsch': isGerman}">{{ 'I am' | translate }}</span>
-            <div class="column">
+            <div  class="column">
                 <span class="name"> <b>Artur Marbach</b> <br></span>
                 <span class="front-end-developer">Frontend {{ 'Developer' | translate }}</span>
-                <a href="#contact"><button  class="btn">{{ 'BUTTON.LETS_TALK' | translate }}</button></a>
-                
-        
-       
+                <a  href="#contact"><button [class.deutsch]="currentLanguage === 'de'"    class="button">{{ 'BUTTON.LETS_TALK' | translate }}</button></a>
         </div>
     </div>
     <img class="background" src="assets/background.png" alt="">

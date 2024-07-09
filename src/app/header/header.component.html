@@ -1,29 +1,32 @@
 <nav>
-<a class="name" href="/"> Ar<span class="colored-letter">t</span>ur</a>
- 
-  <div class="link-section">
+  <a class="name" href="/"> Ar<span class="colored-letter">t</span>ur</a>
+
+  <div [class.deutsch]="currentLanguage === 'de'" class="link-section">
     <a href="#about-me">{{ 'About me' | translate }}</a>
     <a href="#skills">{{ 'Skills' | translate }}</a>
     <a href="#portfolio">Portfolio</a>
-    <button (click)="switchLanguage('en')">En</button>
-  <button (click)="switchLanguage('de')">De</button>
+    <button (click)="switchLanguage('en')" [class.selected]="currentLanguage === 'en'">En</button>
+    <button (click)="switchLanguage('de')" [class.selected]="currentLanguage === 'de'">De</button>
   </div>
   <div class="menu display-none">
-    <button (click)="switchLanguage('en')">En</button>
-    <button (click)="switchLanguage('de')">De</button>
-    <a href="#" (click)="menuContent($event)">
-        <img class="btn-img" src="assets/menu.png" alt="">
-        <img id="btn-hover" class="btn-img-hover" src="assets/menu-hover.png" alt="">
-    </a>
-</div>
-<div id="mobile-content" class="menu-mobile display-none">
-  <div class="menu-content ">
-  <img (click)="closeContent()" class="close-img" src="assets/close.png" alt="">
-    <a (click)="closeContent()" href="#about-me">{{ 'About me' | translate }}</a>
-    <a (click)="closeContent()" href="#skills">{{ 'Skills' | translate }}</a>
-    <a (click)="closeContent()" href="#portfolio">Portfolio</a>
-    <a (click)="closeContent()" href="#contact">{{ 'Contact' | translate }}</a>
-  </div>
-</div>
-</nav>
 
+    <a href="#" (click)="menuContent($event)">
+      <img class="btn-img" src="assets/menu.png" alt="">
+      <img id="btn-hover" class="btn-img-hover" src="assets/menu-hover.png" alt="">
+    </a>
+  </div>
+  <div id="mobile-content" class="menu-mobile display-none">
+    <div class="menu-content ">
+      <img (click)="closeContent()" id="btn-hover" class="close-img" src="assets/menu-hover.png" alt="">
+      <a (click)="closeContent()" href="#about-me">{{ 'About me' | translate }}</a>
+      <a (click)="closeContent()" href="#skills">{{ 'Skills' | translate }}</a>
+      <a (click)="closeContent()" href="#portfolio">Portfolio</a>
+      <a (click)="closeContent()" href="#contact">{{ 'Contact' | translate }}</a>
+      <div class="mobile-btn">
+        <button (click)="switchLanguage('en')" [class.selected]="currentLanguage === 'en'">En</button>
+        <button (click)="switchLanguage('de')" [class.selected]="currentLanguage === 'de'">De</button>
+      </div>
+
+    </div>
+  </div>
+</nav>

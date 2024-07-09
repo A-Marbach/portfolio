@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateConfigModule } from './translate-config.module';
 import { TranslateService } from '@ngx-translate/core';
+import { InprintComponent } from './inprint/inprint.component';
 
 
 
@@ -30,6 +31,7 @@ import { TranslateService } from '@ngx-translate/core';
    ContactComponent,
    PortfolioComponent,
    FooterComponent,
+   InprintComponent
    
   ],
   templateUrl: './app.component.html',
@@ -37,6 +39,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
   constructor(private translate: TranslateService) {
     // Set default language
@@ -44,6 +47,7 @@ export class AppComponent {
   }
 
   switchLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 }

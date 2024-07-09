@@ -79,16 +79,10 @@ h1{
     right: -300px;
 }
 
-@media screen and (max-width: 1600px){
-    .background-shadow{
-        right: -400px;
+@media screen and (max-width: 1250px) {
+    h1{
+        font-size: 80px;
     }
-
-    .profile-circle-container{
-        padding-top: 85px;
-    }
-
-   
 }
 
 @media screen and (max-width:1200px){
@@ -118,7 +112,7 @@ h1{
 
 @media screen and (max-width: 700px){
     h1{
-        font-size: 60px;
+        font-size: 64px;
     }
 
     .info{
@@ -126,10 +120,12 @@ h1{
     }
 }
 
-@media screen and (max-width: 570px){
-    h1{
-        font-size: 50px;
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 40px;
     }
 
-   
+    .about-me-section{
+        padding-top: 120px;
+    }
 }

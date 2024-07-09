@@ -16,65 +16,76 @@
                 <span><b>{{ "Contact me!" | translate}}</b></span>
             </div>
         </div>
-        <div  class="form-content">
+        <div class="form-content">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="relative">
                     <input minlength="3" [(ngModel)]="contactData.name" #name="ngModel" type="text" id="name"
-                           name="name" placeholder="{{'Your name' | translate }}" required (input)="onInputChange()" (blur)="setInputBlurred()"
-                           [class.error-border]="isBlurred && name?.value?.length < 3"
-                           [class.success-border]="isBlurred && name?.value?.length >= 3">
+                        name="name" placeholder="{{'Your name' | translate }}" required (input)="onInputChange()"
+                        (blur)="setInputBlurred()" [class.error-border]="isBlurred && name?.value?.length < 3"
+                        [class.success-border]="isBlurred && name?.value?.length >= 3">
                     <img class="error-img" src="assets/red.png" alt="Error Image"
-                         [hidden]="!isBlurred || name?.value?.length >= 3">
+                        [hidden]="!isBlurred || name?.value?.length >= 3">
                     <img class="success-img" src="assets/green.png" alt="Success Image"
-                         [hidden]="!isBlurred || name?.value?.length < 3">
-                    <span class="error-text" *ngIf="!name?.valid && name.touched">{{"Please enter a name" | translate}}</span>
-                  </div>
-                  
-                  <div class="relative">
-                    <input [(ngModel)]="contactData.email" #email="ngModel" type="email" id="email"
-                           name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="{{'Your email' | translate }}" required (input)="onInputChanges()" (blur)="setInputBlurredSecondInput()"
-                           [class.error-border]="isBlurredSecondInput && !email.valid"
-                           [class.success-border]="isBlurredSecondInput && email.valid">
+                        [hidden]="!isBlurred || name?.value?.length < 3">
+                    <span class="error-text" *ngIf="!name?.valid && name.touched">{{"Please enter a name" |
+                        translate}}</span>
+                </div>
+
+                <div class="relative">
+                    <input [(ngModel)]="contactData.email" #email="ngModel" type="email" id="email" name="email"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        placeholder="{{'Your email' | translate }}" required (input)="onInputChanges()"
+                        (blur)="setInputBlurredSecondInput()"
+                        [class.error-border]="isBlurredSecondInput && !email.valid"
+                        [class.success-border]="isBlurredSecondInput && email.valid">
                     <img class="error-img" src="assets/red.png" alt="Error Image"
-                         [hidden]="!isBlurredSecondInput || email.valid">
+                        [hidden]="!isBlurredSecondInput || email.valid">
                     <img class="success-img" src="assets/green.png" alt="Success Image"
-                         [hidden]="!isBlurredSecondInput || !email.valid">
-                    <span class="error-text" *ngIf="!email.valid && email.touched">{{"Please enter a valid email" | translate}}</span>
-                  </div>
-                  
-                  <div class="relative">
+                        [hidden]="!isBlurredSecondInput || !email.valid">
+                    <span class="error-text" *ngIf="!email.valid && email.touched">{{"Please enter a valid email" |
+                        translate}}</span>
+                </div>
+
+                <div class="relative">
                     <textarea minlength="20" [(ngModel)]="contactData.message" #message="ngModel" id="message"
-                              name="message" placeholder="{{'Your message' | translate }}" required (input)="onTextareaInputChange()" (blur)="setInputBlurredTextarea()"
-                              [class.error-border]="isBlurredTextarea && message?.value?.length < 20"
-                              [class.success-border]="isBlurredTextarea && message?.value?.length >= 20"></textarea>
+                        name="message" placeholder="{{'Your message' | translate }}" required
+                        (input)="onTextareaInputChange()" (blur)="setInputBlurredTextarea()"
+                        [class.error-border]="isBlurredTextarea && message?.value?.length < 20"
+                        [class.success-border]="isBlurredTextarea && message?.value?.length >= 20"></textarea>
                     <img class="error-img" src="assets/red.png" alt="Error Image"
-                         [hidden]="!isBlurredTextarea || message?.value?.length >= 20">
+                        [hidden]="!isBlurredTextarea || message?.value?.length >= 20">
                     <img class="success-img" src="assets/green.png" alt="Success Image"
-                         [hidden]="!isBlurredTextarea || message?.value?.length < 20">
-                    <span class="error-text" *ngIf="!message?.valid && message.touched">{{"Please enter a message (20 letter min)" | translate }}</span>
-                  </div>
+                        [hidden]="!isBlurredTextarea || message?.value?.length < 20">
+                    <span class="error-text" *ngIf="!message?.valid && message.touched">{{"Please enter a message (20
+                        letter min)" | translate }}</span>
+                </div>
 
 
                 <div class="information-data">
-                    <input type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox" name="checkbox" required>
-                    <label for="myCheckbox"></label>
-                    <span>{{"I've read the" | translate }} <a class="privacy-policy" href="">{{"privacy policy" | translate }}</a> {{ 'and agree to the processing of my data as outlined' | translate }}</span>
+                    <div  class="checkbox">
+                        <input type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox" name="checkbox" required>
+                        <label for="myCheckbox"></label>
+                        <span>{{"I've read the" | translate }} <a class="privacy-policy" href="">{{"privacy policy" |
+                                translate }}</a> {{ 'and agree to the processing of my data as outlined' | translate
+                            }}</span>
+                    </div>
+
                     <div class="send-message-btn">
                         <button id="button" [disabled]="!contactForm.valid"
-                            [ngClass]="{'enabled': contactForm.valid, 'disabled': !contactForm.valid}">{{"Send message :)" |translate }}</button>
+                            [ngClass]="{'enabled': contactForm.valid, 'disabled': !contactForm.valid}">{{"Send message:)" |translate }}</button>
                     </div>
                 </div>
-                
+
             </form>
             <div class="go-up-btn">
                 <a href="#first-section">
-                <img class="btn-img" src="assets/zeiger-weiss.png" alt="">
-                <img class="btn-img-hover" src="assets/zeiger-türkis.png" alt="">
-            </a>
+                    <img class="btn-img" src="assets/zeiger-weiss.png" alt="">
+                    <img class="btn-img-hover" src="assets/zeiger-türkis.png" alt="">
+                </a>
             </div>
-            
+
         </div>
     </div>
-    
+
     <div class="bottom-line"></div>
 </div>
