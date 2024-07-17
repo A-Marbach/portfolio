@@ -23,6 +23,10 @@ h1 {
     font-size: 88px;
 }
 
+h1.deutsch{
+    font-size: 60px;
+}
+
 
 
 
@@ -160,13 +164,19 @@ a{
     .mobile-btn{
         display: none;
     }
+
+  
 }
 
 @media screen and (max-width: 1200px) {
     .my-skills-section {
         flex-direction: column-reverse;
         justify-content: center;
-        padding-top: 50px;
+        padding-top: 100px;
+    }
+
+    h1.deutsch{
+        font-size: 80px;
     }
 
     .hide-mobile{
@@ -192,6 +202,10 @@ a{
     .flex {
         justify-content: end;
     }
+
+    .mobile-btn{
+        display: none;
+    }
 }
 
 
@@ -203,6 +217,7 @@ a{
         padding-left: 5px;
     }
 
+
     .skills-container {
         padding-right: 25px;
         justify-content: center;
@@ -213,17 +228,23 @@ a{
     h1{
         font-size: 64px;
     }
+
+    h1.deutsch{
+        font-size: 64px;
+    }
 }
 @media screen and (max-width: 550px) {
     .skills-container {
         font-size: 18px;
-
-
     }
 }
 
 @media screen and (max-width: 500px) {
     h1 {
+        font-size: 40px;
+    }
+
+    h1.deutsch{
         font-size: 40px;
     }
 }

@@ -1,9 +1,10 @@
 <footer>
+    <div class="bottom-line"></div>
     <div class="content">
         <div>
             <a href=""><h2>Ar<span class="colored-letter">t</span>ur</h2></a>
             
-            <a class="inprint" href="#">Impressum</a>
+            <a class="inprint" href="inprint">Impressum</a>
         </div>
         <div class="flex">
             <img src="assets/c.png" alt="">
@@ -22,9 +23,10 @@
             </a>
         </div>
 
-        <a (click)="inprint($event)" class="mobile-section" href="">Impressum</a>
+        <a href="" routerLink="/inprint" (click)="inprint($event)" class="mobile-section">Inprint</a>
+      
     </div>
 
-
+    
 
 </footer>

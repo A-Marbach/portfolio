@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-first-section',
@@ -12,7 +13,11 @@ import { CommonModule } from '@angular/common';
 })
 
 
-export class FirstSectionComponent {
+export class FirstSectionComponent implements OnInit {
+  ngOnInit() {
+    AOS.init();
+  }
+  
   linkIn = 'https://linkedin.com/in/a-marbach-21b964307';
   gitHub = 'https://github.com/A-Marbach';
   isGerman: boolean = false;

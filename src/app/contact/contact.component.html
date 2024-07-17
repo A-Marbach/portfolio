@@ -1,7 +1,7 @@
-<div id="contact" class="contact-section">
+<div  id="contact" class="contact-section">
     <div class="flex">
         <div class="decorate-line"></div>
-        <h1>{{"Contact" | translate}}</h1>
+        <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">{{"Contact" | translate}}</h1>
     </div>
 
     <div class="content">
@@ -65,7 +65,7 @@
                     <div  class="checkbox">
                         <input type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox" name="checkbox" required>
                         <label for="myCheckbox"></label>
-                        <span>{{"I've read the" | translate }} <a class="privacy-policy" href="">{{"privacy policy" |
+                        <span>{{"I've read the" | translate }} <a routerLink="/agb" (click)="agb($event)" class="privacy-policy" href="">{{"privacy policy" |
                                 translate }}</a> {{ 'and agree to the processing of my data as outlined' | translate
                             }}</span>
                     </div>
@@ -79,7 +79,7 @@
             </form>
             <div class="go-up-btn">
                 <a href="#first-section">
-                    <img class="btn-img" src="assets/zeiger-weiss.png" alt="">
+                    <img  src="assets/zeiger-weiss.png" alt="">
                     <img class="btn-img-hover" src="assets/zeiger-türkis.png" alt="">
                 </a>
             </div>
@@ -87,5 +87,5 @@
         </div>
     </div>
 
-    <div class="bottom-line"></div>
+    
 </div>

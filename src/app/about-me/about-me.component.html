@@ -1,8 +1,9 @@
 <div id="about-me" class="about-me-section">
     <img class="background-shadow" src="assets/purple-shadow.png" alt="">
-    <div class="left-section">
+    <div data-aos="fade-right" class="left-section">
         <div>
-            <h1>{{"About me" | translate}}</h1>
+            <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">{{"About me" | translate}}</h1>
+
             <span>{{"homepage.intro" | translate}}</span>
             <div>
                 <div class="">
@@ -22,7 +23,7 @@
 
     </div>
 
-    <div class="right-section">
+    <div data-aos="fade-left" class="right-section">
         <div class="profile-circle-container">
             <div class="profile-circle">
                 <img class="img" src="assets/profile-circle.png" alt="">

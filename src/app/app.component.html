@@ -1,14 +1,21 @@
+<!-- app.component.html -->
+<div  class="container">
+  <div>
+    <!-- Router Outlet für Inprint und AGB -->
+    <div *ngIf="isInprintOrAgbPage(); else normalContent">
+      <app-header></app-header>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer> <!-- Footer am Ende der Inprint- und AGB-Seiten -->
+    </div>
 
-<div class="container">
-
-  
-    <app-first-section></app-first-section>
-    <app-about-me></app-about-me>
-    <app-my-skills></app-my-skills>
-    <app-portfolio></app-portfolio>
-    <app-contact></app-contact>
-    <app-footer></app-footer>
-    <app-inprint></app-inprint>
-    <router-outlet></router-outlet>
-  
+    <ng-template #normalContent>
+      <app-header ></app-header>
+      <app-first-section></app-first-section>
+      <app-about-me ></app-about-me>
+      <app-my-skills></app-my-skills>
+      <app-portfolio></app-portfolio>
+      <app-contact></app-contact>
+      <app-footer></app-footer>
+    </ng-template>
   </div>
+</div>

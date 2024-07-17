@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,7 +12,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
+  ngOnInit() {
+    AOS.init({
+      duration: 1000, // Standarddauer für alle Animationen in Millisekunden
+    });
+  }
   developments = [
     {
       'title': 'Join',
@@ -43,6 +49,7 @@ export class PortfolioComponent {
     window.open(url);
   }
   isGerman: boolean = false;
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en');
@@ -53,6 +60,7 @@ export class PortfolioComponent {
   }
 
   switchLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 }

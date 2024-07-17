@@ -14,6 +14,14 @@ export class FooterComponent {
 
   constructor(private router: Router) {} // Initialisierung des Routers
 
+
+  inprint(event: Event) {
+    event.preventDefault(); // Verhindert die Standardaktion des Links
+    this.router.navigate(['/inprint']).then(() => {
+      window.scrollTo(0, 0); // Scrollt die Seite nach oben
+    });
+  }
+
   goToUrl(url: string) {
     if (url === 'l') {
       window.open(this.linkIn, '_blank'); // `_blank` öffnet die URL in einem neuen Tab
@@ -22,8 +30,4 @@ export class FooterComponent {
     }
   }
 
-  inprint(event: Event) {
-    event.preventDefault(); // Verhindert das Standardverhalten des Links
-    this.router.navigateByUrl('/impressum');
-  }
 }

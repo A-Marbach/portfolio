@@ -6,7 +6,7 @@
         </a>
 
     </div>
-    <div class="left-content">
+    <div data-aos="fade-right" class="left-content">
         <div class="skills-container" *ngFor="let image of images; let i = index">
             <img class="skill-image" src="{{ image }}">
             <span class="title-skills">{{ title[i]}}</span>
@@ -15,10 +15,10 @@
         
     </div>
    
-    <div class="right-content">
-        <div class="flex">
+    <div data-aos="fade-left" class="right-content">
+        <div  class="flex">
            
-            <H1>{{"My Skills" | translate}}</H1>
+            <H1 [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}" >{{"My Skills" | translate}}</H1>
             <div class="line"></div>
         </div>
        

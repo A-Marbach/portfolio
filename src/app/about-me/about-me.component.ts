@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
+  ngOnInit() {
+    AOS.init();
+  }
   isGerman: boolean = false;
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en');
@@ -20,6 +27,7 @@ export class AboutMeComponent {
   }
 
   switchLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 

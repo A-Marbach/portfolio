@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-my-skills',
@@ -12,7 +13,11 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 
-export class MySkillsComponent {
+export class MySkillsComponent implements OnInit {
+  ngOnInit() {
+    AOS.init();
+  }
+  
   images = [
     'assets/javascript.png',
     'assets/typescript.png',
@@ -41,6 +46,7 @@ export class MySkillsComponent {
     'Wordpress',
   ]
   isGerman: boolean = false;
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('en');
@@ -51,6 +57,7 @@ export class MySkillsComponent {
   }
 
   switchLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 }

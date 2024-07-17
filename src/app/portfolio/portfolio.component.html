@@ -1,14 +1,14 @@
 <div id="portfolio" class="portfolio-section">
     <div class="portfolio">
         <div class="short-line"></div>
-        <h1> Portfolio</h1>
+        <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}"> Portfolio</h1>
         <div class="long-line"></div>
     </div>
 
     <span class="description">{{ "Portfolio" | translate}}</span>
 
 
-        <div class="development-section" *ngFor="let development of developments; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
+        <div data-aos="flip-left" class="development-section" *ngFor="let development of developments; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
             <div class="product-img"><img src="{{development.img}}" alt="will be added soon"></div>
             <div class="info-container">
                 <h3>{{development.title}}</h3>

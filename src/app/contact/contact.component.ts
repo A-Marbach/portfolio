@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import {  Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-contact',
@@ -97,8 +99,9 @@ export class ContactComponent {
   }
 
   isGerman: boolean = false;
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
-  constructor(private translate: TranslateService) {
+  constructor(private router: Router, private translate: TranslateService) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
     this.translate.onLangChange.subscribe((event) => {
@@ -107,7 +110,13 @@ export class ContactComponent {
   }
 
   switchLanguage(language: string) {
+    this.currentLanguage = language;
     this.translate.use(language);
+  }
+
+  agb(event: Event) {
+    event.preventDefault(); // Verhindert das Standardverhalten des Links
+    this.router.navigateByUrl('/agb');
   }
 }
 

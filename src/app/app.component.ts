@@ -12,9 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TranslateConfigModule } from './translate-config.module';
 import { TranslateService } from '@ngx-translate/core';
 import { InprintComponent } from './inprint/inprint.component';
-
-
-
+import { Router } from '@angular/router';
+import * as AOS from 'aos';
 
 
 @Component({
@@ -37,18 +36,31 @@ import { InprintComponent } from './inprint/inprint.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit() {
+    AOS.init();
+  }
   title = 'portfolio';
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
-  constructor(private translate: TranslateService) {
+
+
+  constructor( private router: Router, private translate: TranslateService) {
     // Set default language
     this.translate.setDefaultLang('en');
+  }
+
+ 
+
+  isInprintOrAgbPage(): boolean {
+    return this.router.url === '/inprint' || this.router.url === '/agb';
   }
 
   switchLanguage(language: string) {
     this.currentLanguage = language;
     this.translate.use(language);
   }
+
+ 
 }
 

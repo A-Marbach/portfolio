@@ -21,6 +21,10 @@ h1{
     padding-left: 0;
 }
 
+h1.deutsch{
+    font-size: 60px;
+}
+
 .right-section{
     width: 50%;
     padding-left: 150px;
@@ -89,6 +93,10 @@ h1{
     .profile-circle-container{
        display: none;
     }
+
+    h1.deutsch{
+        font-size: 80px;
+    }
     .right-section{
         display: none;
     }
@@ -115,6 +123,10 @@ h1{
         font-size: 64px;
     }
 
+    h1.deutsch{
+        font-size: 64px;
+    }
+
     .info{
         align-items: center;
     }
@@ -122,6 +134,9 @@ h1{
 
 @media screen and (max-width: 500px) {
     h1 {
+        font-size: 40px;
+    }
+    h1.deutsch{
         font-size: 40px;
     }
 
