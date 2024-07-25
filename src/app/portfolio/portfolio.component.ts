@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
-
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 @Component({
   selector: 'app-portfolio',
   standalone: true,
@@ -11,12 +12,16 @@ import * as AOS from 'aos';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
-export class PortfolioComponent implements OnInit {
-  ngOnInit() {
-    AOS.init({
-      duration: 1000, // Standarddauer für alle Animationen in Millisekunden
-    });
+export class PortfolioComponent implements OnInit,  AfterViewInit{
+  ngOnInit() {}
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      console.log('ngAfterViewInit: View wurde initialisiert.');
+      AOS.init(); // Initialisieren von AOS nur im Browser
+    }
   }
+      
+
   developments = [
     {
       'title': 'Join',
@@ -49,7 +54,7 @@ export class PortfolioComponent implements OnInit {
   isGerman: boolean = false;
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
-  constructor(private translate: TranslateService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private translate: TranslateService) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
     this.translate.onLangChange.subscribe((event) => {

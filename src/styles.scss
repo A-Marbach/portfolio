@@ -3,17 +3,23 @@ body {
   font-family: 'poppins';
   background-color: #141D2F;
   overflow-x: hidden;
+
 }
+
+
+
 
 html {
   scroll-behavior: smooth;
+
+
 }
 
 .container {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-
+  overflow-x: hidden;
   box-sizing: border-box;
   /* Optional, um Padding im Gesamtbreitenberechnung zu berücksichtigen */
 }
@@ -22,9 +28,9 @@ html {
   position: absolute;
   height: 445px;
   top: 500px;
-  left: -300px;
+  left: 0;
   z-index: 1;
-  width: 120vw;
+  width: 111vw;
 }
 
 .decorate-img {
@@ -41,7 +47,7 @@ html {
   height: 500px;
   width: 500px;
   top: 3000px;
-  right: -250px;
+  right: -49px;
   rotate: 35deg;
   z-index: 1;
 }
@@ -52,7 +58,7 @@ html {
   width: 500px;
   bottom: 0;
   rotate: 35deg;
-  bottom: 1000px;
+  bottom: -3500px;
   left: -200px;
   z-index: 1;
 }
@@ -62,19 +68,21 @@ html {
   width: 600px;
   position: absolute;
   top: 800px;
-  right: -200px;
+  right: -45px;
   z-index: 1;
 }
 
 .bottom-line {
   position: absolute;
   z-index: 2;
-  bottom: 300px;
-  width: 180vw;
+  bottom: -4250px;
+  width: 111vw;
   height: 4px;
-  left: -250px;
+  left: 0;
   background-color: #1CDAE6;
 }
+
+
 
 /* poppins-200 - latin */
 @font-face {
@@ -257,6 +265,10 @@ html {
     display: none;
   }
 
+  app-root {
+    display: block;
+  }
+
   .background {
     display: none;
   }
@@ -276,6 +288,7 @@ html {
   .bottom-line {
     display: none;
   }
+
 }
 
 @media screen and (max-width:600px) {

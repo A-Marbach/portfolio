@@ -3,7 +3,8 @@ import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import * as AOS from 'aos';
-
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 @Component({
   selector: 'app-first-section',
   standalone: true,
@@ -12,9 +13,15 @@ import * as AOS from 'aos';
   styleUrl: './first-section.component.scss'
 })
 
-export class FirstSectionComponent implements OnInit {
+export class FirstSectionComponent implements OnInit,  AfterViewInit {
   ngOnInit() {
-    AOS.init();
+    console.log('ngOnInit: Komponente wurde initialisiert.');
+  }
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      console.log('ngAfterViewInit: View wurde initialisiert.');
+      AOS.init(); // Initialisieren von AOS nur im Browser
+    }
   }
 
   linkIn = 'https://linkedin.com/in/a-marbach-21b964307';
@@ -22,7 +29,7 @@ export class FirstSectionComponent implements OnInit {
   isGerman: boolean = false;
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
-  constructor(private translate: TranslateService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private translate: TranslateService) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
     this.translate.onLangChange.subscribe((event) => {

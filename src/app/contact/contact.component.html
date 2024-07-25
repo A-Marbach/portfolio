@@ -9,8 +9,8 @@
         <div class="decorate-line"></div>
         <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">{{"Contact" | translate}}</h1>
     </div>
-    <div class="content">
-        <div class="contact-info">
+    <div  class="content">
+        <div data-aos="fade-right" class="contact-info">
             <h2>{{"Got a problem to solve?" | translate}}</h2>
             <div class="contact-span">
                 <span>{{ "Communication" | translate}}</span>
@@ -20,7 +20,7 @@
                 <span><b>{{ "Contact me!" | translate}}</b></span>
             </div>
         </div>
-        <div class="form-content">
+        <div data-aos="fade-left" class="form-content">
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div class="relative">
                     <input minlength="3" [(ngModel)]="contactData.name" #name="ngModel" type="text" id="name"
@@ -37,7 +37,7 @@
 
                 <div class="relative">
                     <input [(ngModel)]="contactData.email" #email="ngModel" type="email" id="email" name="email"
-                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
                         placeholder="{{'Your email' | translate }}" required (input)="onInputChanges()"
                         (blur)="setInputBlurredSecondInput()"
                         [class.error-border]="isBlurredSecondInput && !email.valid"

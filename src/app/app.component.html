@@ -1,29 +1,27 @@
-<!-- app.component.html -->
-<app-header></app-header>
-<div class="container">
 
-
-
-  <div>
-    <!-- Router Outlet für Inprint und AGB -->
-    <div *ngIf="isInprintOrAgbPage(); else normalContent">
-      <app-header></app-header>
-      <router-outlet></router-outlet>
-      <app-footer></app-footer> <!-- Footer am Ende der Inprint- und AGB-Seiten -->
+    <app-header></app-header>
+    <div class="container">
+      <div>
+        <div *ngIf="isInprintOrAgbPage(); else normalContent">
+          <app-header></app-header>
+          <router-outlet></router-outlet>
+          <app-footer></app-footer>
+        </div>
+        <ng-template #normalContent>
+        
+        
+          <app-first-section></app-first-section>
+          <app-about-me></app-about-me>
+          <app-my-skills></app-my-skills>
+          <app-portfolio></app-portfolio>
+          <app-contact></app-contact>
+          <app-footer></app-footer>
+        </ng-template>
+      </div>
     </div>
-    <ng-template #normalContent>
+    <div class="bottom-line"></div>
+      <img class="background" src="assets/background.png" alt="">
       <img class="background-shadow" src="assets/purple-shadow.png" alt="">
       <img class="decorate-img" src="assets/green_shadow.png" alt="">
       <img src="assets/vector.png" alt class="decorate-img-portfolio">
       <img src="assets/green-shadow.png" alt class="decorate-image-portfolio">
-      <img class="background" src="assets/background.png" alt="">
-      <div class="bottom-line"></div>
-      <app-first-section></app-first-section>
-      <app-about-me></app-about-me>
-      <app-my-skills></app-my-skills>
-      <app-portfolio></app-portfolio>
-      <app-contact></app-contact>
-      <app-footer></app-footer>
-    </ng-template>
-  </div>
-</div>

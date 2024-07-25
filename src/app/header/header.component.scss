@@ -5,11 +5,11 @@ nav {
     height: 15vh;
     background-color: #141D2F;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 999;
     opacity: 1;
-
+    width: 111vw;
     >a {
         text-decoration: none;
     }
@@ -149,7 +149,7 @@ nav {
 
 .name {
     color: white;
-    padding-left: 100px;
+    
     padding-top: 32px;
     font-size: 48px;
     cursor: pointer;
@@ -175,6 +175,25 @@ nav {
 
 .link-section.deutsch {
     font-size: 26px;
+}
+
+
+
+@media screen and (max-width:1700px){
+    nav{
+        width: 100vw;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width:1440px){
+    nav{
+        justify-content: space-between;
+    }
+
+    .name{
+        padding-left: 100px;
+    }
 }
 
 @media screen and (max-width:950px) {

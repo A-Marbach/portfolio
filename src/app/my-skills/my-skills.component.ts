@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
-
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 @Component({
   selector: 'app-my-skills',
   standalone: true,
@@ -11,10 +12,15 @@ import * as AOS from 'aos';
   styleUrl: './my-skills.component.scss'
 })
 
-export class MySkillsComponent implements OnInit {
-  ngOnInit() {
-    AOS.init();
+export class MySkillsComponent implements OnInit,  AfterViewInit {
+  ngOnInit() {}
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      console.log('ngAfterViewInit: View wurde initialisiert.');
+      AOS.init(); // Initialisieren von AOS nur im Browser
+    }
   }
+      
   images = [
     'assets/javascript.png',
     'assets/typescript.png',
@@ -45,7 +51,7 @@ export class MySkillsComponent implements OnInit {
   isGerman: boolean = false;
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
-  constructor(private translate: TranslateService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private translate: TranslateService) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
     this.translate.onLangChange.subscribe((event) => {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FirstSectionComponent } from './first-section/first-section.component';
@@ -15,7 +15,8 @@ import { InprintComponent } from './inprint/inprint.component';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
 import { Title } from '@angular/platform-browser';
-
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -37,9 +38,9 @@ import { Title } from '@angular/platform-browser';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit,  AfterViewInit {
 
-  constructor(private titleService: Title, private router: Router, private translate: TranslateService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private titleService: Title, private router: Router, private translate: TranslateService) {
     // Set default language
     this.translate.setDefaultLang('en');
     if (this.currentLanguage === 'en') {
@@ -48,7 +49,13 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.setTitle('Artur Marbach');
-    AOS.init();
+    console.log('ngOnInit: Komponente wurde initialisiert.');
+  }
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      console.log('ngAfterViewInit: View wurde initialisiert.');
+      AOS.init(); // Initialisieren von AOS nur im Browser
+    }
   }
   title = 'Marbach';
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
