@@ -1,10 +1,11 @@
 <footer>
-    <div class="bottom-line"></div>
+    <div class="footer-line"></div>
     <div class="content">
         <div>
-            <a href=""><h2>Ar<span class="colored-letter">t</span>ur</h2></a>
-            
-            <a class="inprint" href="inprint">Impressum</a>
+            <a href="">
+                <h2>Ar<span class="colored-letter">t</span>ur</h2>
+            </a>
+            <a routerLink="/inprint" (click)="inprint($event)" class="inprint" href="">Impressum</a>
         </div>
         <div class="flex">
             <img src="assets/c.png" alt="">
@@ -12,7 +13,6 @@
                 <span class="name">Artur Marbach 2024</span>
             </div>
         </div>
-
         <div class="link-section">
             <a routerLink="">
                 <img (click)="goToUrl('g')" src="assets/github.png" alt=""></a>
@@ -22,11 +22,6 @@
                 <img (click)="goToUrl('l')" src="assets/linkIn.png" alt="">
             </a>
         </div>
-
         <a href="" routerLink="/inprint" (click)="inprint($event)" class="mobile-section">Inprint</a>
-      
     </div>
-
-    
-
 </footer>

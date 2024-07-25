@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import {  Router } from '@angular/router';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -14,20 +13,17 @@ import {  Router } from '@angular/router';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-
   http = inject(HttpClient);
 
   contactData = {
-    name: "" ,
+    name: "",
     email: "",
     message: "",
     checkbox: false
   }
-
   mailTest = false;
-
-  isClicked: boolean = false; // Deklaration der isClicked-Variable
-  isBlurred: boolean = false; // Deklaration der isBlurred-Variable
+  isClicked: boolean = false;
+  isBlurred: boolean = false;
   isClickedSecondInput: boolean = false;
   isBlurredSecondInput: boolean = false;
   isClickedTextarea: boolean = false;
@@ -43,6 +39,17 @@ export class ContactComponent {
       },
     },
   };
+
+  showEmailPopup() {
+    const emailPopup = document.querySelector('.e-mail-popup');
+    if (emailPopup) {
+      emailPopup.classList.remove('hidden');
+      // Füge nach 3 Sekunden die Klasse 'hidden' hinzu
+      setTimeout(() => {
+        emailPopup.classList.add('hidden');
+      }, 4000);
+    }
+  }
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
@@ -62,6 +69,7 @@ export class ContactComponent {
             this.isBlurredSecondInput = false;
             this.isClickedTextarea = false;
             this.isBlurredTextarea = false;
+            this.showEmailPopup();
           },
           error: (error) => {
             console.error(error);
@@ -97,7 +105,6 @@ export class ContactComponent {
   setInputBlurredTextarea() {
     this.isBlurredTextarea = true;
   }
-
   isGerman: boolean = false;
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 

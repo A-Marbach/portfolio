@@ -2,18 +2,53 @@
     background-color: #141D2F;
     color: white !important;
     padding-top: 80px;
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+}
+
+.e-mail-popup {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    /* Übergangseffekt für die Opazität */
+    position: fixed;
+    /* Optional: Stelle sicher, dass das Popup an einer festen Position angezeigt wird */
+    top: 50%;
+    /* Optional: Platzierung am unteren Rand des Bildschirms */
+    left: 50%;
+    /* Optional: Platzierung am rechten Rand des Bildschirms */
+    background-color: rgba(0, 0, 0, 1);
+    /* Optional: Hintergrundfarbe des Popups */
+    color: white;
+    /* Optional: Textfarbe des Popups */
+    padding: 10px 20px;
+    /* Optional: Innenabstand des Popups */
+    border-radius: 5px;
+    /* Optional: Abgerundete Ecken des Popups */
+    z-index: 1000;
+    /* Optional: Stelle sicher, dass das Popup über anderen Elementen angezeigt wird */
+    transform: translate(-50%, -50%);
+    min-width: 361px;
+    border: 2px solid #4441E5;
+}
+
+.e-mail-popup.hidden {
+    opacity: 0;
+    z-index: -1;
 }
 
 .flex {
     display: flex;
     align-items: center;
+    padding-top: 50px;
 }
 
 .decorate-line {
     height: 4px;
     width: 50px;
     background-color: #4441E5;
-   
 }
 
 h1 {
@@ -21,7 +56,7 @@ h1 {
     font-size: 88px;
 }
 
-h1.deutsch{
+h1.deutsch {
     font-size: 60px;
 }
 
@@ -47,26 +82,17 @@ h1.deutsch{
 
 .btn-img-hover {
     opacity: 0;
-    /* Anfangs unsichtbar */
     transition: opacity 0.3s ease;
-    /* Übergangseffekt */
     position: absolute;
-    /* Positionierung des Bildes */
     top: 0;
-    /* Oben ausrichten */
     right: 0;
-    /* Links ausrichten */
     z-index: 1;
-    /* Z-Index über dem ersten Bild */
     cursor: pointer;
 }
 
 .go-up-btn:hover .btn-img-hover {
     opacity: 1;
-    /* Bild einblenden beim Hover */
 }
-
-
 
 .form-content {
     width: 50%;
@@ -83,20 +109,19 @@ h2 {
 .contact-span {
     font-size: 22px;
     padding-bottom: 25px;
-
 }
 
 .contact-me {
     font-size: 22px;
     padding-top: 12px;
     padding-bottom: 25px;
-
 }
 
 .checkbox {
     margin: 0;
     display: flex;
     align-items: center;
+    z-index: 100;
 
     >span {
         font-size: 11px;
@@ -104,14 +129,11 @@ h2 {
     }
 }
 
-/* Entfernt margin und padding für alle Elemente */
 * {
     margin: 0;
-
     box-sizing: border-box;
 }
 
-/* Stil für die Checkbox */
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -124,9 +146,6 @@ input[type="checkbox"] {
     border-radius: 0;
 }
 
-
-
-/* Stil für das Häkchen */
 input[type="checkbox"]:checked:before {
     content: '✓';
     color: #1CDAE6;
@@ -134,7 +153,6 @@ input[type="checkbox"]:checked:before {
     text-align: center;
     line-height: 18px;
 }
-
 
 a {
     text-decoration: none;
@@ -163,22 +181,14 @@ a {
 
 button.enabled {
     background-color: #1CDAE6 !important;
-    /* Farbe für aktivierten Button */
     cursor: pointer !important;
 }
 
 button.disabled {
     background-color: lightgray;
-    /* Farbe für deaktivierten Button */
     cursor: not-allowed;
 }
 
-
-
-
-
-
-/* Verstecke die Standard-Checkbox */
 .custom-checkbox input[type="checkbox"] {
     display: none;
 }
@@ -187,12 +197,9 @@ button.disabled {
 .custom-checkbox {
     display: inline-block;
     width: 20px;
-    /* Breite und Höhe anpassen */
     height: 20px;
     border: 2px solid #1CDAE6;
-    /* Randfarbe */
     border-radius: 4px;
-    /* Runden die Ecken */
     position: relative;
 }
 
@@ -215,14 +222,11 @@ button.disabled {
     border-top: none;
     opacity: 0;
     background-color: transparent;
-    /* Transparenter Hintergrund hinzugefügt */
 }
-
 
 /* Stil für die Checkbox, wenn sie aktiviert ist */
 .custom-checkbox input[type="checkbox"]:checked+label::after {
     opacity: 1;
-    /* Häkchen anzeigen, wenn aktiviert */
 }
 
 input:focus {
@@ -239,10 +243,6 @@ textarea:focus {
     /* Beibehaltung des ursprünglichen Hintergrunds */
 }
 
-// .input{
-//     background-color: #1CDAE6;
-// }
-
 .bottom-line {
     width: 100%;
     height: 4px;
@@ -251,7 +251,6 @@ textarea:focus {
 
 input {
     width: 100%;
-
     background-color: #141D2F;
     border-color: #4441E5;
     height: 50px;
@@ -274,7 +273,6 @@ textarea {
     background-color: #141D2F;
     color: white;
     height: 200px;
-
     border-radius: 10px;
     font-size: 18px;
     width: 100%;
@@ -285,42 +283,31 @@ textarea {
     }
 }
 
-
 form {
     gap: 32px;
     display: flex;
     flex-direction: column;
 
-
-
-
     .error-text {
         color: red;
         padding-left: 24px;
     }
-
-
 }
 
 .error-img,
 .success-img {
     position: absolute;
     right: 20px;
-    top: 30px;
-
+    top: 10px;
 }
 
 .error-border {
     border: 2px solid red !important;
-    /* Ändere die Border-Farbe auf Rot, wenn die Länge des Werts kleiner als 3 ist */
 }
 
 .success-border {
     border: 2px solid green !important;
-    /* Ändere die Border-Farbe auf Grün, wenn die Länge des Werts größer oder gleich 3 ist und das Inputfeld angeklickt wurde */
 }
-
-
 
 input::placeholder {
     color: white;
@@ -335,13 +322,13 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 1250px) {
-    h1{
+    h1 {
         font-size: 80px;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    h1.deutsch{
+    h1.deutsch {
         font-size: 80px;
     }
 }
@@ -372,7 +359,6 @@ textarea::placeholder {
 }
 
 @media screen and (max-width:850px) {
-
     h1 {
         padding-left: 0;
     }
@@ -384,7 +370,6 @@ textarea::placeholder {
     .form-content {
         padding-right: 25px;
         padding-left: 25px;
-
     }
 
     .contact-info {
@@ -392,15 +377,16 @@ textarea::placeholder {
     }
 }
 
-@media screen and (max-width: 700px){
-    h1{
+@media screen and (max-width: 700px) {
+    h1 {
         font-size: 64px;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 64px;
     }
 }
+
 @media screen and (max-width:630px) {
     h2 {
         font-size: 32px;
@@ -417,19 +403,29 @@ textarea::placeholder {
 
 
 @media screen and (max-width:500px) {
+    .e-mail-popup {
+        font-size: 14px;
+        min-width: 320px;
+    }
 
     h1 {
         font-size: 40px;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 40px;
     }
+
     h2 {
         font-size: 26px;
     }
 
-  
+    .checkboxx {
+        max-width: 15px;
+        max-height: 15px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media screen and (max-width:400px) {

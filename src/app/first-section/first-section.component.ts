@@ -12,12 +12,11 @@ import * as AOS from 'aos';
   styleUrl: './first-section.component.scss'
 })
 
-
 export class FirstSectionComponent implements OnInit {
   ngOnInit() {
     AOS.init();
   }
-  
+
   linkIn = 'https://linkedin.com/in/a-marbach-21b964307';
   gitHub = 'https://github.com/A-Marbach';
   isGerman: boolean = false;

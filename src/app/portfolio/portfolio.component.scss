@@ -4,25 +4,27 @@
     margin: 0;
     position: relative;
     overflow: hidden;
-  ;
 }
 
 .decorate-img {
     position: absolute;
     height: 500px;
     width: 500px;
-    top: 450px;
+    top: 100px;
     right: -250px;
-    rotate: (35deg);
+    transform: rotate(35deg);
+    z-index: 999;
+    overflow: hidden;
 }
 
 .decorate-image {
     position: absolute;
     height: 500px;
     width: 500px;
-    bottom: 0;
-    rotate: (35deg);
+    top: 50px;
     left: -200px;
+    transform: rotate(35deg);
+    z-index: 1;
 }
 
 .portfolio {
@@ -30,6 +32,32 @@
     justify-content: flex-end;
     align-items: center;
     padding-bottom: 32px;
+    padding-top: 50px;
+    position: relative;
+    z-index: 5;
+}
+
+.decorate-img-portfolio-1 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    top: 700px;
+    right: -250px;
+    rotate: 35deg;
+    z-index: 1;
+    display: none;
+}
+
+.decorate-image-portfolio-2 {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    bottom: 0;
+    rotate: 35deg;
+    bottom: 0;
+    left: -200px;
+    z-index: 1;
+    display: none;
 }
 
 h1 {
@@ -40,12 +68,11 @@ h1 {
     color: white;
 }
 
-h1.deutsch{
+h1.deutsch {
     font-size: 60px;
 }
 
 .short-line {
-   
     background-color: #4441E5;
     height: 4px;
     width: 5%;
@@ -63,38 +90,39 @@ h1.deutsch{
     padding-bottom: 80px;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 5;
 }
 
 .development-description {
     max-width: 500px;
     font-size: 22px;
+    z-index: 10;
 }
 
 .development-section {
+    position: relative;
     display: flex;
     flex-direction: row;
     padding-top: 20px;
     padding-bottom: 80px;
-    
+    z-index: 10;
 }
 
 .development-section.reverse {
     flex-direction: row-reverse;
-
+    z-index: 10;
     padding-left: 0;
+    position: relative;
     /* Flex-Richtung umdrehen für jedes zweite Element */
 }
-
-
-
 
 .development-section.reverse>.info-container {
     order: 1;
     /* Ändert die Reihenfolge des zweiten Elements in umgekehrten Iterationen */
     padding-right: 0;
-    
     display: flex;
-    align-items: end;
+    align-items: start;
     text-align: end;
     z-index: 9;
 }
@@ -103,19 +131,16 @@ h1.deutsch{
     padding-right: 100px;
 }
 
-
-
 .development-section.reverse>.info-container>.btn-section {
     display: flex;
     justify-content: end;
     gap: 86px;
-
 }
 
 .product-img {
     padding-left: 150px;
     padding-right: 150px;
-
+    z-index: 9;
     padding-top: 30px;
 
     >img {
@@ -161,7 +186,6 @@ h3 {
 
     &:hover {
         background-color: #1CDAE6;
-
     }
 }
 
@@ -176,13 +200,19 @@ h3 {
 
     &:hover {
         background-color: #1CDAE6;
-
     }
 }
 
 
+@media screen and (max-width: 1440px) {
+    .decorate-img-portfolio-1 {
+        display: block;
+    }
 
-
+    .decorate-image-portfolio-2 {
+        display: block;
+    }
+}
 
 @media screen and (max-width:1300px) {
     .development-section.reverse {
@@ -191,7 +221,7 @@ h3 {
         }
     }
 
-    .product-img{
+    .product-img {
         padding-left: 50px;
         padding-right: 50px;
     }
@@ -202,7 +232,7 @@ h3 {
         }
     }
 
-    .btn-section{
+    .btn-section {
         gap: 60px;
     }
 
@@ -214,19 +244,18 @@ h3 {
 }
 
 @media screen and (max-width: 1250px) {
-    h1{
+    h1 {
         font-size: 80px;
     }
 }
 
 @media screen and (max-width:1200px) {
-
     .portfolio-section {
         padding-right: 0;
         padding-left: 0;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 80px;
     }
 
@@ -235,8 +264,10 @@ h3 {
         align-items: center;
         width: 100%;
         padding-top: 0;
+
         .product-img {
             padding-left: 0;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -252,8 +283,6 @@ h3 {
         padding-top: 0;
     }
 
-   
-   
     .description {
         padding-bottom: 0;
         padding-right: 100px;
@@ -306,7 +335,6 @@ h3 {
     }
 }
 
-
 @media screen and (max-width:850px) {
     .info-container {
         padding-right: 50px;
@@ -316,11 +344,9 @@ h3 {
         font-size: 60px;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 60px;
     }
-
-    
 }
 
 @media screen and (max-width:700px) {
@@ -343,8 +369,6 @@ h3 {
         padding-right: 50px;
     }
 
-   
-
     h1 {
         padding-right: 16px;
         padding-left: 16px;
@@ -365,36 +389,29 @@ h3 {
         font-size: 40px;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 40px;
     }
-
-   
 }
-
 
 @media screen and (max-width:410px) {
     .development-description {
         font-size: 18px;
     }
 
-  
     .btn-section {
         gap: 35px;
     }
 
-    .long-line{
+    .long-line {
         width: 13%;
     }
 
     .development-section.reverse {
-
-
         >.info-container {
             >.btn-section {
                 gap: 35px;
             }
         }
-
     }
 }

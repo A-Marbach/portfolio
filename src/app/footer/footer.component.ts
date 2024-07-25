@@ -12,8 +12,7 @@ export class FooterComponent {
   linkIn = 'https://linkedin.com/in/a-marbach-21b964307';
   gitHub = 'https://github.com/A-Marbach';
 
-  constructor(private router: Router) {} // Initialisierung des Routers
-
+  constructor(private router: Router) { }
 
   inprint(event: Event) {
     event.preventDefault(); // Verhindert die Standardaktion des Links

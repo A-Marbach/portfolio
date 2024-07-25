@@ -1,25 +1,24 @@
 <div id="portfolio" class="portfolio-section">
+    <img src="assets/vector.png" alt class="decorate-img-portfolio-1">
+    <img src="assets/green-shadow.png" alt class="decorate-image-portfolio-2">
     <div class="portfolio">
         <div class="short-line"></div>
         <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}"> Portfolio</h1>
         <div class="long-line"></div>
     </div>
-
     <span class="description">{{ "Portfolio" | translate}}</span>
-
-
-        <div data-aos="flip-left" class="development-section" *ngFor="let development of developments; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
-            <div class="product-img"><img src="{{development.img}}" alt="will be added soon"></div>
-            <div class="info-container">
-                <h3>{{development.title}}</h3>
-                <span class="skills">{{development.skills}}</span>
-                <span class="development-description">{{development.description | translate }}</span>
-                <div class="btn-section">
-                    <button (click)="sendToUrl(development.url)" class="live-test">{{ "Live Test" | translate}}</button>
-                    <button (click)="sendToUrl(development.github)" class="github">Github</button>
-                </div>
+    <div data-aos="flip-left" class="development-section" *ngFor="let development of developments; let i = index"
+        [ngClass]="{'reverse': i % 2 === 1}">
+        <div class="product-img"><img src="{{development.img}}" alt="will be added soon"></div>
+        <div class="info-container">
+            <h3>{{development.title}}</h3>
+            <span class="skills">{{development.skills}}</span>
+            <span class="development-description">{{development.description | translate }}</span>
+            <div class="btn-section">
+                <button (click)="sendToUrl(development.url)" class="live-test">{{ "Live Test" | translate}}</button>
+                <button (click)="sendToUrl(development.github)" class="github">Github</button>
             </div>
         </div>
-        <img class="decorate-img" src="assets/vector.png" alt="">
-        <img class="decorate-image" src="assets/green-shadow.png" alt="">
+    </div>
+
 </div>

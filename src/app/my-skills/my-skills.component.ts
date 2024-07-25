@@ -11,13 +11,10 @@ import * as AOS from 'aos';
   styleUrl: './my-skills.component.scss'
 })
 
-
-
 export class MySkillsComponent implements OnInit {
   ngOnInit() {
     AOS.init();
   }
-  
   images = [
     'assets/javascript.png',
     'assets/typescript.png',
@@ -32,7 +29,7 @@ export class MySkillsComponent implements OnInit {
     'assets/wordpress.png'
   ]
 
-  title =[
+  title = [
     'Javascript',
     'Typescript',
     'Angular',

@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FirstSectionComponent } from './first-section/first-section.component';
@@ -14,43 +14,48 @@ import { TranslateService } from '@ngx-translate/core';
 import { InprintComponent } from './inprint/inprint.component';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule,
-   RouterOutlet,
-   HeaderComponent,
-   HttpClientModule,
-   TranslateConfigModule,
-   FirstSectionComponent,
-   AboutMeComponent,
-   MySkillsComponent,
-   ContactComponent,
-   PortfolioComponent,
-   FooterComponent,
-   InprintComponent
-   
+    RouterOutlet,
+    HeaderComponent,
+    HttpClientModule,
+    TranslateConfigModule,
+    FirstSectionComponent,
+    AboutMeComponent,
+    MySkillsComponent,
+    ContactComponent,
+    PortfolioComponent,
+    FooterComponent,
+    InprintComponent
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  ngOnInit() {
-    AOS.init();
-  }
-  title = 'portfolio';
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
-
-
-  constructor( private router: Router, private translate: TranslateService) {
+  constructor(private titleService: Title, private router: Router, private translate: TranslateService) {
     // Set default language
     this.translate.setDefaultLang('en');
+    if (this.currentLanguage === 'en') {
+    }
   }
 
- 
+  ngOnInit() {
+    this.setTitle('Artur Marbach');
+    AOS.init();
+  }
+  title = 'Marbach';
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+
+  setTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
+  }
 
   isInprintOrAgbPage(): boolean {
     return this.router.url === '/inprint' || this.router.url === '/agb';
@@ -60,7 +65,5 @@ export class AppComponent implements OnInit {
     this.currentLanguage = language;
     this.translate.use(language);
   }
-
- 
 }
 

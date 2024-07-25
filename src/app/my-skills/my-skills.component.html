@@ -1,34 +1,26 @@
 <div id="skills" class="my-skills-section">
     <div class="mobile-btn">
         <a href="#contact">
-            <button class="btn-mobile hide-mobile">{{ "Get in touch" |translate}}</button>
-
+            <button [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}"
+                class="btn-mobile hide-mobile">{{ "Get in touch" |translate}}</button>
         </a>
-
     </div>
     <div data-aos="fade-right" class="left-content">
         <div class="skills-container" *ngFor="let image of images; let i = index">
             <img class="skill-image" src="{{ image }}">
             <span class="title-skills">{{ title[i]}}</span>
-           
         </div>
-        
     </div>
-   
     <div data-aos="fade-left" class="right-content">
-        <div  class="flex">
-           
-            <H1 [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}" >{{"My Skills" | translate}}</H1>
+        <div class="flex">
+            <H1 [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}">{{"My Skills" | translate}}
+            </H1>
             <div class="line"></div>
         </div>
-       
         <span class="skills-container">{{ "Skill Development" | translate}}</span>
-            <a href="#contact">
-                <button class="btn hide-desktop">{{ "Get in touch" |translate}}</button>
-
-            </a>
+        <a href="#contact">
+            <button class="btn hide-desktop">{{ "Get in touch" |translate}}</button>
+        </a>
     </div>
-   
-    <img class="decorate-img" src="assets/green_shadow.png" alt="">
-    
+    <img class="decorate-img-section" src="assets/green_shadow.png" alt="">
 </div>

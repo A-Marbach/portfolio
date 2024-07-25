@@ -1,21 +1,22 @@
 .my-skills-section {
     background-color: #141D2F;
     color: white;
-    padding-left: 80px;
+    padding-left: 100px;
     position: relative;
     display: flex;
     padding-bottom: 100px;
     padding-top: 150px;
     overflow: hidden;
-
 }
 
-.decorate-img {
+.decorate-img-section {
     position: absolute;
     height: 500px;
     width: 500px;
-    bottom: 0;
-    left: -200px;
+    top: 450px;
+    left: -100px;
+    z-index: 1;
+    display: none;
 }
 
 h1 {
@@ -23,18 +24,14 @@ h1 {
     font-size: 88px;
 }
 
-h1.deutsch{
+h1.deutsch {
     font-size: 60px;
 }
-
-
-
 
 .left-content {
     width: 60%;
     display: flex;
     flex-wrap: wrap;
-
     z-index: 10;
     gap: 40px;
 }
@@ -42,7 +39,6 @@ h1.deutsch{
 .right-content {
     width: 40%;
 }
-
 
 .line {
     margin-bottom: 35px;
@@ -71,19 +67,18 @@ h1.deutsch{
     }
 }
 
-.mobile-btn{
+.mobile-btn {
     display: flex;
     justify-content: center;
+    z-index: 9;
 }
 
 .btn-mobile {
-   
     color: white;
     text-align: center;
-   margin-top: 50px;
+    margin-top: 50px;
     z-index: 10;
     border: none;
-   
     font-size: 30px;
     border-radius: 10px;
     padding: 12px;
@@ -102,7 +97,7 @@ h1.deutsch{
     max-width: 60px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -122,7 +117,6 @@ a{
     }
 
     .skill-image {
-
         &:hover {
             animation: move 1s ease-in-out infinite;
             /* Verwenden Sie die move-Animation */
@@ -152,6 +146,13 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 1440px) {
+    .decorate-img-section {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 1250px) {
@@ -160,12 +161,10 @@ a{
     }
 }
 
-@media screen and (min-width:1200px){
-    .mobile-btn{
+@media screen and (min-width:1200px) {
+    .mobile-btn {
         display: none;
     }
-
-  
 }
 
 @media screen and (max-width: 1200px) {
@@ -175,14 +174,13 @@ a{
         padding-top: 100px;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 80px;
     }
 
-    .hide-mobile{
+    .hide-mobile {
         display: block;
     }
-
 
     .right-content {
         width: 100%;
@@ -202,21 +200,12 @@ a{
     .flex {
         justify-content: end;
     }
-
-    .mobile-btn{
-        display: none;
-    }
 }
-
-
-
-
 
 @media screen and (max-width: 850px) {
     .my-skills-section {
         padding-left: 5px;
     }
-
 
     .skills-container {
         padding-right: 25px;
@@ -224,15 +213,16 @@ a{
     }
 }
 
-@media screen and (max-width: 700px){
-    h1{
+@media screen and (max-width: 700px) {
+    h1 {
         font-size: 64px;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 64px;
     }
 }
+
 @media screen and (max-width: 550px) {
     .skills-container {
         font-size: 18px;
@@ -244,7 +234,13 @@ a{
         font-size: 40px;
     }
 
-    h1.deutsch{
+    h1.deutsch {
         font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .btn-mobile.deutsch {
+        font-size: 20px;
     }
 }

@@ -1,16 +1,20 @@
-<div  id="contact" class="contact-section">
+<div id="contact" class="contact-section">
+    <div class="popup">
+        <div id="e-mail" class="e-mail-popup hidden">
+            <span class="email-text">Vielen Dank. Ihre E-Mail wurde versand.<br> Ich werde mich bald bei Ihnen
+                melden.</span>
+        </div>
+    </div>
     <div class="flex">
         <div class="decorate-line"></div>
         <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">{{"Contact" | translate}}</h1>
     </div>
-
     <div class="content">
         <div class="contact-info">
             <h2>{{"Got a problem to solve?" | translate}}</h2>
             <div class="contact-span">
                 <span>{{ "Communication" | translate}}</span>
             </div>
-
             <div class="contact-me">
                 <span>{{"Need a Frontend developer?" | translate }} </span>
                 <span><b>{{ "Contact me!" | translate}}</b></span>
@@ -59,33 +63,29 @@
                     <span class="error-text" *ngIf="!message?.valid && message.touched">{{"Please enter a message (20
                         letter min)" | translate }}</span>
                 </div>
-
-
                 <div class="information-data">
-                    <div  class="checkbox">
-                        <input type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox" name="checkbox" required>
+                    <div class="checkbox">
+                        <input class="checkboxx" type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox"
+                            name="checkbox" required>
                         <label for="myCheckbox"></label>
-                        <span>{{"I've read the" | translate }} <a routerLink="/agb" (click)="agb($event)" class="privacy-policy" href="">{{"privacy policy" |
+                        <span>{{"I've read the" | translate }} <a routerLink="/agb" (click)="agb($event)"
+                                class="privacy-policy" href="">{{"privacy policy" |
                                 translate }}</a> {{ 'and agree to the processing of my data as outlined' | translate
                             }}</span>
                     </div>
-
                     <div class="send-message-btn">
                         <button id="button" [disabled]="!contactForm.valid"
-                            [ngClass]="{'enabled': contactForm.valid, 'disabled': !contactForm.valid}">{{"Send message:)" |translate }}</button>
+                            [ngClass]="{'enabled': contactForm.valid, 'disabled': !contactForm.valid}">{{"Send
+                            message:)" |translate }}</button>
                     </div>
                 </div>
-
             </form>
             <div class="go-up-btn">
                 <a href="#first-section">
-                    <img  src="assets/zeiger-weiss.png" alt="">
+                    <img src="assets/zeiger-weiss.png" alt="">
                     <img class="btn-img-hover" src="assets/zeiger-türkis.png" alt="">
                 </a>
             </div>
-
         </div>
     </div>
-
-    
 </div>

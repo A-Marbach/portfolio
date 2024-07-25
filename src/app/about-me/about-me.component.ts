@@ -30,5 +30,4 @@ export class AboutMeComponent implements OnInit {
     this.currentLanguage = language;
     this.translate.use(language);
   }
-
 }

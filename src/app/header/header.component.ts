@@ -13,23 +13,21 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
   ngOnInit(): void {
-
   }
 
   menuContent(event: Event) {
     event.preventDefault(); // Verhindert das Standardverhalten des Links
     document.getElementById('mobile-content')?.classList.remove('display-none');
-    document.getElementById('btn-hover')?.classList.add('display-none');
-
+    document.getElementById('header')?.classList.add('display-none');
   }
 
   closeContent() {
     document.getElementById('mobile-content')?.classList.add('display-none');
     document.getElementById('btn-hover')?.classList.remove('display-none');
-
+    document.getElementById('header')?.classList.remove('display-none');
   }
 
-  constructor(private translate: TranslateService) { 
+  constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
   }
 

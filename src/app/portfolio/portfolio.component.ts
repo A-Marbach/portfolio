@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import * as AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule ],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
@@ -43,9 +42,8 @@ export class PortfolioComponent implements OnInit {
     //   'url': '',
     //   'github': ''
     // }
-    
   ]
-  sendToUrl(url:string){
+  sendToUrl(url: string) {
     window.open(url);
   }
   isGerman: boolean = false;

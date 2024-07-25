@@ -1,5 +1,9 @@
 <!-- app.component.html -->
-<div  class="container">
+<app-header></app-header>
+<div class="container">
+
+
+
   <div>
     <!-- Router Outlet für Inprint und AGB -->
     <div *ngIf="isInprintOrAgbPage(); else normalContent">
@@ -7,11 +11,15 @@
       <router-outlet></router-outlet>
       <app-footer></app-footer> <!-- Footer am Ende der Inprint- und AGB-Seiten -->
     </div>
-
     <ng-template #normalContent>
-      <app-header ></app-header>
+      <img class="background-shadow" src="assets/purple-shadow.png" alt="">
+      <img class="decorate-img" src="assets/green_shadow.png" alt="">
+      <img src="assets/vector.png" alt class="decorate-img-portfolio">
+      <img src="assets/green-shadow.png" alt class="decorate-image-portfolio">
+      <img class="background" src="assets/background.png" alt="">
+      <div class="bottom-line"></div>
       <app-first-section></app-first-section>
-      <app-about-me ></app-about-me>
+      <app-about-me></app-about-me>
       <app-my-skills></app-my-skills>
       <app-portfolio></app-portfolio>
       <app-contact></app-contact>

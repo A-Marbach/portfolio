@@ -1,4 +1,4 @@
-.agb-content{
+.agb-content {
     margin-top: 50px;
     color: white;
     position: relative;
@@ -6,19 +6,19 @@
     padding-right: 100px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-.go-back{
+.go-back {
     position: absolute;
     right: 100px;
     transform: rotate(90deg);
     cursor: pointer;
 }
 
-.go-back-hover{
+.go-back-hover {
     position: absolute;
     right: 100px;
     transform: rotate(90deg);
@@ -28,13 +28,29 @@ a{
     cursor: pointer;
 }
 
- .go-back-hover:hover {
+.display-none {
+    display: none;
+}
+
+.display-hide {
+    display: block;
+}
+
+.go-back-hover:hover {
     opacity: 1;
 }
 
-@media screen and (max-width:950px){
-    .agb-content{
+@media screen and (max-width:950px) {
+    .agb-content {
         padding-left: 25px;
         padding-right: 25px;
+    }
+
+    .go-back {
+        right: 25px;
+    }
+
+    .go-back-hover {
+        right: 25px;
     }
 }
