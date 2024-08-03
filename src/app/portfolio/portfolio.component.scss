@@ -4,6 +4,7 @@
     margin: 0;
     position: relative;
     overflow: hidden;
+    padding-right: 100px;
 }
 
 .decorate-img {
@@ -94,6 +95,10 @@ h1.deutsch {
     z-index: 5;
 }
 
+.description.deutsch{
+    padding-left: 100px;
+}
+
 .development-description {
     max-width: 500px;
     font-size: 22px;
@@ -123,7 +128,7 @@ h1.deutsch {
     padding-right: 0;
     display: flex;
     align-items: start;
-    text-align: end;
+    text-align: start;
     z-index: 9;
 }
 
@@ -251,12 +256,12 @@ h3 {
 
 @media screen and (max-width:1200px) {
     .portfolio-section {
-        padding-right: 0;
+       
         padding-left: 0;
     }
 
     h1.deutsch {
-        font-size: 80px;
+        font-size: 56px;
     }
 
     .development-section.reverse {
@@ -335,9 +340,19 @@ h3 {
     }
 }
 
+@media (max-width: 950px){
+    .portfolio-section{
+        padding-right: 25px;
+    }
+}
+
 @media screen and (max-width:850px) {
     .info-container {
         padding-right: 50px;
+    }
+
+    .description.deutsch{
+        padding-left: 25px;
     }
 
     h1 {
@@ -365,8 +380,8 @@ h3 {
     }
 
     .description {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     h1 {

@@ -6,7 +6,7 @@
         <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}"> Portfolio</h1>
         <div class="long-line"></div>
     </div>
-    <span class="description">{{ "Portfolio" | translate}}</span>
+    <span [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}" class="description">{{ "Portfolio" | translate}}</span>
     <div data-aos="flip-left" data-aos-duration="1500" class="development-section" *ngFor="let development of developments; let i = index"
         [ngClass]="{'reverse': i % 2 === 1}">
         <div class="product-img"><img src="{{development.img}}" alt="will be added soon"></div>

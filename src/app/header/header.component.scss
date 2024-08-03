@@ -5,15 +5,25 @@ nav {
     height: 15vh;
     background-color: #141D2F;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Zentriert den Container horizontal */
     align-items: center;
     z-index: 999;
     opacity: 1;
-    width: 111vw;
-    >a {
-        text-decoration: none;
-    }
-}
+    width: 100%;
+  }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px; /* Maximale Breite des Containers */
+    
+  }
+  
+
+  nav > a {
+    text-decoration: none;
+  }
 
 .link-section button {
     background-color: #141D2F;
@@ -149,10 +159,11 @@ nav {
 
 .name {
     color: white;
-    
+   padding-left: 100px;
     padding-top: 32px;
     font-size: 48px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .link-section {
@@ -179,21 +190,14 @@ nav {
 
 
 
-@media screen and (max-width:1700px){
-    nav{
-        width: 100vw;
-        justify-content: space-around;
-    }
+@media screen and (min-width:1600px){
+   
 }
 
 @media screen and (max-width:1440px){
-    nav{
-        justify-content: space-between;
-    }
+    
 
-    .name{
-        padding-left: 100px;
-    }
+   
 }
 
 @media screen and (max-width:950px) {
@@ -210,3 +214,4 @@ nav {
         padding-left: 25px;
     }
 }
+

@@ -17,7 +17,6 @@ export class AboutMeComponent implements OnInit,  AfterViewInit {
   }
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      console.log('ngAfterViewInit: View wurde initialisiert.');
       AOS.init(); // Initialisieren von AOS nur im Browser
     }
   }

@@ -16,7 +16,6 @@ export class MySkillsComponent implements OnInit,  AfterViewInit {
   ngOnInit() {}
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      console.log('ngAfterViewInit: View wurde initialisiert.');
       AOS.init(); // Initialisieren von AOS nur im Browser
     }
   }
@@ -36,16 +35,16 @@ export class MySkillsComponent implements OnInit,  AfterViewInit {
   ]
 
   title = [
-    'Javascript',
-    'Typescript',
+    'JavaScript',
+    'TypeScript',
     'Angular',
     'HTML',
     'Firebase',
     'Git',
     'CSS',
-    'Rest-Api',
+    'Rest Api',
     'Scrum',
-    'Material-Design',
+    'Material Design',
     'Wordpress',
   ]
   isGerman: boolean = false;

@@ -21,11 +21,11 @@
 
 h1 {
     margin-top: 0;
-    font-size: 88px;
+    font-size: 78px;
 }
 
 h1.deutsch {
-    font-size: 60px;
+    font-size: 56px;
 }
 
 .left-content {
@@ -33,11 +33,14 @@ h1.deutsch {
     display: flex;
     flex-wrap: wrap;
     z-index: 10;
-    gap: 40px;
+    gap: 25px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .right-content {
     width: 40%;
+    padding-right: 100px;
 }
 
 .line {
@@ -67,6 +70,10 @@ h1.deutsch {
     }
 }
 
+.btn.deutsch{
+    margin-left: 40px;
+}
+
 .mobile-btn {
     display: flex;
     justify-content: center;
@@ -94,7 +101,6 @@ h1.deutsch {
 .title-skills {
     text-align: center;
     padding-top: 14px;
-    max-width: 60px;
 }
 
 a {
@@ -109,7 +115,8 @@ a {
     padding-bottom: 48px;
     padding: 10px;
     padding-right: 100px;
-
+    align-items: center;
+    min-width: 80px;
     >img {
         cursor: pointer;
         height: 60px;
@@ -144,7 +151,7 @@ a {
 .flex {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     padding-top: 50px;
 }
@@ -172,6 +179,7 @@ a {
         flex-direction: column-reverse;
         justify-content: center;
         padding-top: 100px;
+        padding-right: 100px;
     }
 
     h1.deutsch {
@@ -189,7 +197,7 @@ a {
     .left-content {
         width: 100%;
         padding-top: 50px;
-        gap: 40px;
+        gap: 25px;
         justify-content: center;
     }
 
@@ -199,6 +207,13 @@ a {
 
     .flex {
         justify-content: end;
+     
+    }
+}
+
+@media (max-width:950px){
+    .my-skills-section{
+        padding-right: 25px;
     }
 }
 

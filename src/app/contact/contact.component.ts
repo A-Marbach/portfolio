@@ -124,6 +124,7 @@ export class ContactComponent {
   agb(event: Event) {
     event.preventDefault(); // Verhindert das Standardverhalten des Links
     this.router.navigateByUrl('/agb');
+    
   }
 }
 

@@ -49,11 +49,9 @@ export class AppComponent implements OnInit,  AfterViewInit {
 
   ngOnInit() {
     this.setTitle('Artur Marbach');
-    console.log('ngOnInit: Komponente wurde initialisiert.');
   }
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      console.log('ngAfterViewInit: View wurde initialisiert.');
       AOS.init(); // Initialisieren von AOS nur im Browser
     }
   }

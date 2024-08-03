@@ -14,12 +14,9 @@ import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 })
 
 export class FirstSectionComponent implements OnInit,  AfterViewInit {
-  ngOnInit() {
-    console.log('ngOnInit: Komponente wurde initialisiert.');
-  }
+  ngOnInit() {}
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      console.log('ngAfterViewInit: View wurde initialisiert.');
       AOS.init(); // Initialisieren von AOS nur im Browser
     }
   }

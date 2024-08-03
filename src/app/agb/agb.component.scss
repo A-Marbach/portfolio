@@ -4,6 +4,8 @@
     position: relative;
     padding-left: 100px;
     padding-right: 100px;
+    z-index: 10;
+    padding-bottom: 150px;
 }
 
 a {
@@ -14,14 +16,14 @@ a {
 .go-back {
     position: absolute;
     right: 100px;
-    transform: rotate(90deg);
+    transform: rotate(270deg);
     cursor: pointer;
 }
 
 .go-back-hover {
     position: absolute;
     right: 100px;
-    transform: rotate(90deg);
+    transform: rotate(270deg);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -39,6 +41,7 @@ a {
 .go-back-hover:hover {
     opacity: 1;
 }
+
 
 @media screen and (max-width:950px) {
     .agb-content {

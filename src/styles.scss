@@ -6,13 +6,9 @@ body {
 
 }
 
-
-
-
 html {
   scroll-behavior: smooth;
-
-
+ 
 }
 
 .container {
@@ -26,26 +22,26 @@ html {
 
 .background {
   position: absolute;
-  height: 445px;
-  top: 500px;
+  height: 460px;
+  bottom: -111px;
   left: 0;
-  z-index: 1;
-  width: 111vw;
+  z-index: 11;
+  width: 100%;
 }
 
 .decorate-img {
   position: absolute;
-  height: 500px;
-  width: 500px;
-  top: 1850px;
+  height: 300px;
+  width: 300px;
+  top: 1050px;
   left: -100px;
   z-index: 1;
 }
 
 .decorate-img-portfolio {
   position: absolute;
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   top: 3000px;
   right: -49px;
   rotate: 35deg;
@@ -54,29 +50,38 @@ html {
 
 .decorate-image-portfolio {
   position: absolute;
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   bottom: 0;
   rotate: 35deg;
-  bottom: -3500px;
-  left: -200px;
+  bottom: -3000px;
+  left: 0px;
   z-index: 1;
 }
 
 .background-shadow {
-  height: 600px;
-  width: 600px;
+  height: 300px;
+  width: 300px;
   position: absolute;
-  top: 800px;
+  top: 1800px;
   right: -45px;
-  z-index: 1;
+  z-index: 20;
+}
+
+.background-shadow-2 {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+top: 4000px;
+  right: -45px;
+  z-index: 20;
 }
 
 .bottom-line {
   position: absolute;
   z-index: 2;
   bottom: -4250px;
-  width: 111vw;
+  width: 100%;
   height: 4px;
   left: 0;
   background-color: #1CDAE6;
@@ -260,6 +265,12 @@ html {
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+// @media (min-width: 1920px) {
+//   .background{
+//     bottom: 320px;
+//   }
+// }
+
 @media screen and (max-width:1440px) {
   .decorate-img-portfolio {
     display: none;
@@ -282,6 +293,10 @@ html {
   }
 
   .background-shadow {
+    display: none;
+  }
+
+  .background-shadow-2 {
     display: none;
   }
 

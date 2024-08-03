@@ -19,7 +19,7 @@
         </div>
         <span class="skills-container">{{ "Skill Development" | translate}}</span>
         <a href="#contact">
-            <button class="btn hide-desktop">{{ "Get in touch" |translate}}</button>
+            <button  [ngClass]="{'deutsch': isGerman}" [class.deutsch]="currentLanguage === 'de'" class="btn hide-desktop">{{ "Get in touch" |translate}}</button>
         </a>
     </div>
     <img class="decorate-img-section" src="assets/green_shadow.png" alt="">

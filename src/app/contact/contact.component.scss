@@ -5,6 +5,7 @@
     position: relative;
 }
 
+
 .popup {
     position: absolute;
 }
@@ -43,6 +44,7 @@
     display: flex;
     align-items: center;
     padding-top: 50px;
+    padding-left: 100px;
 }
 
 .decorate-line {
@@ -52,12 +54,11 @@
 }
 
 h1 {
-    padding-left: 50px;
     font-size: 88px;
 }
 
 h1.deutsch {
-    font-size: 60px;
+    font-size: 56px;
 }
 
 .content {
@@ -144,6 +145,7 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 0;
+    padding: 0;
 }
 
 input[type="checkbox"]:checked:before {
@@ -177,6 +179,7 @@ a {
     border-radius: 10px;
     background-color: lightgray;
     cursor: not-allowed;
+    border: none;
 }
 
 button.enabled {
@@ -257,7 +260,7 @@ input {
     border-radius: 10px;
     color: white;
     font-size: 18px;
-
+    padding-left: 12px;
     &:hover {
         border-color: #1CDAE6;
         cursor: pointer;
@@ -276,7 +279,8 @@ textarea {
     border-radius: 10px;
     font-size: 18px;
     width: 100%;
-
+    font-family: 'poppins';
+    padding-left: 12px;
     &:hover {
         border-color: #1CDAE6;
         cursor: pointer;
@@ -311,13 +315,13 @@ form {
 
 input::placeholder {
     color: white;
-    padding-left: 8px;
+   
     font-size: 18px;
 }
 
 textarea::placeholder {
     color: white;
-    padding-left: 8px;
+  
     font-size: 18px;
 }
 
@@ -356,6 +360,16 @@ textarea::placeholder {
         width: 100%;
         padding-left: 100px;
     }
+}
+
+@media (max-width: 950px){
+  .flex{
+    padding-left: 25px;
+  }
+
+  .decorate-line{
+    width: 75px;
+  }
 }
 
 @media screen and (max-width:850px) {

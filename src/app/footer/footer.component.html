@@ -5,7 +5,8 @@
             <a href="">
                 <h2>Ar<span class="colored-letter">t</span>ur</h2>
             </a>
-            <a routerLink="/inprint" (click)="inprint($event)" class="inprint" href="">Impressum</a>
+            <a [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}" routerLink="/inprint"
+                (click)="inprint($event)" class="inprint" href="">{{ "Inprint" | translate}}</a>
         </div>
         <div class="flex">
             <img src="assets/c.png" alt="">
@@ -16,12 +17,12 @@
         <div class="link-section">
             <a routerLink="">
                 <img (click)="goToUrl('g')" src="assets/github.png" alt=""></a>
-            <a routerLink="mailto:marbach.a@gmx.net">
+                <a [href]="'mailto:' + 'mail' + '&#64;' + 'artur-marbach.de'">
                 <img src="assets/mail.png" alt=""></a>
             <a routerLink="">
                 <img (click)="goToUrl('l')" src="assets/linkIn.png" alt="">
             </a>
         </div>
-        <a href="" routerLink="/inprint" (click)="inprint($event)" class="mobile-section">Inprint</a>
+        <a href="" routerLink="/inprint" (click)="inprint($event)" class="mobile-section">{{ "Imprint" | translate}}</a>
     </div>
 </footer>
