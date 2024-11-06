@@ -23,6 +23,14 @@ export class PortfolioComponent implements OnInit,  AfterViewInit{
 
   developments = [
     {
+      'title': 'Da-Bubble',
+      'skills': 'Angular | TypeScript | Firebase',
+      'description': 'development3.description',
+      'img': 'assets/da-bubble.png',
+      'url': 'https://da-bubble.artur-marbach.de',
+      'github': 'https://github.com/A-Marbach/daBubble'
+    },
+    {
       'title': 'Join',
       'skills': 'JavaScript | HTML | CSS',
       'description': 'development1.description',

@@ -11,7 +11,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  linkIn = 'https://linkedin.com/in/a-marbach-21b964307';
+  linkIn = 'https://linkedin.com/in/artur-marbach';
   gitHub = 'https://github.com/A-Marbach';
   isGerman: boolean = false;
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt

@@ -2,12 +2,13 @@
     "BUTTON": {
         "LETS_TALK": "Lets talk"
     },
-    "homepage.intro": "As a front-end developer with extensive experience in JavaScript and Angular, I have successfully demonstrated my technical skills and problem-solving abilities in numerous projects.",
+    "homepage.intro": "Hello, my name is Artur Marbach and i live in Hamburg. As a front-end developer with extensive experience in JavaScript and Angular, I have successfully demonstrated my technical skills and problem-solving abilities in numerous projects.",
     "Enthusiasm": "Through my analytical thinking and solid experience with modern frameworks, I find creative solutions to complex challenges and effectively bring new ideas to life.",
     "Commitment": "I have participated in several group projects, gaining valuable experience in collaborative software development.",
     "Skill Development": "My enhanced frontend skills in design and usability now enable me to develop complex web applications.",
     "Portfolio": "Explore a selection of my projects here - interact with the applications, test their features, and view the live code to see my skills in action.",
     "development1.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
+    "development3.description": "This app is a Slack clone. It simplifies team communication and collaboration with its intuitive user interface, real-time messaging, and a freely selectable variety of channels.",
     "development2.description": "A simple Jump-and-Run game based on a object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken",
     "Communication": "Contact me throug this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work."
 }

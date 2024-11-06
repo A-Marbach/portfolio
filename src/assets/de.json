@@ -5,7 +5,7 @@
   "I am": "Ich bin",
   "Developer": "Entwickler",
   "Scroll down": "Scroll runter",
-  "homepage.intro": "Als Front-End-Entwickler mit umfangreicher Erfahrung in JavaScript und Angular habe ich in zahlreichen Projekten meine technischen Fähigkeiten und meine Problemlösungskompetenz erfolgreich demonstriert.",
+  "homepage.intro": "Hallo, mein Name ist Artur Marbach und lebe in Hamburg. Als Front-End-Entwickler mit umfangreicher Erfahrung in JavaScript und Angular habe ich in zahlreichen Projekten meine technischen Fähigkeiten und meine Problemlösungskompetenz erfolgreich demonstriert.",
   "BUTTON": {
     "LETS_TALK": "Lass uns reden"
   },
@@ -16,6 +16,7 @@
   "Get in touch": "Kontaktieren Sie mich",
   "Portfolio": "Entdecken Sie hier eine Auswahl meiner Projekte – interagieren Sie mit den Anwendungen, testen Sie die Funktionen und werfen Sie einen Blick auf den Live-Code, um meine Fähigkeiten in Aktion zu erleben.",
   "development1.description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+  "development3.description": "Diese App ist ein Slack-Klon. Sie vereinfacht die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und einer frei wählbaren Auswahl an Kanälen.",
   "development2.description": "Einfaches Jump-and-Run-Spiel basierend auf objektorientierung. Hilf Pepe, Münzen und Flaschen zu finden, um gegen das Killer-Huhn zu kämpfen.",
   "Got a problem to solve?": "Gibt es ein Problem zu lösen?",
   "Communication": "Kontaktieren Sie mich über dieses Formular. Ich bin interessiert daran, von Ihnen zu hören, Ihre Ideen zu erfahren und durch meine Arbeit zu Ihren Projekten beizutragen.",

@@ -93,6 +93,7 @@ h1.deutsch {
     justify-content: center;
     position: relative;
     z-index: 5;
+    padding-left: 120px;
 }
 
 .description.deutsch{
@@ -123,6 +124,7 @@ h1.deutsch {
 }
 
 .development-section.reverse>.info-container {
+    padding-left: 120px;
     order: 1;
     /* Ändert die Reihenfolge des zweiten Elements in umgekehrten Iterationen */
     padding-right: 0;
@@ -143,7 +145,7 @@ h1.deutsch {
 }
 
 .product-img {
-    padding-left: 150px;
+    padding-left: 100px;
     padding-right: 150px;
     z-index: 9;
     padding-top: 30px;
@@ -241,11 +243,7 @@ h3 {
         gap: 60px;
     }
 
-    .development-section.reverse {
-        .info-container {
-            padding-left: 20px;
-        }
-    }
+   
 }
 
 @media screen and (max-width: 1250px) {
@@ -293,6 +291,7 @@ h3 {
         padding-right: 100px;
         padding-left: 100px;
         text-align: center;
+       
     }
 
     .product-img {
