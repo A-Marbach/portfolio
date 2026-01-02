@@ -17,6 +17,6 @@ import { HttpLoaderFactory } from './translate.module';
 })
 export class TranslateConfigModule {
   constructor(translate: TranslateService) {
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('de');
   }
 }

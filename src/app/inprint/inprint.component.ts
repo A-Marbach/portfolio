@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, PLATFORM_ID, Inject } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-inprint',
@@ -13,12 +13,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './inprint.component.scss'
 })
 export class InprintComponent {
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'de'; // Standardmäßig Englisch ausgewählt
   isGerman: boolean = false;
 
-  constructor(private router: Router, private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+  constructor(private router: Router, private translate: TranslateService, @Inject(PLATFORM_ID) private platformId: any) {
+    this.translate.setDefaultLang('de');
+    this.translate.use('de');
     this.translate.onLangChange.subscribe((event) => {
       this.isGerman = event.lang === 'de';
     });
@@ -28,19 +28,24 @@ export class InprintComponent {
     this.translate.use(language);
   }
 
-  ngOnInit() {
-    // Scrollt die Seite beim ersten Laden nach oben
-    window.scrollTo(0, 0);
+    ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
 
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0); // Scrollt die Seite nach oben
+      // Scroll beim Laden
+      window.scrollTo(0, 0);
+
+      // Scroll nach Navigation
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          window.scrollTo(0, 0);
+        }
+      });
+
+    }
+  }
+
+      showNormalContent() {
+        // Navigiert zur Hauptseite (Home), passen Sie den Pfad nach Bedarf an
+        this.router.navigate(['/']);
       }
-    });
-  }
-
-  showNormalContent() {
-    // Navigiert zur Hauptseite (Home), passen Sie den Pfad nach Bedarf an
-    this.router.navigate(['/']);
-  }
-}
+    }

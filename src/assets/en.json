@@ -2,13 +2,21 @@
     "BUTTON": {
         "LETS_TALK": "Lets talk"
     },
-    "homepage.intro": "Hello, my name is Artur Marbach and i live in Hamburg. As a front-end developer with extensive experience in JavaScript and Angular, I have successfully demonstrated my technical skills and problem-solving abilities in numerous projects.",
-    "Enthusiasm": "Through my analytical thinking and solid experience with modern frameworks, I find creative solutions to complex challenges and effectively bring new ideas to life.",
-    "Commitment": "I have participated in several group projects, gaining valuable experience in collaborative software development.",
-    "Skill Development": "My enhanced frontend skills in design and usability now enable me to develop complex web applications.",
-    "Portfolio": "Explore a selection of my projects here - interact with the applications, test their features, and view the live code to see my skills in action.",
-    "development1.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
-    "development3.description": "This app is a Slack clone. It simplifies team communication and collaboration with its intuitive user interface, real-time messaging, and a freely selectable variety of channels.",
+    "homepage.intro": "Hello, my name is Artur Marbach and I live in Hamburg. I am a DevOps/Cloud Engineer with hands-on experience in building reliable and scalable infrastructure. I enjoy tackling complex challenges and turning them into practical solutions.",
+    "Enthusiasm": "I have hands-on experience with Docker, CI/CD pipelines, YAML configurations, Linux, and multi-container deployments, and I apply these skills in my own projects to create stable and automated workflows.",
+    "Commitment": "I am currently expanding my skills in AWS, Kubernetes, Terraform, and cloud deployments to operate infrastructure that is stable, scalable, and automated. I am actively working on projects to apply these technologies in practice. I learn independently, experiment with new tools, and continuously aim to grow my knowledge to take on responsibility in future DevOps projects.",
+    "Skill Development": "My skills in automation, containerization, and CI/CD enable me to implement stable, scalable, and efficient infrastructure and deployment solutions.",
+    "Portfolio": "In my portfolio, I showcase selected DevOps and container projects that I have implemented using Docker, CI/CD pipelines, and Linux infrastructure. The source code for all projects is available on GitHub – take a look at the repositories to see how I implement stable infrastructure, automation, and deployment in practice.",
+    "development1.description": "Deployment of an API including a database on a virtual machine. The project demonstrates containerization, setting up a stable infrastructure on a dedicated VM, database integration, and the basics of automation.",
+    "development3.description": "Deployment of a containerized application on AWS using ECR (Container Registry) and ECS (Fargate) with a CI/CD pipeline. Demonstrates containerization, cloud deployment, and automated deployments, with a focus on stable infrastructure and DevOps best practices.",
     "development2.description": "A simple Jump-and-Run game based on a object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken",
-    "Communication": "Contact me throug this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work."
+    "development4.description": "Setup of a monitoring system for visualizing system metrics and logs. The project demonstrates the configuration of observability infrastructure.",
+    "development5.description": "Deployment of a multi-container application with a Django backend and Angular frontend. Demonstrates containerization and CI/CD pipelines. Focuses on stable infrastructure, automated deployments, and DevOps practices.",
+    "development6.description": "Aktuell arbeite ich daran, die bestehende API mit Terraform auf AWS zu deployen. Das Projekt dient dazu, Infrastrukturautomatisierung und Cloud-Deployments praktisch zu erlernen.",
+    "development7.description": "A lightweight, containerized setup for running a Minecraft Java Edition Server using Docker and Docker Compose.",
+    "development8.description": "A Docker Compose setup that deploys WordPress with a MySQL database — featuring persistent data storage, configurable environment variables, and easy deployment.",
+    "development9.description": "Deployment of a containerized Django e-commerce shop with PostgreSQL, secure configuration via environment variables, and management through the admin panel.",
+    "development10.description": "Penetration tests and security assessments to identify and remediate XSS, SQL injection, and other web application vulnerabilities.",
+    
+    "Communication": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work."
 }

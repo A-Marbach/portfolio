@@ -6,16 +6,21 @@
         <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}"> Portfolio</h1>
         <div class="long-line"></div>
     </div>
-    <span [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}" class="description">{{ "Portfolio" | translate}}</span>
-    <div data-aos="flip-left" data-aos-duration="1500" class="development-section" *ngFor="let development of developments; let i = index"
-        [ngClass]="{'reverse': i % 2 === 1}">
+    <span [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}" class="description">{{ "Portfolio" |
+        translate}}</span>
+    <div data-aos="flip-left" data-aos-duration="1500" class="development-section"
+        *ngFor="let development of developments; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
         <div class="product-img"><img src="{{development.img}}" alt="will be added soon"></div>
         <div class="info-container">
             <h3>{{development.title}}</h3>
-            <span class="skills">{{development.skills}}</span>
+            <div class="skills">
+                <ng-container *ngFor="let skill of development.skills">
+                    <img [src]="skill.icon" [alt]="skill.icon" class="skill-icon">
+                </ng-container>
+            </div>
             <span class="development-description">{{development.description | translate }}</span>
             <div class="btn-section">
-                <button (click)="sendToUrl(development.url)" class="live-test">{{ "Live Test" | translate}}</button>
+                <button (click)="sendToUrl(development.url)" class="live-test">{{ "Documentation" | translate}}</button>
                 <button (click)="sendToUrl(development.github)" class="github">Github</button>
             </div>
         </div>

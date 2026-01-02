@@ -30,7 +30,7 @@ export class ContactComponent {
   isBlurredTextarea: boolean = false;
 
   post = {
-    endPoint: 'https://portfolio.artur-marbach.de/sendMail.php',
+    endPoint: 'https://artur-marbach.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -52,35 +52,45 @@ export class ContactComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            ngForm.resetForm();
-            this.contactData = {
-              name: '',
-              email: '',
-              message: '',
-              checkbox: false
-            };
-            this.isClicked = false;
-            this.isBlurred = false;
-            this.isClickedSecondInput = false;
-            this.isBlurredSecondInput = false;
-            this.isClickedTextarea = false;
-            this.isBlurredTextarea = false;
-            this.showEmailPopup();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      this.contactData.email = '';
-      ngForm.resetForm();
-    }
+  if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    // HTTP POST korrekt mit JSON senden
+    this.http.post(this.post.endPoint, this.contactData, {
+      headers: { 'Content-Type': 'application/json' },
+      responseType: 'json' as const
+    }).subscribe({
+      next: (response) => {
+        // Formular zurücksetzen
+        ngForm.resetForm();
+        this.contactData = {
+          name: '',
+          email: '',
+          message: '',
+          checkbox: false
+        };
+
+        // Input-Style Variablen zurücksetzen
+        this.isClicked = false;
+        this.isBlurred = false;
+        this.isClickedSecondInput = false;
+        this.isBlurredSecondInput = false;
+        this.isClickedTextarea = false;
+        this.isBlurredTextarea = false;
+
+        // Popup anzeigen
+        this.showEmailPopup();
+      },
+      error: (error) => {
+        console.error(error);
+        alert('Fehler beim Senden. Bitte versuche es später erneut.');
+      },
+      complete: () => console.info('send post complete'),
+    });
+  } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    this.contactData.email = '';
+    ngForm.resetForm();
   }
+}
+
 
   onInputChange() {
     this.isClicked = true;

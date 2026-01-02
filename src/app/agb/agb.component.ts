@@ -1,9 +1,9 @@
-import { Component, isStandalone } from '@angular/core';
+import { Component, isStandalone, PLATFORM_ID, Inject } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-agb',
@@ -16,7 +16,7 @@ export class AgbComponent {
   currentLanguage: string = 'en';
   isGerman: boolean = false;
 
-  constructor(private router: Router, private translate: TranslateService) {
+  constructor(private router: Router, private translate: TranslateService,  @Inject(PLATFORM_ID) private platformId: any) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
     this.translate.onLangChange.subscribe((event) => {
@@ -29,16 +29,24 @@ export class AgbComponent {
   }
 
   ngOnInit() {
-    // Scrollt die Seite beim ersten Laden nach oben
-    window.scrollTo(0, 0);
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
-      }
-    });
+    if (isPlatformBrowser(this.platformId)) {
+
+      // Scroll beim Laden
+      window.scrollTo(0, 0);
+
+      // Scroll nach Navigation
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          window.scrollTo(0, 0);
+        }
+      });
+
+    }
   }
 
   showNormalContent() {
     this.router.navigate(['/']);
   }
 }
+
+

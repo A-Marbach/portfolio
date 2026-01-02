@@ -8,7 +8,9 @@
         <span class="vertikal" [ngClass]="{'deutsch': isGerman}">{{ 'I am' | translate }}</span>
         <div class="column">
             <span class="name"> <b>Artur Marbach</b> <br></span>
-            <span class="front-end-developer">Frontend {{ 'Developer' | translate }}</span>
+            <span class="front-end-developer">
+                {{ 'DevSecOps Engineer' | translate }}
+            </span>
             <a href="#contact"><button [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}"
                     class="button">{{ 'BUTTON.LETS_TALK' | translate }}</button></a>
         </div>

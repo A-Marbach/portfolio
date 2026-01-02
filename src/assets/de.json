@@ -3,24 +3,30 @@
   "Skills": "Fähigkeiten",
   "Contact": "Kontakt",
   "I am": "Ich bin",
-  "Developer": "Entwickler",
+  "DevSecOps Engineer": "DevSevOps Engineer",
   "Scroll down": "Scroll runter",
-  "homepage.intro": "Hallo, mein Name ist Artur Marbach und lebe in Hamburg. Als Front-End-Entwickler mit umfangreicher Erfahrung in JavaScript und Angular habe ich in zahlreichen Projekten meine technischen Fähigkeiten und meine Problemlösungskompetenz erfolgreich demonstriert.",
+  "homepage.intro": "Hallo, mein Name ist Artur Marbach und ich lebe in Hamburg. Ich bin DevSecOps Engineer mit Erfahrung im Aufbau stabiler und skalierbarer Infrastrukturen.",
   "BUTTON": {
     "LETS_TALK": "Lass uns reden"
   },
-  "Enthusiasm": "Durch meine analytische Denkweise und fundierte Erfahrung mit modernen Frameworks finde ich kreative Lösungen für komplexe Aufgaben und setze neue Ideen effektiv in die Tat um.",
-  "Commitment": "Ich habe an mehreren Gruppenprojekten mitgewirkt und dabei wertvolle Erfahrungen in der gemeinsamen Entwicklung von Softwareprojekten gesammelt.",
+  "Enthusiasm": "Erfahrung in Docker, CI/CD, Linux, Multi-Container-Deployments und Monitoring für stabile und automatisierte Abläufe.",
+  "Commitment": "Ich lerne kontinuierlich neue Tools und Technologien, z. B. AWS, um meine Fähigkeiten zu erweitern und Projekte effizient umzusetzen.",
   "My Skills": "Meine Skills",
-  "Skill Development": "Meine erweiterten Frontend-Fähigkeiten in Design und Nutzerfreundlichkeit ermöglichen es mir jetzt, komplexe Webanwendungen zu entwickeln.",
-  "Get in touch": "Kontaktieren Sie mich",
-  "Portfolio": "Entdecken Sie hier eine Auswahl meiner Projekte – interagieren Sie mit den Anwendungen, testen Sie die Funktionen und werfen Sie einen Blick auf den Live-Code, um meine Fähigkeiten in Aktion zu erleben.",
-  "development1.description": "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
-  "development3.description": "Diese App ist ein Slack-Klon. Sie vereinfacht die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeitnachrichten und einer frei wählbaren Auswahl an Kanälen.",
-  "development2.description": "Einfaches Jump-and-Run-Spiel basierend auf objektorientierung. Hilf Pepe, Münzen und Flaschen zu finden, um gegen das Killer-Huhn zu kämpfen.",
+  "Skill Development": "Kenntnisse in Automatisierung, Containerisierung, CI/CD, Monitoring und Cloud (AWS). Regelmäßiger Einsatz von Docker und Linux für stabile, skalierbare Projekte.",
+  "Portfolio": "In meinem Portfolio präsentiere ich ausgewählte DevOps- und Container-Projekte, die ich mit Docker, CI/CD-Pipelines und Linux-Infrastruktur umgesetzt habe. Der Quellcode aller Projekte ist auf GitHub verfügbar – werfen Sie einen Blick in die Repositories, um zu sehen, wie ich stabile Infrastruktur, Automatisierung und Deployment in der Praxis umsetze.",
+  "development1.description": "Deployment einer API inklusive Datenbank auf einer virtuellen Maschine. Projekt demonstriert Containerisierung, Setup einer stabilen Infrastruktur auf eigener VM, Datenbankintegration und Grundzüge der Automatisierung.",
+  "development3.description": "Deployment einer Container-Anwendung auf AWS über ECR (Container Registry) und ECS (Fargate) mit CI/CD-Pipeline. Zeigt Containerisierung, Cloud-Deployment und automatisierte Deployments. Fokus liegt auf stabiler Infrastruktur und DevOps-Praktiken.",
+  "development4.description": "Setup eines Monitoring-Systems zur Visualisierung von Systemmetriken und Logs. Projekt zeigt die Einrichtung von Observability-Infrastruktur.",
+  "development5.description": "Deployment einer Multi-Container-Anwendung mit Backend (Django) und Frontend (Angular). Zeigt Containerisierung und CI/CD-Pipelines. Fokus liegt auf stabiler Infrastruktur, automatisierten Deployments und DevOps-Praktiken.",
+  "development6.description": "Aktuell arbeite ich daran, die bestehende API mit Terraform auf AWS zu deployen. Das Projekt dient dazu, Infrastrukturautomatisierung und Cloud-Deployments praktisch zu erlernen.",
+  "development7.description": "Ein leichtgewichtiges, containerisiertes Setup zum Ausführen eines Minecraft-Java-Edition-Servers mit Docker und Docker Compose.",
+  "development8.description": "Ein Docker-Compose-Setup, das WordPress mit einer MySQL-Datenbank bereitstellt – mit persistenten Daten, konfigurierbaren Umgebungsvariablen und einfachem Deployment.",
+  "development9.description": "Deployment eines containerisierten Django-E-Commerce-Shops mit PostgreSQL, sicherer Konfiguration via Umgebungsvariablen und Verwaltung über das Admin-Panel.",
+  "development10.description": "Penetrationstests und Sicherheitsprüfungen zur Identifizierung und Behebung von XSS-, SQL-Injection- und weiteren Web-Anwendungsschwachstellen.",
+  "Documentation": "Dokumentation",
   "Got a problem to solve?": "Gibt es ein Problem zu lösen?",
   "Communication": "Kontaktieren Sie mich über dieses Formular. Ich bin interessiert daran, von Ihnen zu hören, Ihre Ideen zu erfahren und durch meine Arbeit zu Ihren Projekten beizutragen.",
-  "Need a Frontend developer?": "Brauchen Sie einen Frontend-Entwickler?",
+  "Need a Frontend developer?": "Brauchen Sie einen DevOps/Cloud Engineer?",
   "Contact me!": "Kontaktiere mich!",
   "Please enter a name": "Bitte Namen eingeben",
   "Please enter a valid email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
@@ -33,10 +39,4 @@
   "Your email": "Deine Email",
   "Your message": "Deine Nachricht",
   "Inprint": "Impressum"
-
-
- 
-
-
-
 }

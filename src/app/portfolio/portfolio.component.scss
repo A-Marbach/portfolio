@@ -53,9 +53,9 @@
     position: absolute;
     height: 300px;
     width: 300px;
-    bottom:0;
+    bottom: 0;
     rotate: 35deg;
-   
+
     left: -50px;
     z-index: 1;
     display: none;
@@ -96,7 +96,7 @@ h1.deutsch {
     padding-left: 120px;
 }
 
-.description.deutsch{
+.description.deutsch {
     padding-left: 100px;
 }
 
@@ -153,6 +153,7 @@ h1.deutsch {
     >img {
         height: 500px;
         width: 500px;
+        object-fit: contain;
     }
 }
 
@@ -171,9 +172,23 @@ h3 {
 }
 
 .skills {
-    font-size: 24px;
-    color: #1CDAE6 !important;
-    padding-bottom: 8px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.skill-icon {
+    width: auto;
+    height: 40px;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out; // Smooth animation
+    cursor: pointer; // optional: zeigt an, dass es interaktiv ist
+}
+
+.skill-icon:hover {
+    transform: scale(1.2); // Vergrößerung beim Hover
 }
 
 .btn-section {
@@ -243,7 +258,7 @@ h3 {
         gap: 60px;
     }
 
-   
+
 }
 
 @media screen and (max-width: 1250px) {
@@ -254,7 +269,7 @@ h3 {
 
 @media screen and (max-width:1200px) {
     .portfolio-section {
-       
+
         padding-left: 0;
     }
 
@@ -291,7 +306,7 @@ h3 {
         padding-right: 100px;
         padding-left: 100px;
         text-align: center;
-       
+
     }
 
     .product-img {
@@ -339,18 +354,16 @@ h3 {
     }
 }
 
-@media (max-width: 950px){
-    .portfolio-section{
+@media (max-width: 950px) {
+    .portfolio-section {
         padding-right: 25px;
     }
 }
 
 @media screen and (max-width:850px) {
-    .info-container {
-        padding-right: 50px;
-    }
 
-    .description.deutsch{
+
+    .description.deutsch {
         padding-left: 25px;
     }
 

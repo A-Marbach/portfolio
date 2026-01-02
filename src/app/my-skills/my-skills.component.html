@@ -1,4 +1,4 @@
-<div id="skills" class="my-skills-section">
+<!-- <div id="skills" class="my-skills-section">
     <div class="mobile-btn">
         <a href="#contact">
             <button [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}"
@@ -8,7 +8,6 @@
     <div data-aos="fade-right" class="left-content">
         <div class="skills-container" *ngFor="let image of images; let i = index">
             <img class="skill-image" src="{{ image }}">
-            <span class="title-skills">{{ title[i]}}</span>
         </div>
     </div>
     <div data-aos="fade-left" class="right-content">
@@ -23,4 +22,29 @@
         </a>
     </div>
     <img class="decorate-img-section" src="assets/green_shadow.png" alt="">
+</div> -->
+
+
+<div class="my-skills">
+  <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">
+    {{ "My Skills" | translate }}
+  </h1>
+
+  <div class="skills-grid">
+    <div class="skill-card" *ngFor="let skill of skills">
+      <div class="card-inner">
+        <div class="card-front">
+          <img [src]="skill.img" [alt]="skill.title" />
+        </div>
+        <div class="card-back">
+          <div class="hoverTextContent">
+            <h3>{{ skill.title }}</h3>
+            <ul>
+              <li *ngFor="let line of skill.description">{{ line }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

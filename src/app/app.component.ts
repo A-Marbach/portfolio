@@ -40,23 +40,25 @@ import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
 })
 export class AppComponent implements OnInit,  AfterViewInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private titleService: Title, private router: Router, private translate: TranslateService) {
-    // Set default language
-    this.translate.setDefaultLang('en');
-    if (this.currentLanguage === 'en') {
-    }
-  }
-
+constructor(
+  @Inject(PLATFORM_ID) private platformId: Object,
+  private titleService: Title,
+  private router: Router,
+  private translate: TranslateService
+) {
+  // Fallback-Sprache setzen
+  this.translate.setDefaultLang('de'); 
+}
   ngOnInit() {
-    this.setTitle('Artur Marbach');
-  }
+  this.setTitle('Artur Marbach');
+}
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init(); // Initialisieren von AOS nur im Browser
     }
   }
   title = 'Marbach';
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'de'; 
 
   setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
