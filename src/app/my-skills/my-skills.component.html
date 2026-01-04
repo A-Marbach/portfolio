@@ -27,20 +27,20 @@
 
 <div class="my-skills">
   <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">
-    {{ "My Skills" | translate }}
+    {{ "MY_SKILLS_TITLE" | translate }}
   </h1>
 
   <div class="skills-grid">
     <div class="skill-card" *ngFor="let skill of skills">
       <div class="card-inner">
         <div class="card-front">
-          <img [src]="skill.img" [alt]="skill.title" />
+          <img [src]="skill.img" [alt]="skill.titleKey | translate" />
         </div>
         <div class="card-back">
           <div class="hoverTextContent">
-            <h3>{{ skill.title }}</h3>
+            <h3>{{ skill.titleKey | translate }}</h3>
             <ul>
-              <li *ngFor="let line of skill.description">{{ line }}</li>
+              <li *ngFor="let line of skill.descriptionKeys">{{ line | translate }}</li>
             </ul>
           </div>
         </div>
@@ -48,3 +48,4 @@
     </div>
   </div>
 </div>
+

@@ -38,5 +38,51 @@
   "Your name": "Dein Name",
   "Your email": "Deine Email",
   "Your message": "Deine Nachricht",
-  "Inprint": "Impressum"
+  "Inprint": "Impressum",
+   "MY_SKILLS_TITLE": "Meine Skills",
+
+  "DOCKER_TITLE": "Docker",
+  "DOCKER_DESC1": "Containerisierung von Anwendungen",
+  "DOCKER_DESC2": "Erstellung von Dockerfiles",
+  "DOCKER_DESC3": "Image-Management & Registry",
+
+  "CICD_TITLE": "CI/CD",
+  "CICD_DESC1": "Automatisierte Build-Pipelines",
+  "CICD_DESC2": "Test- und Deployment-Prozesse",
+  "CICD_DESC3": "Integration mit GitHub/GitLab",
+
+  "SHELL_TITLE": "Shell Scripting",
+  "SHELL_DESC1": "Automatisierte Systemaufgaben",
+  "SHELL_DESC2": "Batch- und Cron-Jobs erstellen",
+  "SHELL_DESC3": "Systemadministration optimieren",
+
+  "YAML_TITLE": "YAML",
+  "YAML_DESC1": "Konfiguration von Services",
+  "YAML_DESC2": "CI/CD Pipelines definieren",
+  "YAML_DESC3": "Deployment-Templates erstellen",
+
+  "SECURITY_TITLE": "IT-Security",
+  "SECURITY_DESC1": "Sicherheitsüberprüfungen durchführen",
+  "SECURITY_DESC2": "Penetration Tests planen",
+  "SECURITY_DESC3": "Best Practices & Compliance",
+
+  "PYTHON_TITLE": "Python",
+  "PYTHON_DESC1": "Automatisierung von Abläufen",
+  "PYTHON_DESC2": "Skripting für DevOps-Prozesse",
+  "PYTHON_DESC3": "Datenanalyse und Tools",
+
+  "HTML_TITLE": "HTML",
+  "HTML_DESC1": "Erstellung semantischer Webseiten",
+  "HTML_DESC2": "Strukturierung von Inhalten",
+  "HTML_DESC3": "Barrierefreie Layouts",
+
+  "DOCUSAURUS_TITLE": "Docusaurus",
+  "DOCUSAURUS_DESC1": "Dokumentations-Websites erstellen",
+  "DOCUSAURUS_DESC2": "Markdown-Inhalte integrieren",
+  "DOCUSAURUS_DESC3": "Theming und Anpassungen",
+
+  "CSS_TITLE": "CSS",
+  "CSS_DESC1": "Design responsiver Layouts",
+  "CSS_DESC2": "Flexbox & Grid Anwendungen",
+  "CSS_DESC3": "Animations- und Styling-Effekte"
 }

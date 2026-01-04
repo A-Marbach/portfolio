@@ -2,9 +2,9 @@
     "BUTTON": {
         "LETS_TALK": "Lets talk"
     },
-    "homepage.intro": "Hello, my name is Artur Marbach and I live in Hamburg. I am a DevOps/Cloud Engineer with hands-on experience in building reliable and scalable infrastructure. I enjoy tackling complex challenges and turning them into practical solutions.",
-    "Enthusiasm": "I have hands-on experience with Docker, CI/CD pipelines, YAML configurations, Linux, and multi-container deployments, and I apply these skills in my own projects to create stable and automated workflows.",
-    "Commitment": "I am currently expanding my skills in AWS, Kubernetes, Terraform, and cloud deployments to operate infrastructure that is stable, scalable, and automated. I am actively working on projects to apply these technologies in practice. I learn independently, experiment with new tools, and continuously aim to grow my knowledge to take on responsibility in future DevOps projects.",
+    "homepage.intro": "Hello, my name is Artur Marbach, and I live in Hamburg. I am a DevSecOps Engineer with experience in building stable and scalable infrastructures.",
+    "Enthusiasm": "Experience with Docker, CI/CD, Linux, multi-container deployments, and monitoring for stable and automated operations.",
+    "Commitment": "I continuously learn new tools and technologies, such as AWS, to expand my skills and execute projects efficiently.",
     "Skill Development": "My skills in automation, containerization, and CI/CD enable me to implement stable, scalable, and efficient infrastructure and deployment solutions.",
     "Portfolio": "In my portfolio, I showcase selected DevOps and container projects that I have implemented using Docker, CI/CD pipelines, and Linux infrastructure. The source code for all projects is available on GitHub – take a look at the repositories to see how I implement stable infrastructure, automation, and deployment in practice.",
     "development1.description": "Deployment of an API including a database on a virtual machine. The project demonstrates containerization, setting up a stable infrastructure on a dedicated VM, database integration, and the basics of automation.",
@@ -18,5 +18,52 @@
     "development9.description": "Deployment of a containerized Django e-commerce shop with PostgreSQL, secure configuration via environment variables, and management through the admin panel.",
     "development10.description": "Penetration tests and security assessments to identify and remediate XSS, SQL injection, and other web application vulnerabilities.",
     
-    "Communication": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work."
+    "Communication": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "MY_SKILLS_TITLE": "My Skills",
+
+  "DOCKER_TITLE": "Docker",
+  "DOCKER_DESC1": "Containerization of applications",
+  "DOCKER_DESC2": "Writing Dockerfiles",
+  "DOCKER_DESC3": "Image management & registry",
+
+  "CICD_TITLE": "CI/CD",
+  "CICD_DESC1": "Automated build pipelines",
+  "CICD_DESC2": "Test and deployment processes",
+  "CICD_DESC3": "Integration with GitHub/GitLab",
+
+  "SHELL_TITLE": "Shell Scripting",
+  "SHELL_DESC1": "Automating system tasks",
+  "SHELL_DESC2": "Creating batch and cron jobs",
+  "SHELL_DESC3": "Optimizing system administration",
+
+  "YAML_TITLE": "YAML",
+  "YAML_DESC1": "Service configuration",
+  "YAML_DESC2": "Define CI/CD pipelines",
+  "YAML_DESC3": "Create deployment templates",
+
+  "SECURITY_TITLE": "IT Security",
+  "SECURITY_DESC1": "Perform security audits",
+  "SECURITY_DESC2": "Plan penetration tests",
+  "SECURITY_DESC3": "Best practices & compliance",
+
+  "PYTHON_TITLE": "Python",
+  "PYTHON_DESC1": "Automating workflows",
+  "PYTHON_DESC2": "Scripting for DevOps processes",
+  "PYTHON_DESC3": "Data analysis and tools",
+
+  "HTML_TITLE": "HTML",
+  "HTML_DESC1": "Creating semantic web pages",
+  "HTML_DESC2": "Structuring content",
+  "HTML_DESC3": "Accessible layouts",
+
+  "DOCUSAURUS_TITLE": "Docusaurus",
+  "DOCUSAURUS_DESC1": "Build documentation websites",
+  "DOCUSAURUS_DESC2": "Integrate Markdown content",
+  "DOCUSAURUS_DESC3": "Theming and customization",
+
+  "CSS_TITLE": "CSS",
+  "CSS_DESC1": "Design responsive layouts",
+  "CSS_DESC2": "Flexbox & Grid usage",
+  "CSS_DESC3": "Animation and styling effects"
+    
 }

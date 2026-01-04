@@ -9,14 +9,20 @@ import { HttpLoaderFactory } from './translate.module';
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+        deps: [HttpClient],
+      },
+    }),
   ],
-  exports: [TranslateModule]
+  exports: [TranslateModule],
 })
 export class TranslateConfigModule {
-  constructor(translate: TranslateService) {
-    translate.setDefaultLang('de');
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('de'); // Fallback-Sprache
+
+    // Sprache nach einer kurzen Verzögerung setzen, um sicherzustellen,
+    // dass der Loader vollständig initialisiert ist
+    setTimeout(() => {
+      this.translate.use('de');
+    }, 0);
   }
 }
