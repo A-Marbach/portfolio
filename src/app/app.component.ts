@@ -46,8 +46,19 @@ constructor(
   private router: Router,
   private translate: TranslateService
 ) {
-  // Fallback-Sprache setzen
-  this.translate.setDefaultLang('de'); 
+  this.translate.setDefaultLang('de');
+
+  // Sprache aus Browser oder LocalStorage
+ if (isPlatformBrowser(this.platformId)) {
+  let browserLang = this.translate.getBrowserLang() || 'de'; 
+  browserLang = browserLang.toLowerCase(); 
+
+
+  const langToUse = browserLang.startsWith('de') ? 'de' : 'en';
+  
+  this.translate.use(langToUse);
+  this.currentLanguage = langToUse;
+}
 }
   ngOnInit() {
   this.setTitle('Artur Marbach');

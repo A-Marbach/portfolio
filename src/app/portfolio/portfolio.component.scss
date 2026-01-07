@@ -298,8 +298,11 @@ h3 {
 
 @media screen and (max-width:1200px) {
     .portfolio-section {
-
         padding-left: 0;
+    }
+
+    .skills{
+        justify-content: center;
     }
 
     h1.deutsch {
@@ -391,6 +394,9 @@ h3 {
 
 @media screen and (max-width:850px) {
 
+    .info-container{
+        padding-left: 100px;
+    }
 
     .description.deutsch {
         padding-left: 25px;
@@ -409,6 +415,8 @@ h3 {
     .long-line {
         width: 20%;
     }
+
+ 
 
     .decorate-img {
         right: -167px;

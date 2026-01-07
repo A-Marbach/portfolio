@@ -5,8 +5,8 @@
       <a href="#about-me">{{ 'About me' | translate }}</a>
       <a href="#skills">{{ 'Skills' | translate }}</a>
       <a href="#portfolio">Portfolio</a>
-      <button (click)="switchLanguage('en')" [class.selected]="currentLanguage === 'en'">En</button>
-      <button (click)="switchLanguage('de')" [class.selected]="currentLanguage === 'de'">De</button>
+      <!-- <button (click)="switchLanguage('en')" [class.selected]="currentLanguage === 'en'">En</button>
+      <button (click)="switchLanguage('de')" [class.selected]="currentLanguage === 'de'">De</button> -->
     </div>
   </div>
   <div class="menu display-none">
@@ -22,10 +22,10 @@
       <a (click)="closeContent()" href="#skills">{{ 'Skills' | translate }}</a>
       <a (click)="closeContent()" href="#portfolio">Portfolio</a>
       <a (click)="closeContent()" href="#contact">{{ 'Contact' | translate }}</a>
-      <div class="mobile-btn">
+      <!-- <div class="mobile-btn">
         <button (click)="switchLanguage('en')" [class.selected]="currentLanguage === 'en'">En</button>
         <button (click)="switchLanguage('de')" [class.selected]="currentLanguage === 'de'">De</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </nav> 
