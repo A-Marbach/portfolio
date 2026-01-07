@@ -25,16 +25,17 @@
 </div> -->
 
 
-<div class="my-skills">
+<div id="skills" class="my-skills">
   <h1 [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">
     {{ "MY_SKILLS_TITLE" | translate }}
   </h1>
 
-  <div class="skills-grid">
+  <!-- Desktop Grid -->
+  <div class="skills-grid" *ngIf="!isMobile">
     <div class="skill-card" *ngFor="let skill of skills">
       <div class="card-inner">
         <div class="card-front">
-          <img [src]="skill.img" [alt]="skill.titleKey | translate" />
+          <img [src]="skill.img" [alt]="skill.titleKey | translate">
         </div>
         <div class="card-back">
           <div class="hoverTextContent">
@@ -47,5 +48,30 @@
       </div>
     </div>
   </div>
-</div>
 
+  <!-- Mobile: 3 Skills pro Gruppe -->
+<div class="mobile-skill-content" *ngIf="isMobile">
+  <!-- EIN Wrapper für alle 3 Skills -->
+  <div class="skill-card-mobile-group">
+    <!-- Hier iterieren wir über die 3 Skills -->
+    <div class="skill-card-mobile" *ngFor="let skill of skillGroups[currentPage]">
+      <div class="skill-mobile-inner">
+        <img [src]="skill.img" [alt]="skill.titleKey | translate" />
+        <div class="skill-description-right">
+          <ul>
+            <li *ngFor="let line of skill.descriptionKeys">{{ line | translate }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination unter der Box -->
+  <div class="pagination-dots">
+    <img *ngFor="let _ of skillGroups; let idx = index"
+         [src]="'assets/' + (currentPage === idx ? 'active-point.png' : 'inactive-point.png')"
+         alt="page-dot"
+         class="pagination-image"
+         (click)="goToPage(idx)" />
+  </div>
+</div>
