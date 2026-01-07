@@ -84,28 +84,28 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
         { icon: 'assets/yaml-icon.png' },
       ]
     },
-    {
-      'title': 'Wordpress',
-      'description': 'development8.description',
-      'img': 'assets/wordpress.png',
-      'url': 'https://github.com/A-Marbach/wordpress/blob/main/readme.md',
-      'github': 'https://github.com/A-Marbach/wordpress',
-      'skills': [
-        { icon: 'assets/shell.png' },
-        { icon: 'assets/container.png' },
-      ]
-    },
-    {
-      'title': 'Baby-Tools-Shop',
-      'description': 'development9.description',
-      'img': 'assets/Baby_Tools.png',
-      'url': 'https://github.com/A-Marbach/baby-tools-shop/blob/main/README.md',
-      'github': 'https://github.com/A-Marbach/baby-tools-shop',
-      'skills': [
-        { icon: 'assets/shell.png' },
-        { icon: 'assets/container.png' },
-      ]
-    },
+    // {
+    //   'title': 'Wordpress',
+    //   'description': 'development8.description',
+    //   'img': 'assets/wordpress.png',
+    //   'url': 'https://github.com/A-Marbach/wordpress/blob/main/readme.md',
+    //   'github': 'https://github.com/A-Marbach/wordpress',
+    //   'skills': [
+    //     { icon: 'assets/shell.png' },
+    //     { icon: 'assets/container.png' },
+    //   ]
+    // },
+    // {
+    //   'title': 'Baby-Tools-Shop',
+    //   'description': 'development9.description',
+    //   'img': 'assets/Baby_Tools.png',
+    //   'url': 'https://github.com/A-Marbach/baby-tools-shop/blob/main/README.md',
+    //   'github': 'https://github.com/A-Marbach/baby-tools-shop',
+    //   'skills': [
+    //     { icon: 'assets/shell.png' },
+    //     { icon: 'assets/container.png' },
+    //   ]
+    // },
 
     // {
     //   'title': 'Truck-Signs API – Terraform / AWS Deployment',

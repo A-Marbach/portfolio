@@ -10,7 +10,7 @@
         translate}}</span>
     <div data-aos="flip-left" data-aos-duration="1500" class="development-section"
         *ngFor="let development of developments; let i = index" [ngClass]="{'reverse': i % 2 === 1}">
-        <div class="product-img"><img src="{{development.img}}" alt="will be added soon"></div>
+        <div class="product-img"><img src="{{development.img}}" alt="{{development.title}}"></div>
         <div class="info-container">
             <h3>{{development.title}}</h3>
             <div class="skills">
@@ -25,5 +25,12 @@
             </div>
         </div>
     </div>
+    <div class="more-projects">
+        <a href="https://github.com/A-Marbach" target="_blank" rel="noopener" class="more-projects-link"
+            [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}">
 
+            <img src="assets/Frame.png" alt="Pfeil zu GitHub" class="arrow-img">
+            <span>Weitere Projekte ansehen</span>
+        </a>
+    </div>
 </div>

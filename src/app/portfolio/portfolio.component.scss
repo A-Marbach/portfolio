@@ -49,6 +49,35 @@
     display: none;
 }
 
+.more-projects {
+    display: flex;
+    justify-content: center;
+}
+
+.more-projects-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.arrow-img {
+    width: 28px;
+    transition: transform 0.3s ease;
+}
+
+.more-projects-link:hover {
+    opacity: 0.85;
+    text-decoration: underline;
+}
+
+.more-projects-link:hover .arrow-img {
+    transform: translateX(6px);
+}
 .decorate-image-portfolio-2 {
     position: absolute;
     height: 300px;
@@ -111,7 +140,7 @@ h1.deutsch {
     display: flex;
     flex-direction: row;
     padding-top: 20px;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
     z-index: 10;
 }
 
