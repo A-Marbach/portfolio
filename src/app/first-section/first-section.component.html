@@ -1,37 +1,63 @@
 <div id="first-section" class="content">
-    <img class="background-section" src="assets/background.png" alt="">
-    <div data-aos="fade-up" class="left-content">
-        <img class="my-profile" src="assets/my_photo.png">
-        <img class="behind_the_picture" src="assets/behind_the_picture.png">
+
+  <img class="background-section" src="assets/background.png" alt="">
+
+  <div data-aos="fade-up" class="left-content">
+    <img class="my-profile" src="assets/my_photo.png">
+    <img class="behind_the_picture" src="assets/behind_the_picture.png">
+  </div>
+
+  <div data-aos="fade-down" class="right-content">
+
+    <span class="vertikal">
+      {{ 'I am' | translate }}
+    </span>
+
+    <div class="column">
+      <span class="name">
+        <b>Artur Marbach</b><br>
+      </span>
+
+      <span class="front-end-developer">
+        Frontend {{ 'Developer' | translate }}
+      </span>
+
+      <a href="#contact">
+        <button class="button">
+          {{ 'BUTTON.LETS_TALK' | translate }}
+        </button>
+      </a>
     </div>
-    <div data-aos="fade-down" class="right-content">
-        <span class="vertikal" [ngClass]="{'deutsch': isGerman}">{{ 'I am' | translate }}</span>
-        <div class="column">
-            <span class="name"> <b>Artur Marbach</b> <br></span>
-            <span class="front-end-developer">Frontend {{ 'Developer' | translate }}</span>
-            <a href="#contact"><button [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}"
-                    class="button">{{ 'BUTTON.LETS_TALK' | translate }}</button></a>
-        </div>
+
+  </div>
+
+  <div class="scroll-down-vertikal box">
+    <span>{{ "Scroll down" | translate }}</span>
+    <img class="up" src="assets/up.png" alt="">
+  </div>
+
+  <div class="contact">
+    <div class="line"></div>
+
+    <div class="logo">
+      <a (click)="goToUrl('g')">
+        <img src="assets/github.png" alt="">
+      </a>
+
+      <a href="#contact">
+        <img src="assets/mail.png" alt="">
+      </a>
+
+      <a (click)="goToUrl('l')">
+        <img src="assets/linkIn.png" alt="">
+      </a>
     </div>
-    <div class="scroll-down-vertikal box">
-        <span>{{"Scroll down" | translate}}</span>
-        <img class="up" src="assets/up.png" alt="">
-    </div>
-    <div class="contact">
-        <div class="line"></div>
-        <div class="logo">
-            <a routerLink="">
-                <img (click)="goToUrl('g')" src="assets/github.png" alt="">
-            </a>
-            <a href="#contact">
-                <img src="assets/mail.png" alt="">
-            </a>
-            <a routerLink="">
-                <img (click)="goToUrl('l')" src="assets/linkIn.png" alt="">
-            </a>
-        </div>
-        <span class="e-mail">
-            <a [href]="'mailto:' + 'mail' + '&#64;' + 'artur-marbach.de'">mail&#64;artur-marbach.de</a>
-        </span>
-    </div>
+
+    <span class="e-mail">
+      <a [href]="'mailto:mail@artur-marbach.de'">
+        mail&#64;artur-marbach.de
+      </a>
+    </span>
+  </div>
+
 </div>

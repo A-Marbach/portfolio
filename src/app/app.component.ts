@@ -32,7 +32,7 @@ import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
     ContactComponent,
     PortfolioComponent,
     FooterComponent,
-    InprintComponent
+    
 
   ],
   templateUrl: './app.component.html',
@@ -42,8 +42,8 @@ export class AppComponent implements OnInit,  AfterViewInit {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,private titleService: Title, private router: Router, private translate: TranslateService) {
     // Set default language
-    this.translate.setDefaultLang('en');
-    if (this.currentLanguage === 'en') {
+    this.translate.setDefaultLang('de');
+    if (this.currentLanguage === 'de') {
     }
   }
 
@@ -56,7 +56,7 @@ export class AppComponent implements OnInit,  AfterViewInit {
     }
   }
   title = 'Marbach';
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'de'; // Standardmäßig Englisch ausgewählt
 
   setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);

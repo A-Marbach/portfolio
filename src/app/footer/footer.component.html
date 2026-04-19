@@ -1,28 +1,40 @@
 <footer>
-    <div class="footer-line"></div>
-    <div class="content">
-        <div>
-            <a href="">
-                <h2>Ar<span class="colored-letter">t</span>ur</h2>
-            </a>
-            <a [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}" routerLink="/inprint"
-                (click)="inprint($event)" class="inprint" href="">{{ "Inprint" | translate}}</a>
-        </div>
-        <div class="flex">
-            <img src="assets/c.png" alt="">
-            <div>
-                <span class="name">Artur Marbach 2026</span>
-            </div>
-        </div>
-        <div class="link-section">
-            <a routerLink="">
-                <img (click)="goToUrl('g')" src="assets/github.png" alt=""></a>
-                <a [href]="'mailto:' + 'mail' + '&#64;' + 'artur-marbach.de'">
-                <img src="assets/mail.png" alt=""></a>
-            <a routerLink="">
-                <img (click)="goToUrl('l')" src="assets/linkIn.png" alt="">
-            </a>
-        </div>
-        <a href="" routerLink="/inprint" (click)="inprint($event)" class="mobile-section">{{ "Imprint" | translate}}</a>
+  <div class="footer-line"></div>
+
+  <div class="content">
+    <div>
+      <a href="">
+        <h2>Ar<span class="colored-letter">t</span>ur</h2>
+      </a>
+
+      <a routerLink="/inprint" (click)="inprint($event)" class="inprint">
+        {{ "Inprint" | translate }}
+      </a>
     </div>
+
+    <div class="flex">
+      <img src="assets/c.png" alt="">
+      <div>
+        <span class="name">Artur Marbach 2026</span>
+      </div>
+    </div>
+
+    <div class="link-section">
+      <a>
+        <img (click)="goToUrl('g')" src="assets/github.png" alt="">
+      </a>
+
+      <a [href]="'mailto:' + 'mail' + '&#64;' + 'artur-marbach.de'">
+        <img src="assets/mail.png" alt="">
+      </a>
+
+      <a>
+        <img (click)="goToUrl('l')" src="assets/linkIn.png" alt="">
+      </a>
+    </div>
+
+    <a routerLink="/inprint" (click)="inprint($event)" class="mobile-section">
+      {{ "Imprint" | translate }}
+    </a>
+  </div>
 </footer>

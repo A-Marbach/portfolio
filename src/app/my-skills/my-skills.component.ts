@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import * as AOS from 'aos';
 import { isPlatformBrowser } from '@angular/common';
-import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
+import * as AOS from 'aos';
+
 @Component({
   selector: 'app-my-skills',
   standalone: true,
@@ -11,12 +11,18 @@ import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
-
 export class MySkillsComponent implements OnInit, AfterViewInit {
-  ngOnInit() { }
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public translate: TranslateService
+  ) {}
+
+  ngOnInit() {}
+
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      AOS.init(); // Initialisieren von AOS nur im Browser
+      AOS.init();
     }
   }
 
@@ -28,31 +34,14 @@ export class MySkillsComponent implements OnInit, AfterViewInit {
     { name: 'CSS', img: 'assets/css.png' },
     { name: 'Git', img: 'assets/git.png' },
     { name: 'REST API', img: 'assets/api.png' },
-
     { name: 'Firebase', img: 'assets/firebase.png' },
     { name: 'Docker', img: 'assets/docker.png' },
     { name: 'CI/CD', img: 'assets/cd.png' },
     { name: 'Security', img: 'assets/security.png' },
-
     {
-      name: 'Continual\nLearning',
+      name: 'Continual\narning',
       img: 'assets/continually_learning.png',
       special: true
     }
   ];
-  isGerman: boolean = false;
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
-
-  constructor(@Inject(PLATFORM_ID) private platformId: Object, private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-    this.translate.onLangChange.subscribe((event) => {
-      this.isGerman = event.lang === 'de';
-    });
-  }
-
-  switchLanguage(language: string) {
-    this.currentLanguage = language;
-    this.translate.use(language);
-  }
 }

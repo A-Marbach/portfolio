@@ -1,12 +1,15 @@
 <div id="skills" class="my-skills-section">
+
   <div class="mobile-btn">
     <a href="#contact">
-      <button [class.deutsch]="currentLanguage === 'de'"
-        [ngClass]="{'deutsch': isGerman}"
-        class="btn-mobile hide-mobile">{{ "Get in touch" |translate}}</button>
+      <button class="btn-mobile hide-mobile">
+        {{ "Get in touch" | translate }}
+      </button>
     </a>
   </div>
+
   <div data-aos="fade-right" class="left-content">
+
     <div class="skills-container"
       *ngFor="let skill of skills; let last = last"
       [ngClass]="{ 'special-skill': last }">
@@ -14,7 +17,6 @@
       <img class="skill-image" [src]="skill.img" [alt]="skill.name">
       <span class="title-skills">{{ skill.name }}</span>
 
-      <!-- Hover Box NUR für letzten -->
       <div class="hover-box" *ngIf="last">
         <p>I have a special interest in learning</p>
 
@@ -32,20 +34,28 @@
       </div>
 
     </div>
+
   </div>
+
   <div data-aos="fade-left" class="right-content">
+
     <div class="flex">
-      <h1 [class.deutsch]="currentLanguage === 'de'"
-        [ngClass]="{'deutsch': isGerman}">{{"My Skills" | translate}}
-      </h1>
+      <h1>{{ "My Skills" | translate }}</h1>
       <div class="line"></div>
     </div>
-    <span class="skills-container">{{ "Skill Development" | translate}}</span>
+
+    <span class="skills-container">
+      {{ "Skill Development" | translate }}
+    </span>
+
     <a href="#contact">
-      <button [ngClass]="{'deutsch': isGerman}"
-        [class.deutsch]="currentLanguage === 'de'" class="btn hide-desktop">{{
-        "Get in touch" |translate}}</button>
+      <button class="btn hide-desktop">
+        {{ "Get in touch" | translate }}
+      </button>
     </a>
+
   </div>
+
   <img class="decorate-img-section" src="assets/green_shadow.png" alt>
+
 </div>

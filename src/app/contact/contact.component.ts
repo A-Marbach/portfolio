@@ -20,14 +20,16 @@ export class ContactComponent {
     email: "",
     message: "",
     checkbox: false
-  }
+  };
+
   mailTest = false;
-  isClicked: boolean = false;
-  isBlurred: boolean = false;
-  isClickedSecondInput: boolean = false;
-  isBlurredSecondInput: boolean = false;
-  isClickedTextarea: boolean = false;
-  isBlurredTextarea: boolean = false;
+
+  isClicked = false;
+  isBlurred = false;
+  isClickedSecondInput = false;
+  isBlurredSecondInput = false;
+  isClickedTextarea = false;
+  isBlurredTextarea = false;
 
   post = {
     endPoint: 'https://portfolio.artur-marbach.de/sendMail.php',
@@ -40,11 +42,21 @@ export class ContactComponent {
     },
   };
 
+  constructor(
+    private router: Router,
+    private translate: TranslateService
+  ) {
+    // IMPORTANT: KEIN setDefaultLang / use hier!
+
+    // optional: nur UI sync (falls du class bindings brauchst)
+    this.translate.onLangChange.subscribe(() => {});
+  }
+
   showEmailPopup() {
     const emailPopup = document.querySelector('.e-mail-popup');
     if (emailPopup) {
       emailPopup.classList.remove('hidden');
-      // Füge nach 3 Sekunden die Klasse 'hidden' hinzu
+
       setTimeout(() => {
         emailPopup.classList.add('hidden');
       }, 4000);
@@ -55,20 +67,23 @@ export class ContactComponent {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {
+          next: () => {
             ngForm.resetForm();
+
             this.contactData = {
               name: '',
               email: '',
               message: '',
               checkbox: false
             };
+
             this.isClicked = false;
             this.isBlurred = false;
             this.isClickedSecondInput = false;
             this.isBlurredSecondInput = false;
             this.isClickedTextarea = false;
             this.isBlurredTextarea = false;
+
             this.showEmailPopup();
           },
           error: (error) => {
@@ -76,7 +91,9 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    }
+
+    if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.contactData.email = '';
       ngForm.resetForm();
     }
@@ -105,26 +122,9 @@ export class ContactComponent {
   setInputBlurredTextarea() {
     this.isBlurredTextarea = true;
   }
-  isGerman: boolean = false;
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
-
-  constructor(private router: Router, private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-    this.translate.onLangChange.subscribe((event) => {
-      this.isGerman = event.lang === 'de';
-    });
-  }
-
-  switchLanguage(language: string) {
-    this.currentLanguage = language;
-    this.translate.use(language);
-  }
 
   agb(event: Event) {
-    event.preventDefault(); // Verhindert das Standardverhalten des Links
+    event.preventDefault();
     this.router.navigateByUrl('/agb');
-    
   }
 }
-
