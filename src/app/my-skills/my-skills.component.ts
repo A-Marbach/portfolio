@@ -12,41 +12,34 @@ import { Inject, PLATFORM_ID, AfterViewInit } from '@angular/core';
   styleUrl: './my-skills.component.scss'
 })
 
-export class MySkillsComponent implements OnInit,  AfterViewInit {
-  ngOnInit() {}
+export class MySkillsComponent implements OnInit, AfterViewInit {
+  ngOnInit() { }
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
       AOS.init(); // Initialisieren von AOS nur im Browser
     }
   }
-      
-  images = [
-    'assets/javascript.png',
-    'assets/typescript.png',
-    'assets/angular.png',
-    'assets/html.png',
-    'assets/firebase.png',
-    'assets/git.png',
-    'assets/css.png',
-    'assets/api.png',
-    'assets/scrum.png',
-    'assets/material-design.png',
-    'assets/wordpress.png'
-  ]
 
-  title = [
-    'JavaScript',
-    'TypeScript',
-    'Angular',
-    'HTML',
-    'Firebase',
-    'Git',
-    'CSS',
-    'Rest Api',
-    'Scrum',
-    'Material Design',
-    'Wordpress',
-  ]
+  skills = [
+    { name: 'JavaScript', img: 'assets/javascript.png' },
+    { name: 'TypeScript', img: 'assets/typescript.png' },
+    { name: 'Angular', img: 'assets/angular.png' },
+    { name: 'HTML', img: 'assets/html.png' },
+    { name: 'CSS', img: 'assets/css.png' },
+    { name: 'Git', img: 'assets/git.png' },
+    { name: 'REST API', img: 'assets/api.png' },
+
+    { name: 'Firebase', img: 'assets/firebase.png' },
+    { name: 'Docker', img: 'assets/docker.png' },
+    { name: 'CI/CD', img: 'assets/cd.png' },
+    { name: 'Security', img: 'assets/security.png' },
+
+    {
+      name: 'Continual\nLearning',
+      img: 'assets/continually_learning.png',
+      special: true
+    }
+  ];
   isGerman: boolean = false;
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 

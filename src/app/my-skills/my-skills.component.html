@@ -1,26 +1,51 @@
 <div id="skills" class="my-skills-section">
-    <div class="mobile-btn">
-        <a href="#contact">
-            <button [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}"
-                class="btn-mobile hide-mobile">{{ "Get in touch" |translate}}</button>
-        </a>
-    </div>
-    <div data-aos="fade-right" class="left-content">
-        <div class="skills-container" *ngFor="let image of images; let i = index">
-            <img class="skill-image" src="{{ image }}">
-            <span class="title-skills">{{ title[i]}}</span>
+  <div class="mobile-btn">
+    <a href="#contact">
+      <button [class.deutsch]="currentLanguage === 'de'"
+        [ngClass]="{'deutsch': isGerman}"
+        class="btn-mobile hide-mobile">{{ "Get in touch" |translate}}</button>
+    </a>
+  </div>
+  <div data-aos="fade-right" class="left-content">
+    <div class="skills-container"
+      *ngFor="let skill of skills; let last = last"
+      [ngClass]="{ 'special-skill': last }">
+
+      <img class="skill-image" [src]="skill.img" [alt]="skill.name">
+      <span class="title-skills">{{ skill.name }}</span>
+
+      <!-- Hover Box NUR für letzten -->
+      <div class="hover-box" *ngIf="last">
+        <p>I have a special interest in learning</p>
+
+        <div class="hover-icons">
+          <div class="icon-item">
+            <img src="assets/react.png">
+            <span>React</span>
+          </div>
+
+          <div class="icon-item">
+            <img src="assets/vue.png">
+            <span>Vue.js</span>
+          </div>
         </div>
+      </div>
+
     </div>
-    <div data-aos="fade-left" class="right-content">
-        <div class="flex">
-            <H1 [class.deutsch]="currentLanguage === 'de'" [ngClass]="{'deutsch': isGerman}">{{"My Skills" | translate}}
-            </H1>
-            <div class="line"></div>
-        </div>
-        <span class="skills-container">{{ "Skill Development" | translate}}</span>
-        <a href="#contact">
-            <button  [ngClass]="{'deutsch': isGerman}" [class.deutsch]="currentLanguage === 'de'" class="btn hide-desktop">{{ "Get in touch" |translate}}</button>
-        </a>
+  </div>
+  <div data-aos="fade-left" class="right-content">
+    <div class="flex">
+      <h1 [class.deutsch]="currentLanguage === 'de'"
+        [ngClass]="{'deutsch': isGerman}">{{"My Skills" | translate}}
+      </h1>
+      <div class="line"></div>
     </div>
-    <img class="decorate-img-section" src="assets/green_shadow.png" alt="">
+    <span class="skills-container">{{ "Skill Development" | translate}}</span>
+    <a href="#contact">
+      <button [ngClass]="{'deutsch': isGerman}"
+        [class.deutsch]="currentLanguage === 'de'" class="btn hide-desktop">{{
+        "Get in touch" |translate}}</button>
+    </a>
+  </div>
+  <img class="decorate-img-section" src="assets/green_shadow.png" alt>
 </div>
