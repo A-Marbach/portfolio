@@ -46,7 +46,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       skills: 'JavaScript | HTML | CSS',
       description: 'development2.description',
       img: 'assets/pollo-loco.png',
-      url: 'https://el-pollo-loco.artur-marbach.de',
+      url: 'https://elpolloloco.artur-marbach.de',
       github: 'https://github.com/A-Marbach/el-pollo-loco'
     }
   ];

@@ -1,6 +1,6 @@
 <div id="first-section" class="content">
 
-  <img class="background-section" src="assets/background.png" alt="">
+  <img class="background-section" src="assets/background.png" alt>
 
   <div data-aos="fade-up" class="left-content">
     <img class="my-profile" src="assets/my_photo.png">
@@ -9,7 +9,9 @@
 
   <div data-aos="fade-down" class="right-content">
 
-    <span class="vertikal">
+    <span
+      class="vertikal"
+      [class.english]="( 'I am' | translate ) === 'I am'">
       {{ 'I am' | translate }}
     </span>
 
@@ -33,7 +35,7 @@
 
   <div class="scroll-down-vertikal box">
     <span>{{ "Scroll down" | translate }}</span>
-    <img class="up" src="assets/up.png" alt="">
+    <img class="up" src="assets/up.png" alt>
   </div>
 
   <div class="contact">
@@ -41,15 +43,15 @@
 
     <div class="logo">
       <a (click)="goToUrl('g')">
-        <img src="assets/github.png" alt="">
+        <img src="assets/github.png" alt>
       </a>
 
       <a href="#contact">
-        <img src="assets/mail.png" alt="">
+        <img src="assets/mail.png" alt>
       </a>
 
       <a (click)="goToUrl('l')">
-        <img src="assets/linkIn.png" alt="">
+        <img src="assets/linkIn.png" alt>
       </a>
     </div>
 

@@ -69,7 +69,7 @@ a {
     z-index: 900;
     border: none;
     margin-top: 50px;
-    max-width: 170px;
+    max-width: 230px;
     font-size: 30px;
     border-radius: 10px;
     padding: 12px;
@@ -148,6 +148,10 @@ a {
     transform: rotate(180deg);
     transform-origin: center top;
     /* Ursprungspunkt Mitte oben */
+}
+
+.vertikal.english{
+    font-size: 28px;
 }
 
 
@@ -330,15 +334,13 @@ a {
     .name {
         font-size: 34px;
     }
-    .vertikal.deutsch {
-        font-size: 18px;
-    }
+    
 
     .front-end-developer {
         font-size: 24px;
     }
 
-    .vertikal {
+    .vertikal.english {
         font-size: 28px;
         margin-top: 79px;
     }
@@ -396,13 +398,6 @@ a {
 }
 
 
-@media (max-width:600px) {
-    
-
-    
-
-   
-}
 
 @media (max-width:550px) {
     .background {
@@ -412,8 +407,6 @@ a {
 
 @media (max-width:480px) {
     
-   
-
     .button {
         margin-top: 16px;
     }
