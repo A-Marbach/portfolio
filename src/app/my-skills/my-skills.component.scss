@@ -1,261 +1,338 @@
 .my-skills-section {
-    background-color: #141D2F;
-    color: white;
-    padding-left: 100px;
-    position: relative;
-    display: flex;
-    padding-bottom: 100px;
-    padding-top: 150px;
-    overflow: hidden;
+  background-color: #141D2F;
+  color: white;
+  padding-left: 100px;
+  position: relative;
+  display: flex;
+  padding-bottom: 100px;
+  padding-top: 150px;
+  overflow: hidden;
 }
 
 .decorate-img-section {
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    top: 450px;
-    left: -100px;
-    z-index: 1;
-    display: none;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  top: 450px;
+  left: -100px;
+  z-index: 1;
+  display: none;
 }
 
 h1 {
-    margin-top: 0;
-    font-size: 78px;
+  margin-top: 0;
+  font-size: 56px
 }
 
 h1.deutsch {
-    font-size: 56px;
+  font-size: 56px;
 }
 
 .left-content {
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    z-index: 10;
-    gap: 25px;
-    justify-content: space-evenly;
-    align-items: center;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 10;
+  gap: 25px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .right-content {
-    width: 40%;
-    padding-right: 100px;
+  width: 40%;
+  padding-right: 100px;
 }
 
 .line {
-    margin-bottom: 35px;
-    background-color: #4441E5;
-    height: 4px;
-    width: 10%;
-}
-
-.btn {
-    color: white;
-    text-align: center;
-    margin-left: 120px;
-    margin-top: 50px;
-    z-index: 10;
-    border: none;
-    margin-top: 50px;
-    font-size: 30px;
-    border-radius: 10px;
-    padding: 12px;
-    background-color: #1CDAE6;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #4441E5;
-        scale: 1.1;
-    }
-}
-
-.btn.deutsch{
-    margin-left: 40px;
-}
-
-.mobile-btn {
-    display: flex;
-    justify-content: center;
-    z-index: 9;
-}
-
-.btn-mobile {
-    color: white;
-    text-align: center;
-    margin-top: 50px;
-    z-index: 10;
-    border: none;
-    font-size: 30px;
-    border-radius: 10px;
-    padding: 12px;
-    background-color: #1CDAE6;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #4441E5;
-        scale: 1.1;
-    }
+  margin-bottom: 35px;
+  background-color: #4441E5;
+  height: 4px;
+  width: 10%;
 }
 
 .title-skills {
-    text-align: center;
-    padding-top: 14px;
+  white-space: pre-line;
+}
+
+.btn {
+  color: white;
+  text-align: center;
+  margin-left:60px;
+  margin-top: 50px;
+  z-index: 10;
+  border: none;
+  margin-top: 50px;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #1CDAE6;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4441E5;
+    scale: 1.1;
+  }
+}
+
+.btn.deutsch {
+  margin-left: 40px;
+}
+
+.mobile-btn {
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+}
+
+.btn-mobile {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  z-index: 10;
+  border: none;
+  font-size: 30px;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #1CDAE6;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4441E5;
+    scale: 1.1;
+  }
+}
+
+.title-skills {
+  text-align: center;
+  padding-top: 14px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.hover-box {
+  position: absolute;
+  bottom: 110%;
+  /* über dem Icon */
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  background: #1c1f2e;
+  padding: 10px;
+  border-radius: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 50;
+  width: 180px;
+}
+
+/* Anzeige nur beim Hover vom letzten */
+.special-skill:hover .hover-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  background-color: white;
+  color: black;
+
+}
+
+/* Icons im Popup */
+.hover-icons {
+  display: flex;
+  justify-self: center;
+  margin-top: 8px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  padding: 12px;
+}
+
+.special-skill {
+  color: #1CDAE6;
+  transition: 0.3s ease;
+
+  >img {
+    filter: brightness(0) saturate(100%) invert(65%) sepia(80%) saturate(500%) hue-rotate(140deg);
+    animation: none !important;
+    transform: none !important;
+    transition: 0.3s ease;
+  }
+
+}
+
+.special-skill:hover .skill-image {
+  filter: brightness(0) invert(1); /* weiß */
+  color: white!important;
+}
+
+.icon-item img {
+  width: 30px;
+  height: 30px;
+
+}
+
+.special-skill:hover {
+  color: white;
 }
 
 .skills-container {
-    text-align: center;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 48px;
-    padding: 10px;
-    padding-right: 100px;
-    align-items: center;
-    min-width: 80px;
-    >img {
-        cursor: pointer;
-        height: 60px;
-        width: 60px;
-    }
+  position: relative;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 48px;
+  padding: 10px;
+  padding-right: 100px;
+  align-items: center;
+  min-width: 80px;
 
-    .skill-image {
-        &:hover {
-            animation: move 1s ease-in-out infinite;
-            /* Verwenden Sie die move-Animation */
+  >img {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+  }
 
-            @keyframes move {
-                0% {
-                    transform: translateY(0);
-                    /* Anfangsposition */
-                }
+  .skill-image {
+    &:hover {
+      animation: move 1s ease-in-out infinite;
+      /* Verwenden Sie die move-Animation */
 
-                50% {
-                    transform: translateY(-15px);
-                    /* Zwischenposition (hin) */
-                }
-
-                100% {
-                    transform: translateY(0);
-                    /* Endposition (zurück) */
-                }
-            }
+      @keyframes move {
+        0% {
+          transform: translateY(0);
+          /* Anfangsposition */
         }
+
+        50% {
+          transform: translateY(-15px);
+          /* Zwischenposition (hin) */
+        }
+
+        100% {
+          transform: translateY(0);
+          /* Endposition (zurück) */
+        }
+      }
     }
+  }
 }
 
 .flex {
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 50px;
 }
 
 @media screen and (max-width: 1440px) {
-    .decorate-img-section {
-        display: block;
-    }
+  .decorate-img-section {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1250px) {
-    h1 {
-        font-size: 80px;
-    }
+  h1 {
+    font-size: 80px;
+  }
 }
 
 @media screen and (min-width:1200px) {
-    .mobile-btn {
-        display: none;
-    }
+  .mobile-btn {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .my-skills-section {
-        flex-direction: column-reverse;
-        justify-content: center;
-        padding-top: 100px;
-        padding-right: 100px;
-    }
+  .my-skills-section {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 100px;
+    padding-right: 100px;
+  }
 
-    h1.deutsch {
-        font-size: 80px;
-    }
+  h1.deutsch {
+    font-size: 80px;
+  }
 
-    .hide-mobile {
-        display: block;
-    }
+  .hide-mobile {
+    display: block;
+  }
 
-    .right-content {
-        width: 100%;
-    }
+  .right-content {
+    width: 100%;
+  }
 
-    .left-content {
-        width: 100%;
-        padding-top: 50px;
-        gap: 25px;
-        justify-content: center;
-    }
+  .left-content {
+    width: 100%;
+    padding-top: 50px;
+    gap: 25px;
+    justify-content: center;
+  }
 
-    .hide-desktop {
-        display: none;
-    }
+  .hide-desktop {
+    display: none;
+  }
 
-    .flex {
-        justify-content: end;
-     
-    }
+  .flex {
+    justify-content: end;
+
+  }
 }
 
-@media (max-width:950px){
-    .my-skills-section{
-        padding-right: 25px;
-    }
+@media (max-width:950px) {
+  .my-skills-section {
+    padding-right: 25px;
+  }
 }
 
 @media screen and (max-width: 850px) {
-    .my-skills-section {
-        padding-left: 5px;
-    }
+  .my-skills-section {
+    padding-left: 5px;
+  }
 
-    .skills-container {
-        padding-right: 25px;
-        justify-content: center;
-    }
+  .skills-container {
+    padding-right: 25px;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    h1 {
-        font-size: 64px;
-    }
+  h1 {
+    font-size: 64px;
+  }
 
-    h1.deutsch {
-        font-size: 64px;
-    }
+  h1.deutsch {
+    font-size: 64px;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .skills-container {
-        font-size: 18px;
-    }
+  .skills-container {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    h1 {
-        font-size: 40px;
-    }
+  h1 {
+    font-size: 40px;
+  }
 
-    h1.deutsch {
-        font-size: 40px;
-    }
+  h1.deutsch {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .btn-mobile.deutsch {
-        font-size: 20px;
-    }
+  .btn-mobile.deutsch {
+    font-size: 20px;
+  }
 }

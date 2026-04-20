@@ -1,4 +1,4 @@
-<div *ngIf="isGerman" [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}" class="agb-content ">
+<div *ngIf="isGerman"  class="agb-content ">
     <img class="go-back" src="assets/zeiger-weiss.png" alt="Zurück">
     <img (click)="showNormalContent()" class="go-back-hover" src="assets/zeiger-türkis.png" alt="">
     <h1>Datenschutz&shy;erkl&auml;rung</h1>
@@ -202,7 +202,7 @@
     <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
 </div>
 
-<div *ngIf="!isGerman" [ngClass]="{'deutsch': currentLanguage === 'de' || isGerman}" class="agb-content ">
+<div *ngIf="!isGerman" class="agb-content ">
     <img class="go-back" src="assets/zeiger-weiss.png" alt="Back">
     <img (click)="showNormalContent()" class="go-back-hover" src="assets/zeiger-türkis.png" alt="">
     <h1>Privacy Policy</h1>

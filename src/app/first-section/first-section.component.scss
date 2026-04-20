@@ -69,7 +69,7 @@ a {
     z-index: 900;
     border: none;
     margin-top: 50px;
-    max-width: 170px;
+    max-width: 230px;
     font-size: 30px;
     border-radius: 10px;
     padding: 12px;
@@ -140,7 +140,7 @@ a {
 
 .vertikal {
     color: white;
-    font-size: 32px;
+    font-size: 21px;
     margin-top: 93px;
     writing-mode: vertical-lr;
     text-orientation: mixed;
@@ -150,9 +150,11 @@ a {
     /* Ursprungspunkt Mitte oben */
 }
 
-.vertikal.deutsch {
-    font-size: 21px;
+.vertikal.english{
+    font-size: 28px;
 }
+
+
 
 .line {
     height: 4px;
@@ -332,15 +334,13 @@ a {
     .name {
         font-size: 34px;
     }
-    .vertikal.deutsch {
-        font-size: 18px;
-    }
+    
 
     .front-end-developer {
         font-size: 24px;
     }
 
-    .vertikal {
+    .vertikal.english {
         font-size: 28px;
         margin-top: 79px;
     }
@@ -398,13 +398,6 @@ a {
 }
 
 
-@media (max-width:600px) {
-    
-
-    
-
-   
-}
 
 @media (max-width:550px) {
     .background {
@@ -414,8 +407,6 @@ a {
 
 @media (max-width:480px) {
     
-   
-
     .button {
         margin-top: 16px;
     }

@@ -1,14 +1,62 @@
 {
-    "BUTTON": {
-        "LETS_TALK": "Lets talk"
-    },
-    "homepage.intro": "Hello, my name is Artur Marbach and i live in Hamburg. As a front-end developer with extensive experience in JavaScript and Angular, I have successfully demonstrated my technical skills and problem-solving abilities in numerous projects.",
-    "Enthusiasm": "Through my analytical thinking and solid experience with modern frameworks, I find creative solutions to complex challenges and effectively bring new ideas to life.",
-    "Commitment": "I have participated in several group projects, gaining valuable experience in collaborative software development.",
-    "Skill Development": "My enhanced frontend skills in design and usability now enable me to develop complex web applications.",
-    "Portfolio": "Explore a selection of my projects here - interact with the applications, test their features, and view the live code to see my skills in action.",
-    "development1.description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
-    "development3.description": "This app is a Slack clone. It simplifies team communication and collaboration with its intuitive user interface, real-time messaging, and a freely selectable variety of channels.",
-    "development2.description": "A simple Jump-and-Run game based on a object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken",
-    "Communication": "Contact me throug this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work."
+  "About me": "About me",
+  "Skills": "Skills",
+  "Contact": "Contact",
+  "I am": "I am",
+  "Developer": "Developer",
+  "Scroll down": "Scroll down",
+
+  "homepage.intro": "I am Artur Marbach from Hamburg, specializing in frontend development with Angular and JavaScript, with a focus on modern and high-performance web applications.",
+
+  "BUTTON": {
+    "LETS_TALK": "Let's talk"
+  },
+
+  "Enthusiasm": "I develop applications in a structured and analytical way, placing strong emphasis on clean code, clear architecture, and good user experience.",
+
+  "Commitment": "In addition, I have knowledge in the field of DevSecOps and a solid understanding of secure and scalable applications.",
+
+  "My Skills": "My Skills",
+
+  "Skill Development": "I develop modern web applications with a focus on design, performance, and user experience.",
+
+  "Get in touch": "Get in touch",
+
+  "Portfolio": "A selection of my projects – explore the applications and get an impression of my work.",
+
+  "development1.description": "Kanban-based task manager with drag-and-drop functionality, user assignment, and subtask support, including simple backend integration for data persistence.",
+
+  "development3.description": "Slack-inspired real-time chat application with channel-based communication and Firebase integration. Focus on clean Angular architecture and scalable frontend design.",
+
+  "development2.description": "JavaScript-based 2D jump-and-run game with an object-oriented architecture, custom game mechanics, collision detection, and animated character controls.",
+
+  "Got a problem to solve?": "Got a problem to solve?",
+
+  "Communication": "Feel free to contact me via the form – I look forward to hearing from you and learning more about your ideas.",
+
+  "Need a Frontend developer?": "Need a Frontend developer?",
+
+  "Contact me!": "Contact me!",
+
+  "Please enter a name": "Please enter a name",
+
+  "Please enter a valid email": "Please enter a valid email address.",
+
+  "Please enter a message (20 letter min)": "Please enter a message (minimum 20 characters).",
+
+  "I've read the": "I've read the",
+
+  "privacy policy": "privacy policy",
+
+  "and agree to the processing of my data as outlined": "and agree to the processing of my data as outlined.",
+
+  "Send message :)": "Send message :)",
+
+  "Your name": "Your name",
+
+  "Your email": "Your email",
+
+  "Your message": "Your message",
+
+  "Inprint": "Imprint"
 }

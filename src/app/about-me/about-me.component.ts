@@ -21,18 +21,10 @@ export class AboutMeComponent implements OnInit,  AfterViewInit {
     }
   }
   isGerman: boolean = false;
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object, private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-    this.translate.onLangChange.subscribe((event) => {
-      this.isGerman = event.lang === 'de';
-    });
+   
   }
 
-  switchLanguage(language: string) {
-    this.currentLanguage = language;
-    this.translate.use(language);
-  }
+ 
 }
