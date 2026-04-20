@@ -6,33 +6,33 @@
   "Developer": "Developer",
   "Scroll down": "Scroll down",
 
-  "homepage.intro": "Hello, my name is Artur Marbach and I live in Hamburg. As a front-end developer with extensive experience in JavaScript and Angular, I have successfully demonstrated my technical skills and problem-solving abilities in numerous projects.",
+  "homepage.intro": "I am Artur Marbach from Hamburg, specializing in frontend development with Angular and JavaScript, with a focus on modern and high-performance web applications.",
 
   "BUTTON": {
     "LETS_TALK": "Let's talk"
   },
 
-  "Enthusiasm": "Through my analytical thinking and solid experience with modern frameworks, I find creative solutions to complex challenges and effectively bring new ideas to life.",
+  "Enthusiasm": "I develop applications in a structured and analytical way, placing strong emphasis on clean code, clear architecture, and good user experience.",
 
-  "Commitment": "I have participated in several group projects, gaining valuable experience in collaborative software development.",
+  "Commitment": "In addition, I have knowledge in the field of DevSecOps and a solid understanding of secure and scalable applications.",
 
   "My Skills": "My Skills",
 
-  "Skill Development": "My advanced frontend skills in design and usability now enable me to develop complex web applications.",
+  "Skill Development": "I develop modern web applications with a focus on design, performance, and user experience.",
 
   "Get in touch": "Get in touch",
 
-  "Portfolio": "Explore a selection of my projects here – interact with the applications, test their features, and view the live code to see my skills in action.",
+  "Portfolio": "A selection of my projects – explore the applications and get an impression of my work.",
 
-  "development1.description": "Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functions, assign users and categories.",
+  "development1.description": "Kanban-based task manager with drag-and-drop functionality, user assignment, and subtask support, including simple backend integration for data persistence.",
 
-  "development3.description": "This app is a Slack clone. It simplifies team communication and collaboration with its intuitive user interface, real-time messaging, and a freely selectable variety of channels.",
+  "development3.description": "Slack-inspired real-time chat application with channel-based communication and Firebase integration. Focus on clean Angular architecture and scalable frontend design.",
 
-  "development2.description": "A simple jump-and-run game based on object-oriented programming. Help Pepe find coins and bottles to fight against the killer chicken.",
+  "development2.description": "JavaScript-based 2D jump-and-run game with an object-oriented architecture, custom game mechanics, collision detection, and animated character controls.",
 
   "Got a problem to solve?": "Got a problem to solve?",
 
-  "Communication": "Contact me through this form. I am interested in hearing from you, learning your ideas, and contributing to your projects with my work.",
+  "Communication": "Feel free to contact me via the form – I look forward to hearing from you and learning more about your ideas.",
 
   "Need a Frontend developer?": "Need a Frontend developer?",
 

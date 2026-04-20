@@ -39,7 +39,7 @@ export class MySkillsComponent implements OnInit, AfterViewInit {
     { name: 'CI/CD', img: 'assets/cd.png' },
     { name: 'Security', img: 'assets/security.png' },
     {
-      name: 'Continual\narning',
+      name: 'Continual\nLearning',
       img: 'assets/continually_learning.png',
       special: true
     }
