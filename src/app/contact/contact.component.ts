@@ -32,13 +32,15 @@ export class ContactComponent {
   isBlurredTextarea = false;
 
   post = {
-    endPoint: 'https://portfolio.artur-marbach.de/sendMail.php',
+    endPoint: 'https://artur-marbach.de/sendMail.php',
+
     body: (payload: any) => JSON.stringify(payload),
+
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json',
       },
+      responseType: 'text' as const,
     },
   };
 
@@ -49,7 +51,7 @@ export class ContactComponent {
     // IMPORTANT: KEIN setDefaultLang / use hier!
 
     // optional: nur UI sync (falls du class bindings brauchst)
-    this.translate.onLangChange.subscribe(() => {});
+    this.translate.onLangChange.subscribe(() => { });
   }
 
   showEmailPopup() {
