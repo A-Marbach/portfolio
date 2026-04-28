@@ -29,7 +29,7 @@ export class MySkillsComponent implements OnInit, AfterViewInit {
   skills = [
     { name: 'JavaScript', img: 'assets/javascript.png' },
     { name: 'TypeScript', img: 'assets/typescript.png' },
-    { name: 'Angular', img: 'assets/angular.png' },
+    { name: 'Angular', img: 'assets/angular.svg' },
     { name: 'HTML', img: 'assets/html.png' },
     { name: 'CSS', img: 'assets/css.png' },
     { name: 'Git', img: 'assets/git.png' },

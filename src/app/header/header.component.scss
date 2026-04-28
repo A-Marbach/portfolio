@@ -5,25 +5,23 @@ nav {
     height: 15vh;
     background-color: #141D2F;
     display: flex;
-    justify-content: center; /* Zentriert den Container horizontal */
+    justify-content: center;
     align-items: center;
     z-index: 999;
-    opacity: 1;
     width: 100%;
-  }
-  .nav-container {
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1440px; /* Maximale Breite des Containers */
-    
-  }
-  
+    max-width: 1440px;
+}
 
-  nav > a {
+nav > a {
     text-decoration: none;
-  }
+}
 
 .link-section button {
     background-color: #141D2F;
@@ -35,7 +33,7 @@ nav {
     transition: background-color 0.3s;
 }
 
-.link-section.button:hover {
+.link-section button:hover {
     background-color: #252f43;
 }
 
@@ -47,7 +45,6 @@ nav {
 .mobile-btn {
     padding-top: 24px;
 }
-
 
 .mobile-btn button {
     background-color: #141D2F;
@@ -64,13 +61,79 @@ nav {
     opacity: 1;
 }
 
-.close-img {
+.colored-letter {
+    color: #1CDAE6;
+}
+
+.name {
+    color: white;
+    padding-left: 100px;
+    font-size: 48px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-section {
+    display: flex;
+    align-items: center;
+    padding-right: 100px;
+    font-size: 32px;
+
+    a {
+        padding-right: 24px;
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #1CDAE6;
+    }
+}
+
+.link-section.deutsch {
+    font-size: 26px;
+}
+
+// ── Burger-Button ─────────────────────────────────────────────────────────────
+
+.menu {
     position: absolute;
     right: 25px;
-    top: 50px;
-    object-fit: cover;
-    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+
+    a {
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 32px;
+    }
 }
+
+.btn-img,
+.btn-img-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn-img-hover {
+    opacity: 0;
+}
+
+.menu:hover .btn-img-hover {
+    opacity: 1;
+}
+
+.menu:hover .btn-img {
+    opacity: 0;
+}
+
+// ── Mobile Overlay ────────────────────────────────────────────────────────────
 
 .menu-mobile {
     opacity: 0.9;
@@ -91,21 +154,32 @@ nav {
     justify-content: center;
     height: 100vh;
 
-    >img {
-        padding-top: 32px;
-        width: 32px;
-        height: 32px;
-    }
-
-    >a {
+    > a {
         color: lightgray;
         text-decoration: none;
         padding-top: 24px;
         font-size: 24px;
     }
 
-    >a:hover {
+    > a:hover {
         border-bottom: 2px solid #1CDAE6;
+    }
+}
+
+// Close-Icon sitzt auf der gleichen Position wie der Burger (Mitte der Nav = 7.5vh)
+.close-img {
+    position: absolute;
+    right: 25px;
+    top: 7.5vh;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
     }
 }
 
@@ -113,92 +187,7 @@ nav {
     display: none;
 }
 
-.menu {
-    justify-content: end;
-    position: relative;
-    padding-top: 32px;
-    padding-right: 100px;
-}
-
-.btn-img-hover {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    right: 0;
-    z-index: 1;
-    cursor: pointer;
-    padding-top: 32px;
-    padding-right: 25px;
-}
-
-.menu:hover .btn-img-hover {
-    opacity: 1;
-}
-
-.menu .btn-img-hover {
-    opacity: 0;
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-}
-
-.menu:hover .btn-img-hover {
-    display: block;
-}
-
-.menu:hover .btn-img {
-    opacity: 0;
-}
-
-.colored-letter {
-    padding-left: 0;
-    padding-right: 0;
-    color: #1CDAE6;
-}
-
-.name {
-    color: white;
-   padding-left: 100px;
-    padding-top: 32px;
-    font-size: 48px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.link-section {
-    display: flex;
-    align-items: center;
-    padding-right: 100px;
-    padding-top: 32px;
-    font-size: 32px;
-
-    a {
-        padding-right: 24px;
-        color: white;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: #1CDAE6;
-    }
-}
-
-.link-section.deutsch {
-    font-size: 26px;
-}
-
-
-
-@media screen and (min-width:1600px){
-   
-}
-
-@media screen and (max-width:1440px){
-    
-
-   
-}
+// ── Responsive ────────────────────────────────────────────────────────────────
 
 @media screen and (max-width:950px) {
     .link-section {
@@ -207,11 +196,9 @@ nav {
 
     .menu {
         display: block;
-        padding-right: 25px;
     }
 
     .name {
         padding-left: 25px;
     }
 }
-

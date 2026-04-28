@@ -1,48 +1,20 @@
+// ── Section ───────────────────────────────────────────────────────────────────
+
 .portfolio-section {
     padding-top: 80px;
+    padding-bottom: 100px;
     background-color: #141D2F;
-    margin: 0;
     position: relative;
     overflow: hidden;
-    padding-right: 100px;
 }
 
-.decorate-img {
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    top: 100px;
-    right: -250px;
-    transform: rotate(35deg);
-    z-index: 999;
-    overflow: hidden;
-}
-
-.decorate-image {
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    top: 50px;
-    left: -200px;
-    transform: rotate(35deg);
-    z-index: 1;
-}
-
-.portfolio {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-bottom: 32px;
-    padding-top: 50px;
-    position: relative;
-    z-index: 5;
-}
+// ── Decorative images ─────────────────────────────────────────────────────────
 
 .decorate-img-portfolio-1 {
     position: absolute;
     height: 300px;
     width: 300px;
-    top: 700px;
+    top: 600px;
     right: -50px;
     rotate: 35deg;
     z-index: 1;
@@ -53,17 +25,26 @@
     position: absolute;
     height: 300px;
     width: 300px;
-    bottom:0;
-    rotate: 35deg;
-   
+    bottom: 0;
     left: -50px;
+    rotate: 35deg;
     z-index: 1;
     display: none;
 }
 
+// ── Header ────────────────────────────────────────────────────────────────────
+
+.portfolio {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 50px 100px 32px;
+    position: relative;
+    z-index: 5;
+}
+
 h1 {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 40px;
     margin: 0;
     font-size: 88px;
     color: white;
@@ -85,111 +66,114 @@ h1.deutsch {
     width: 30%;
 }
 
+// ── Description ───────────────────────────────────────────────────────────────
+
 .description {
-    color: white;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
     font-size: 20px;
-    padding-bottom: 80px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    padding: 0 100px 60px;
     position: relative;
     z-index: 5;
-    padding-left: 120px;
 }
 
-.description.deutsch{
-    padding-left: 100px;
-}
+// ── Projects grid ─────────────────────────────────────────────────────────────
 
-.development-description {
-    max-width: 500px;
-    font-size: 22px;
-    z-index: 10;
-}
-
-.development-section {
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 0 100px;
     position: relative;
+    z-index: 5;
+}
+
+// ── Project card ──────────────────────────────────────────────────────────────
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(28, 218, 230, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
-    padding-top: 20px;
-    padding-bottom: 80px;
-    z-index: 10;
-}
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
-.development-section.reverse {
-    flex-direction: row-reverse;
-    z-index: 10;
-    padding-left: 0;
-    position: relative;
-    /* Flex-Richtung umdrehen für jedes zweite Element */
-}
-
-.development-section.reverse>.info-container {
-    padding-left: 120px;
-    order: 1;
-    /* Ändert die Reihenfolge des zweiten Elements in umgekehrten Iterationen */
-    padding-right: 0;
-    display: flex;
-    align-items: start;
-    text-align: start;
-    z-index: 9;
-}
-
-.development-section.reverse>.product-img {
-    padding-right: 100px;
-}
-
-.development-section.reverse>.info-container>.btn-section {
-    display: flex;
-    justify-content: end;
-    gap: 86px;
-}
-
-.product-img {
-    padding-left: 100px;
-    padding-right: 150px;
-    z-index: 9;
-    padding-top: 30px;
-
-    >img {
-        height: 500px;
-        width: 500px;
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 60px rgba(28, 218, 230, 0.1);
+        border-color: rgba(28, 218, 230, 0.5);
     }
 }
 
-.info-container {
+.card-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+}
+
+.project-card:hover .card-image img {
+    transform: scale(1.06);
+}
+
+.card-body {
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    color: white;
-    margin-top: 80px;
-    z-index: 10;
+    gap: 10px;
+    flex: 1;
+}
+
+.project-number {
+    font-size: 52px;
+    font-weight: 900;
+    color: rgba(68, 65, 229, 0.25);
+    line-height: 1;
 }
 
 h3 {
-    color: #4441E5 !important;
-    font-size: 36px;
-    margin-bottom: 4px;
+    color: white;
+    font-size: 26px;
+    margin: 0;
 }
 
 .skills {
-    font-size: 24px;
-    color: #1CDAE6 !important;
-    padding-bottom: 8px;
+    font-size: 14px;
+    color: #1CDAE6;
+    letter-spacing: 0.04em;
+}
+
+.development-description {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.65;
+    flex: 1;
 }
 
 .btn-section {
     display: flex;
-    gap: 86px;
-    padding-top: 50px;
+    gap: 16px;
+    padding-top: 12px;
 }
 
 .live-test {
-    font-size: 30px;
-    border-radius: 10px;
-    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px 22px;
     cursor: pointer;
     background-color: #4441E5;
     color: white;
     border: none;
+    transition: background-color 0.3s;
 
     &:hover {
         background-color: #1CDAE6;
@@ -197,19 +181,21 @@ h3 {
 }
 
 .github {
-    font-size: 30px;
-    border-radius: 10px;
-    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px 22px;
     cursor: pointer;
-    background-color: #141D2F;
-    border-color: #1CDAE6;
+    background-color: transparent;
+    border: 1px solid #1CDAE6;
     color: white;
+    transition: background-color 0.3s;
 
     &:hover {
         background-color: #1CDAE6;
     }
 }
 
+// ── Responsive ────────────────────────────────────────────────────────────────
 
 @media screen and (max-width: 1440px) {
     .decorate-img-portfolio-1 {
@@ -221,186 +207,63 @@ h3 {
     }
 }
 
-@media screen and (max-width:1300px) {
-    .development-section.reverse {
-        .product-img {
-            padding-right: 0;
-        }
-    }
-
-    .product-img {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .development-section:nth-of-type(2) {
-        .info-container {
-            padding-left: 50px;
-        }
-    }
-
-    .btn-section {
-        gap: 60px;
-    }
-
-   
-}
-
 @media screen and (max-width: 1250px) {
     h1 {
         font-size: 80px;
     }
+
+    .projects-grid {
+        gap: 20px;
+        padding: 0 60px;
+    }
 }
 
-@media screen and (max-width:1200px) {
-    .portfolio-section {
-       
-        padding-left: 0;
+@media screen and (max-width: 950px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 40px;
+    }
+
+    .description {
+        padding: 0 40px 40px;
+    }
+
+    .portfolio {
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 64px;
+        padding: 0 16px;
     }
 
     h1.deutsch {
         font-size: 56px;
     }
 
-    .development-section.reverse {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding-top: 0;
-
-        .product-img {
-            padding-left: 0;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
-    .development-section {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding-top: 0;
-    }
-
-    .description {
-        padding-bottom: 0;
-        padding-right: 100px;
-        padding-left: 100px;
-        text-align: center;
-       
-    }
-
-    .product-img {
-        padding-top: 0;
-        z-index: 9;
-
-        >img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    .info-container {
-        margin-top: -50px;
-        width: 80%;
-        text-align: center;
-        padding-right: 100px;
-        padding-left: 100px;
-    }
-
-    .development-description {
-        max-width: none;
-    }
-
-    .btn-section {
-        justify-content: center;
-    }
-
-    .development-section.reverse {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding-top: 0;
-        padding-right: 100px;
-
-        >.info-container {
-            margin-top: -50px;
-            width: 80%;
-            text-align: center;
-            align-items: center;
-            padding-right: 100px;
-            padding-left: 100px;
-        }
-    }
-}
-
-@media (max-width: 950px){
-    .portfolio-section{
-        padding-right: 25px;
-    }
-}
-
-@media screen and (max-width:850px) {
-    .info-container {
-        padding-right: 50px;
-    }
-
-    .description.deutsch{
-        padding-left: 25px;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    h1.deutsch {
-        font-size: 60px;
-    }
-}
-
-@media screen and (max-width:700px) {
     .long-line {
         width: 20%;
     }
 
-    .decorate-img {
-        right: -167px;
-        top: 254px;
-    }
-
-    .decorate-image {
-        bottom: 485px;
-
+    .portfolio {
+        padding: 40px 25px 24px;
     }
 
     .description {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    h1 {
-        padding-right: 16px;
-        padding-left: 16px;
-        font-size: 64px;
+        padding: 0 25px 32px;
     }
 }
 
-@media screen and (max-width:500px) {
-    .live-test {
-        font-size: 20px;
-    }
-
-    .github {
-        font-size: 20px;
+@media screen and (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 0 25px;
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 48px;
     }
 
     h1.deutsch {
@@ -408,24 +271,16 @@ h3 {
     }
 }
 
-@media screen and (max-width:410px) {
-    .development-description {
-        font-size: 18px;
+@media screen and (max-width: 410px) {
+    h1 {
+        font-size: 40px;
     }
 
-    .btn-section {
-        gap: 35px;
+    h1.deutsch {
+        font-size: 36px;
     }
 
     .long-line {
         width: 13%;
-    }
-
-    .development-section.reverse {
-        >.info-container {
-            >.btn-section {
-                gap: 35px;
-            }
-        }
     }
 }

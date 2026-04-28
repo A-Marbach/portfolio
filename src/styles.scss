@@ -8,7 +8,10 @@ body {
 
 html {
   scroll-behavior: smooth;
- 
+}
+
+app-root {
+  display: block;
 }
 
 .container {
@@ -17,45 +20,25 @@ html {
   position: relative;
   overflow-x: hidden;
   box-sizing: border-box;
-  /* Optional, um Padding im Gesamtbreitenberechnung zu berücksichtigen */
 }
+
 
 .background {
   position: absolute;
+  width: 100vw;
   height: 460px;
   bottom: -111px;
   left: 0;
-  z-index: 11;
-  width: 100%;
+  z-index: 3;
 }
+
 
 .decorate-img {
   position: absolute;
   height: 300px;
   width: 300px;
-  top: 1050px;
-  left: -100px;
-  z-index: 20;
-}
-
-.decorate-img-portfolio {
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  top: 3000px;
-  right: -49px;
-  rotate: 35deg;
-  z-index: 1;
-}
-
-.decorate-image-portfolio {
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  bottom: 0;
-  rotate: 35deg;
-  bottom: -3000px;
-  left: 0px;
+  top: 850px;
+  left: -120px;
   z-index: 1;
 }
 
@@ -63,18 +46,38 @@ html {
   height: 300px;
   width: 300px;
   position: absolute;
+  top: 1450px;
+  right: -120px;
+  z-index: 1;
+}
+
+.decorate-img-portfolio {
+  position: absolute;
+  height: 300px;
+  width: 300px;
   top: 2000px;
-  right: -45px;
-  z-index: 20;
+  right: -120px;
+  rotate: 35deg;
+  z-index: 1;
 }
 
 .background-shadow-2 {
   height: 300px;
   width: 300px;
   position: absolute;
-top: 4000px;
-  right: -45px;
-  z-index: 20;
+  top: 2700px;
+  right: -120px;
+  z-index: 1;
+}
+
+.decorate-image-portfolio {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  top: 3200px;
+  left: -120px;
+  rotate: 35deg;
+  z-index: 1;
 }
 
 .bottom-line {
@@ -276,13 +279,7 @@ top: 4000px;
     display: none;
   }
 
-  app-root {
-    display: block;
-  }
 
-  .background {
-    display: none;
-  }
 
   .decorate-image-portfolio {
     display: none;
@@ -304,6 +301,17 @@ top: 4000px;
     display: none;
   }
 
+  .background {
+    height: 190px;
+    bottom: 0;
+  }
+
+}
+
+@media screen and (max-width: 760px) {
+  .background {
+    height: 355px;
+  }
 }
 
 @media screen and (max-width:600px) {
